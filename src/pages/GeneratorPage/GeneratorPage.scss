@@ -1,0 +1,12 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.GeneratorPage {
+  display: flex;
+  flex-wrap: wrap;
+
+  img {
+    height: auto;
+    flex-basis: 33%;
+  }
+}

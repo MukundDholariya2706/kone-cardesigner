@@ -9,28 +9,28 @@ import { Route as PublicRoute, Redirect, Switch, useLocation, useParams } from "
 
 
 // Bundled pages
-import Welcome from './pages/Welcome';
-import Selections from './pages/Selections';
+import Welcome from './pages/Welcome/components/Welcome';
+import Selections from './pages/Selections/Selections';
 import SelectionsMarine from './pages/Selections/SelectionsMarine';
-import PreDesigns from './pages/PreDesigns';
+import PreDesigns from './pages/PreDesigns/PreDesigns';
 import ContactKone from './pages/ContactKone/ContactKone';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
-import DesignShare from './components/DesignShare'
-import LoadingSpinner from './components/LoadingSpinner';
+import DesignShare from './components/DesignShare/DesignShare'
+import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner';
 import { NEW_BUILDINGS, EXISTING_BUILDINGS } from './constants';
-import MobileDownloadPage from './pages/MobileDownloadPage';
+import MobileDownloadPage from './pages/MobileDownloadPage/MobileDownloadPage';
 import GendocShareLoadingView from './components/GendocShareLoadingView/GendocShareLoadingView';
-import DesignSpecification from './pages/DesignSpecification/components'
-import Loader from './components/Loader';
-import { AuthContext } from './store/auth';
-import { DataContext } from './store/data';
-import { DesignContext } from './store/design';
+import DesignSpecification from './pages/DesignSpecification/components/DesignSpecification'
+import Loader from './components/Loader/Loader';
+import { AuthContext } from './store/auth/AuthProvider';
+import { DataContext } from './store/data/DataProvider';
+import { DesignContext } from './store/design/DesignProvider';
 import { attemptAsync } from './utils/async-utils';
 
 // Lazy pages
-const Editor = lazyWithRetry(() => import('./pages/Editor'), 'Editor')
-const ImageRendererPage = lazyWithRetry(() => import('./pages/ImageRendererPage'), 'ImageRendererPage')
-const GeneratorPage = lazyWithRetry(() => import('./pages/GeneratorPage'), 'GeneratorPage')
+const Editor = lazyWithRetry(() => import('./pages/Editor/Editor'), 'Editor')
+const ImageRendererPage = lazyWithRetry(() => import('./pages/ImageRendererPage/ImageRendererPage'), 'ImageRendererPage')
+const GeneratorPage = lazyWithRetry(() => import('./pages/GeneratorPage/GeneratorPage'), 'GeneratorPage')
 const Provider2 = lazyWithRetry(() => import('./store/index2'), 'index2');
 
 // buildingsType has to match one of these values (or can be omitted)

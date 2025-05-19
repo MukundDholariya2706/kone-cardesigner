@@ -1,21 +1,21 @@
 import React, { useState, useEffect, useContext, useRef} from 'react'
 import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
-import Layout from '../../components/Layout'; 
-import { DesignContext } from '../../store/design'
+import Layout from '../../components/Layout/Layout'; 
+import { DesignContext } from '../../store/design/DesignProvider'
 import applyRules, { validateDesign } from '../../store/design/design-rules'
-import { ProductContext } from '../../store/product'
-import { OfferingContext } from '../../store/offering'
-import { DataContext } from '../../store/data'
-import { UserContext } from '../../store/user'
-import { APIContext } from '../../store/api';
-import LoadingSpinner from '../LoadingSpinner';
+import { ProductContext } from '../../store/product/ProductProvider'
+import { OfferingContext } from '../../store/offering/OfferingProvider'
+import { DataContext } from '../../store/data/DataProvider'
+import { UserContext } from '../../store/user/UserProvider'
+import { APIContext } from '../../store/api/APIProvider';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 import { createColorImage } from '../../utils/image-utils';
-import Loader from '../Loader';
+import Loader from '../Loader/Loader';
 import GendocShareLoadingView from '../GendocShareLoadingView/GendocShareLoadingView';
 import { getDesignSpecificationURL } from '../../utils/link-utils';
 import ExpiredLinkError from './components/ExpiredLinkError/ExpiredLinkError';
-import { AuthContext } from '../../store/auth';
+import { AuthContext } from '../../store/auth/AuthProvider';
 
 
 /* 
