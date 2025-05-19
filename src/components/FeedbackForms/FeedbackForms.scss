@@ -1,0 +1,177 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+
+.FeedbackDialog {
+  .btn-cancel {
+    @include create-navbar-button();
+      border: 2px solid $light-blue;
+      margin: 10px 0;
+      padding: 0.5rem 2rem;
+  }
+
+  .btn-submit {
+    @include create-kone-button();
+
+    &.disabled {
+      background-color: $light-gray;
+      pointer-events: none;
+    }
+  }
+
+  .input-label {
+    .required {
+      color: $kone-blue;
+    }
+  }
+
+  .SmileySelector {
+    &.no-selection-made {
+      padding-bottom: 1rem;
+    }
+  }
+
+  &.no-smiley-selected {
+    .DialogBody {
+      overflow-y: hidden;
+    }
+
+    .form-content {
+      max-height: 0;
+      height: 0;
+      visibility: hidden;
+      padding-top: 0;
+    }
+
+    .DialogFooter {
+      display: none;
+    }
+  }
+
+  .form-content {
+    padding-top: 2rem;
+    max-height: 600px;
+    visibility: visible;
+    transition: all 0.1s linear;
+  }
+
+  .form {
+    .half-width {
+      width: 50%;
+
+      @include respond($phone-big) {
+        width: 100%;
+      }
+    }
+  }
+
+  .form-section + .form-section {
+    margin-top: 1.5rem;
+  }
+
+  .PrivacyStatement {
+    margin-top: 2rem;
+  }
+
+  .DialogFooter {
+    text-align: right;
+
+    .btn {
+      min-width: 128px;
+      display: inline-block;
+    }
+    
+    .btn + .btn {
+      margin-left: 10px;
+    }
+
+    @include respond($phone-big) {
+      text-align: unset;
+      display: flex;
+
+      .btn {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.SuccessView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+  .heading {
+    font-size: clamp(1rem, 4vw, 1.7rem);
+  }
+
+  .success-icon {
+    width: clamp(62px, 12vw, 92px);;
+    height: clamp(62px, 12vw, 92px);;
+    margin-bottom: 1.5rem;
+
+    .svg-icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .closes-in-text {
+    font-size: clamp(11px, 3.5vw, 14px);
+    color: #717A80;
+  }
+}
+
+.CompactFeedbackForm {
+  padding: 1.25rem 1rem;
+
+  &.is-open {
+    opacity: 1;
+  }
+
+  .heading {
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .close-button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .close-icon {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+
+    .svg-icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .form-section {
+    margin-top: 1rem;
+  }
+
+  .PrivacyStatement {
+    margin-top: 1rem;
+    font-size: 12px;
+  }
+
+  .action-button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .SuccessView {
+    height: 20rem;
+    justify-content: center;
+  }
+}
+
+.ActionButton {
+  @include create-kone-button();
+  margin: 0;
+  display: block;
+}

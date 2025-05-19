@@ -1,0 +1,67 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.DownloadDialog {
+
+    .loading-spinner-container {
+        height: 140px;
+    }
+
+    .InfoBox {
+        margin: 10px 0;
+        background-color: white;
+        border: 2px solid $kone-blue;
+        border-radius: 4px;
+
+        .icon-container {
+            padding: 10px;
+            svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .text-container {
+            .text-head {
+                margin: 0;
+            }
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+
+        button {
+            margin: 1rem;
+
+            @media screen and (max-width: $phone-big) {
+                width: 100%;  
+                margin: 0;       
+            }
+        }
+
+        .download {
+            @include create-kone-button();
+            width: 20rem;
+
+            @media screen and (max-width: $phone-big) {
+                padding: 0;          
+                margin: 0;
+                width: 100%;
+            }
+        }
+
+        .close {
+            @include create-navbar-button();
+            padding: 0.5rem 25%;
+            border: 2px solid $kone-blue;
+        }
+
+        .disabled {
+            background-color: $light-gray;
+            pointer-events: none;
+        }
+    }
+    
+}

@@ -1,0 +1,15 @@
+.Editor {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  background: #edeff0;
+  flex-direction: column;
+
+  .ToastContainer {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+}

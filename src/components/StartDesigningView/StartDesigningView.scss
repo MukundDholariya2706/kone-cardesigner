@@ -1,0 +1,66 @@
+@import '../../styles/Variables.scss';
+
+.StartDesigningView {
+  display: flex;
+  justify-content: center;
+
+  @media only screen and (max-width: $phone-big) {
+    flex-direction: column;
+  }
+
+  &-item {
+    margin: 0 10px;
+    flex: 1 1 0px;
+    max-width: 340px;
+
+    @media only screen and (max-width: $phone-big) {
+      margin: 0;
+      max-width: unset;
+
+      &:not(:last-of-type) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &.disabled { 
+      pointer-events: none;
+      opacity: 0.3;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  .predesign-image-container {
+    .Sprite {
+      bottom: 0;
+    }
+  }
+
+  .empty-design-image-container {
+    .Sprite {
+      top: -20px;
+    }
+  }
+}
+
+.rtl {
+  .StartDesigningView {    
+    .StartDesigningView-item {  
+      margin: 0 10px;
+      
+      &:first-child {
+        margin-right: 0;
+      }
+      
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+  }  
+}

@@ -1,0 +1,118 @@
+@import "../../../../styles/Variables";
+@import "../../../../styles/utils.scss";
+
+
+.TenderInfo {
+  background: #262E33;
+  color: #FFFFFF;
+  padding: 0.9rem 10%;
+  display: flex;
+
+  @include respond($tablet-landscape) {
+    padding: 1rem 5%;
+  }
+
+  @include respond($phone-big) {
+    flex-direction: column;
+    padding: 1.75rem 5%;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .tender-container {
+    flex: 4;
+    padding-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__header {
+      font-size: 1.5rem;
+
+      @include respond($tablet-portrait) {
+        font-size: 1.25rem;
+
+        span {
+          // Forcing two lines
+          display: inline-block;
+          width: 100%;
+        }
+      }
+
+      @include respond($phone-big) {
+        font-size: 1.35rem;
+      }
+    }
+
+    @include respond($tablet-portrait) {
+      flex: 3;
+    }
+
+    &__numbers {
+      font-size: 1.1rem;
+      margin-top: 0.65rem;
+
+      @include respond($tablet-portrait) {
+        font-size: 1rem;
+      }
+
+      @include respond($phone-big) {
+        font-size: 1.1rem;
+        margin-top: 1.3rem;
+      }
+    }
+  }
+
+  .person-container { 
+    flex: 2;
+    font-size: 1.15rem;
+    
+    @include respond($phone-big) {
+      margin-top: 1.6rem;
+    }
+
+    &__header {
+      color: #AAAFB3;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+
+    &__contact-info {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      display: flex;
+
+      @include respond($tablet-portrait) {
+        font-size: 1rem;
+        flex-direction: column;
+      }
+
+      .contact-info-block {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+
+        @include respond($tablet-portrait) {
+          font-size: 1rem;
+        }
+
+        .svg-icon {
+          margin-right: 0.45rem;
+          fill: white;
+          height: 1.1rem;
+          width: 1.1rem;
+        }
+
+        &:not(:last-of-type) {
+          margin-right: 1rem;
+
+          @include respond($tablet-portrait) {
+            margin-bottom: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+}

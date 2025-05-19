@@ -1,0 +1,22 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.Box {
+  position: relative;
+  &.padding-sm {
+    padding: 10px;    
+  }
+
+  &.padding-sm-side {
+    padding: 0 10px;    
+  }
+
+  &.margin-sm-side {
+    margin: 0 10px;    
+  }
+
+  &.darker-gray {
+    background-color: $darker-gray;
+    color: white;
+  }
+}

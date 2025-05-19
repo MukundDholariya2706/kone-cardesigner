@@ -1,0 +1,220 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.hideBackButton .left {
+  visibility: hidden;
+}  
+
+.NavBar {
+  .edit-design-button {
+    border: 2px solid $kone-blue;
+    padding: 0 1rem;
+    height: 2rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond($phone-big) {
+      padding: 0 3rem;
+      margin: 0;
+    }
+
+    @include respond($phone) {
+      padding: 0 2rem;
+    }
+  }
+
+  &.design-specification {
+    @media only screen and (max-width: $phone-big){
+      .left {
+        order: 1;
+      }
+      .center {
+        order: 3;        
+        flex-basis: 100%;
+      }
+      .right {
+        order: 2;
+      }
+    }
+  }
+}
+
+.DesignSpecification {
+  position: relative;
+  // margin: 1.25rem auto;
+  width: 100%;
+  height: auto;
+
+  // Used if there are missing components in KTOC design
+  .Notification {
+    bottom: 0;
+  }
+
+  a {
+    color: $light-blue;
+    text-decoration: none;
+  }
+
+  .topContainer {
+    width: 100%;
+    padding-bottom: 1rem;
+    background: transparent linear-gradient(180deg, #FCFCFC 0%, #E1E8E8 100%) 0% 0% no-repeat padding-box;
+
+    .page-header {
+      // display: flex;
+      position: relative;
+      margin-top: 0;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 5rem;
+
+    }
+  }
+
+  .bottomContainer {
+    width: 80%;
+    margin: 3.5rem auto 0;
+    padding-bottom: 5rem;
+
+    @media screen and (max-width: $tablet-landscape) {
+      width: 90%;
+      margin: 2rem auto 0;
+    }
+
+    @media screen and (max-width: $phone-big) {
+    }
+
+    .specification {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+
+      @media screen and (max-width: $phone-big) {
+        flex-direction: column;   
+      }
+      
+      .textContent{
+        margin-right: 1rem;
+        width: 100%;
+        .header {
+          font-size: 1.75rem;
+          margin: 0 0 2rem 0;
+        }
+
+        .DesignNameEditor {
+          margin-bottom: 1rem;
+        }
+
+        .model {
+          font-size: 2rem;
+          margin: 0 0 1rem 0;
+        }
+
+        .desc {
+          font-size: 1.1rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    .contact-container {
+      display: flex;
+      pointer-events: none;
+      color: $kone-blue;
+      position: fixed;
+      justify-content: center;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-transform: uppercase;
+      margin: 0 auto;
+      
+      .contact {
+        pointer-events: auto;
+        margin-left: 50rem;
+        cursor: pointer;
+        background-color: #58AB27;
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        font-size: 1.1rem;
+
+        @include respond($tablet-landscape) {
+          margin-left: 30rem;
+        }
+
+        @include respond($tablet-portrait) {
+          margin: 0;
+          width: 100%;
+          justify-content: center;
+        }
+
+        .svg-icon {
+          fill: white;
+          margin-left: 0;
+        }
+      }
+
+      svg {
+        margin: 0 1rem;
+        @media screen and (max-width: $tablet-landscape) {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+    .disableContact {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+
+  .unsupportedComponents {
+    &__container {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: start;
+      
+      .unsupportedComponent {
+        min-width: 30%;
+        text-align: center;
+        background-color: #ffaaaa; 
+        margin: .5rem;
+        padding: .5rem;
+      }
+    }
+  }
+}
+
+.rtl {
+  .DesignSpecification {
+    .topContainer {
+      .head {
+        .left {
+          .icon {
+            margin-left: unset;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+    .bottomContainer {
+      .specification {
+        .textContent {
+          margin-right: unset;
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    // .bottomContainer {
+      
+    // }
+  }
+}

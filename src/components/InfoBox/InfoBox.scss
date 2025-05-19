@@ -1,0 +1,55 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.InfoBox {
+  display: flex;
+  background-color: #e0f2fb;
+  padding: 15px;
+  align-items: center;
+  
+  .icon-container {
+    margin: 0 15px 0 0;
+    svg {
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &.smallIcon {
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .text-head {
+    font-size: 1.2rem;
+    margin: 1.25rem 0 0;
+  }
+
+  .text-body {
+    margin: 0 0;
+  }
+
+  &.h-align-center {
+    justify-content: center;
+  }
+
+  &.bottom-space-sm {
+    margin-bottom: 10px;
+  }
+
+  &.bottom-space-md {
+    margin-bottom: 20px;
+  }
+
+}
+
+.rtl {
+  .InfoBox {
+    .icon-container {
+      margin: 0 0 0 15px;
+    }
+  }
+}

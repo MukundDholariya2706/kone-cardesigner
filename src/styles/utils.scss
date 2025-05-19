@@ -1,0 +1,509 @@
+@import './Variables.scss';
+
+@mixin custom-scrollbar($class) {
+  .#{$class} {
+    scrollbar-width: thin;
+  }
+  
+  .#{$class}::-webkit-scrollbar {
+    width: 8px;
+    background-color: #fff;
+  }
+
+  .#{$class}::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    max-height:100px;
+  }
+
+  .#{$class}::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(59,66,69,0.2);
+    border: none;
+  }
+
+  .#{$class}::-webkit-scrollbar-thumb:hover {
+    background: rgba(59,66,69,0.5);
+  }
+  
+  .#{$class}::-webkit-scrollbar-thumb:active {
+    background: rgba(59,66,69,0.5);
+  }
+}
+
+@mixin respond($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin respond-larger-than($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin respond-between($min-width, $max-width) {
+  @media only screen and (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin respond-high-res() {
+  @media only screen and (-moz-min-device-pixel-ratio: 2), 
+  only screen and (-o-min-device-pixel-ratio: 2/1), 
+  only screen and (-webkit-min-device-pixel-ratio: 2), 
+  only screen and (min-device-pixel-ratio: 2) {
+    @content;
+  }   
+}
+
+/* 
+  Breakpoint utils for various edit panel states.
+*/
+
+@mixin respond-narrow-edit-panel-nav() {
+  @media (max-width: $main-nav-narrow-breakpoint), (max-height: $main-nav-low-breakpoint) {
+    @content;
+  }
+}
+
+@mixin respond-wide-edit-panel-nav() {
+  @media (min-width: $main-nav-narrow-breakpoint + 1px) and (min-height: $main-nav-low-breakpoint + 1px) {
+    @content;
+  }
+}
+
+@mixin respond-narrow-edit-panel() {
+  @media (max-width: $edit-panel-narrow-breakpoint) {
+    @content;
+  }
+}
+
+@mixin respond-wide-edit-panel() {
+  @media (min-width: $edit-panel-narrow-breakpoint + 1px) {
+    @content;
+  }
+}
+
+
+@mixin btn(
+  $color: $kone-blue,
+  $hover-color: white,
+  $disabled-color: $gray,
+  $bg: transparent,
+  $hover-bg: $kone-blue,
+  $disabled-bg: $light-gray,
+  $border: 2px solid $kone-blue,
+  $hover-border: 2px solid $kone-blue,
+  $disabled-border: 2px solid $gray,
+  $font-size: 1rem,
+  $padding: 0.5em 1.25em
+) {  
+  text-align: center;
+  display: inline-block;
+  color: $color;
+  background-color: $bg;
+  border: $border;
+  padding: $padding;
+  font-size: $font-size;
+  font-family: 'KoneFont','Microsoft YaHei','HeiTi SC', 'DroidSansFallback', sans-serif;
+  border-radius: $button-primary-border-radius;
+  text-decoration: none;
+  line-height: 1;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover:not([disabled]) {
+    color: $hover-color;
+    background-color: $hover-bg;
+    border: $hover-border;
+  }
+
+  &.disabled {
+    opacity: 1;
+    color: $disabled-color;
+    background-color: $disabled-bg;
+    border: $disabled-color;
+    pointer-events: none;
+  }
+
+}
+
+@mixin btn-md {
+  @include btn();
+  font-size: 18px;
+}
+
+@mixin btn-lg {
+  @include btn();
+  font-size: 22px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: $phone){
+    font-size: 18px;
+  }
+}
+
+@mixin btn-white {
+  color: white;
+  border-color: white; 
+  &:hover:not([disabled]) {
+    color: rgba(white, 0.7);
+    background-color: transparent;
+    border-color: rgba(white, 0.7);
+  }
+}
+
+@mixin btn-blue {
+  color: white;
+  border-color: $kone-blue; 
+  background-color: $kone-blue;
+  &:hover:not([disabled]) {
+    background-color: lighten($kone-blue, 3%);
+    border-color: lighten($kone-blue, 3%);
+  }
+}
+
+
+@mixin create-button($text-color: #FFFFFF, $bg-color: $kone-blue, $border-color: transparent) {
+  @include create-ripple();
+  @include disable-button();
+
+  display: inline-block;
+  color: $text-color;
+  background-color: $bg-color;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border-radius: $button-border-radius;
+  border: solid 1px $border-color;
+  text-decoration: none;
+  font-family: 'KoneFont','Microsoft YaHei','HeiTi SC', 'DroidSansFallback', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+
+  /*   
+  @include background-image(linear-gradient($btn-bg, darken($btn-bg, $darken-percent)));
+  border: 1px solid darken($btn-bg, $darken-percent);
+  
+  &:disabled, &.disabled {
+      @include background-image(linear-gradient(lighten($btn-bg, $lighten-percent), lighten($btn-bg, $lighten-percent / 2)));
+      color: lighten($btn-text-color, $lighten-percent);
+      border: 1px solid lighten($btn-bg, $lighten-percent);
+    &:active {
+      @include background-image(linear-gradient(lighten($btn-bg, $lighten-percent), lighten($btn-bg, $lighten-percent / 2)));
+      color: lighten($btn-text-color, $lighten-percent);
+      border: 1px solid lighten($btn-bg, $lighten-percent);
+    }
+  }
+  
+  &:active, &.active {
+    @include background-image(linear-gradient(darken($btn-bg, $darken-percent *2), darken($btn-bg, $darken-percent)));
+      color: darken($btn-text-color, $darken-percent);
+      border: 1px solid darken($btn-bg, $darken-percent);
+    } */
+}
+
+@mixin create-kone-button($text-color: #FFFFFF, $bg-color: $light-blue, $hover-color: $hover-blue, $border-color: transparent) {
+  @include create-ripple();
+  @include disable-button();
+
+  display: inline-block;
+  background-color: $bg-color;
+  border-radius: $button-primary-border-radius;
+  border: 2px solid $border-color;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  
+  min-width: 120px;
+  min-height: 35px;
+  line-height: 32px;
+  
+  font-family: 'KoneFont','Microsoft YaHei','HeiTi SC', 'DroidSansFallback', sans-serif;
+  font-size: 11.5pt;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-color;
+  
+  &:hover:not([disabled]) {
+      background-color: $hover-color;
+    }
+
+  &.disabled {
+    opacity: 1;
+    color: #BABDBF;
+    background-color: #E0E4E6;
+    pointer-events: none;
+  }
+
+  
+}
+
+
+@mixin create-primary-button {
+  @include create-ripple();
+  @include disable-button();
+
+  display: inline-block;
+  background-color: $light-blue;
+  border-radius: $button-primary-border-radius;
+  border: none;
+  box-sizing: border-box;
+  padding: 9px 8px;    
+  cursor: pointer;
+  
+  min-width: 120px;
+  min-height: 35px;
+  line-height: 35px;
+  
+  .Label {
+    font-family: 'KoneFont','Microsoft YaHei','HeiTi SC', 'DroidSansFallback', sans-serif;
+    font-size: 11.5pt;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+  }
+
+  &:hover:not([disabled]) {
+      background-color: $hover-blue;
+  }
+
+}
+
+@mixin create-secondary-button {
+  @include create-ripple();
+  @include disable-button();
+
+  display: inline-block;
+  background-color: white;
+  border-radius: $button-primary-border-radius;
+  border: 2px solid $light-blue;
+  box-sizing: border-box;
+  padding: 9px 8px;
+  cursor: pointer;
+  
+  min-width: 120px;
+  min-height: 35px;
+  line-height: 35px;
+  
+  .Label {
+    font-family: 'KoneFont','Microsoft YaHei','HeiTi SC', 'DroidSansFallback', sans-serif;
+    font-size: 11.5pt;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: $light-blue;
+  }
+
+}
+
+@mixin create-navbar-button {
+  @include create-button($kone-blue, transparent, $kone-blue);
+  @include create-ripple();
+  @include disable-button();
+  &:hover:not([disabled]) {
+    opacity: 0.8;
+  }
+}
+
+@mixin create-select() {
+
+  padding: 0 0.75rem;
+  border-radius: $button-border-radius;
+  border: solid 1px $border-color-darker;
+  appearance: none;
+  line-height: 33px;
+  font-size: 16px;
+  font-family: 'KoneFont','Microsoft YaHei','HeiTi SC', 'DroidSansFallback', sans-serif;
+  outline: none;
+
+  &:hover, &:active, &:focus {
+    border: solid 1px $light-blue;
+  }
+
+/*   option {
+    background-color: $light-blue;
+    color: white;
+  } */
+
+}
+
+/* Spacing utils */
+
+/* 1.25rem = 20px */
+$spacing: 1.25rem;
+
+.mr-1 {
+  margin-right: ($spacing * 0.25) !important;
+}
+.mr-2 {
+  margin-right: ($spacing * 0.5) !important;
+}
+.mr-3 {
+  margin-right: $spacing !important;
+}
+
+.pr-4 {
+  padding-right: ($spacing * 2) !important;
+}
+.pl-4 {
+  padding-left: ($spacing * 2) !important;
+}
+
+@mixin create-edit-panel-subheader() {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+  .headerLabel {
+      text-transform: uppercase;
+      color: $dark-gray;
+      line-height: 1.2;
+      font-size: 10.5pt;
+  }
+  .headerInfoIcon {
+      cursor: pointer;
+
+      //tooltip, currently will interfere with mouse events
+      //position: relative;
+/*       &::before {
+        opacity: 0;
+        background: #fff;
+        padding: 3px;
+        font-size: 14px;
+        width: 0px;
+        height: 0px;
+        content: attr(data-info);
+        position: absolute;
+        left: -241px; bottom: -77px;
+        border: 1px solid $border-color;
+        box-shadow: 0.5px 0.5px 2px $border-color;
+        z-index: 100;
+      } */
+  }  
+/*   .headerInfoIcon:hover::before {
+    opacity: 1;
+    width: 240px;
+    height: 80px;
+    transition: opacity 0.3s ease; 
+
+  } */
+}
+
+@mixin create-subheader-border {
+  border-top: 1px solid $border-color;
+}
+
+@mixin create-add-button() {
+  display: flex;
+  border: none;
+  background: transparent;
+  align-items: center;
+  
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  &:focus{
+    outline: none;
+  }
+
+  &__image {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: $light-blue;
+    display: inline-block;
+    position: relative;
+    font-size: 1.5rem;
+    color: white;
+    line-height: 23px;
+  }
+
+  &__text {
+    font-family: KoneFont,'Microsoft YaHei','HeiTi SC', 'DroidSansFallback', sans-serif;
+    margin: 0;
+    margin-left: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $light-blue;
+  }
+
+}
+
+@mixin create-ripple { 
+    
+  position: relative;
+  overflow: hidden;
+  margin :10px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, .5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+  }
+
+  &:focus:not(:active)::after {
+    animation: ripple 0.3s ease-out;
+  }
+
+
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(25, 25);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(40, 40);
+    }
+  }
+}
+
+@mixin disable-button {
+  &:disabled{
+    background: #E0E4E6;
+    color: #BABDBF;
+    border: 2px solid transparent;
+  }
+}
+
+@mixin reader-line {
+  position: relative;
+  &::after {
+    content: '';
+    box-sizing: border-box;
+    background: currentcolor;
+    height: 3px;
+    width: 70px;
+    position: absolute;
+    top: calc(100% + 20px);
+    left: calc(50% - (70px / 2));
+  }
+}
+
+@mixin center-absolute {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,46 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.GendocEditWarningDialog {
+  min-height: 250px;
+
+  .DialogFooter {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-portrait) {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    .btn-cancel {
+      @include create-navbar-button();
+      border: 2px solid $light-blue;
+      margin: 10px 0;
+      padding: 0.5rem 2rem;
+
+      @media (min-width: $tablet-portrait) {
+        margin: 0 10px;
+      }
+    }
+
+    .btn-confirm {
+      @include create-kone-button();
+      margin: 0;
+    }
+
+    .disabled {
+      background-color: $light-gray;
+      pointer-events: none;
+    }
+  }
+}
+
+// RTL styling
+.rtl {
+  .GendocEditWarningDialog {
+    .DialogFooter {
+
+    }
+  }
+}

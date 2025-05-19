@@ -1,0 +1,83 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+$stacked-mode-breakpoint: $phone-big;
+
+.OpenSurveyBanner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -3.75rem;
+  height: 3.75rem;
+  box-sizing: border-box;
+  background-color: #FCC400;
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  padding: 0 clamp(1rem, 3vw, 2.5rem);
+  transition: top 0.2s ease-in-out;
+
+  @include respond($stacked-mode-breakpoint) {
+    flex-direction: column;
+    padding: 2.5rem 1.75rem;
+    top: -11.5rem;
+    height: 11.5rem;
+    align-items: flex-start;
+    transition: top 0.25s ease-in-out; // slightly slower transition because the element is taller
+  }
+
+  &.positioned {
+    top: 0;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .banner-heading {
+    font-size: clamp(16px, 2vw, 20px);
+  }
+  .banner-description {
+    margin-left: clamp(1rem, 2vw, 2rem);
+    margin-right: 1rem;
+    font-size: clamp(14px, 1.75vw, 16px);
+
+    @include respond($stacked-mode-breakpoint) {
+      margin: 1rem 0;
+    }
+  }
+  .action-button {
+    @include btn-lg();
+    @include btn-blue();
+    font-size: clamp(14px, 1.5vw, 18px);
+    white-space: nowrap;
+    margin-left: auto;
+    margin-right: clamp(1.5rem, 3.2vw, 3rem);
+
+    @include respond($stacked-mode-breakpoint) {
+      margin: unset;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $phone){
+      font-size: 14px; // Overwrite mobile style from btn-lg
+    }
+  }
+  .close-button {
+    height: 1.35rem;
+    width: 1.35rem;
+    cursor: pointer;
+    .svg-icon {
+      height: 100%;
+      width: 100%;
+      fill: white;
+    }
+
+    @include respond($stacked-mode-breakpoint) {
+      position: absolute;
+      right: 1.5rem;
+      top: 0.75rem;
+    }
+  }
+}

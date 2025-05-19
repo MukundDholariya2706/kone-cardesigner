@@ -1,0 +1,40 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+@include custom-scrollbar(ScrollBox);
+
+.ScrollBox {
+  
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-grow: 1;
+  box-sizing: border-box;
+
+  & > * {
+    // Prevents UI shifting when scrollbar appears or disappears
+    min-width: $edit-panel-contents-width;
+    box-sizing: border-box;
+    
+    @include respond-narrow-edit-panel {
+      min-width: $edit-panel-narrow-contents-width;
+    }
+  }
+  
+  // The 3px on the left is required or select item :focus style outline is cut off
+  // in the Editor
+  margin: 0 -20px 0 -3px;
+  padding: 0 20px 0 3px;
+
+  &.padding-sm {
+    padding: 10px;    
+  }
+
+}
+
+.rtl {
+  .ScrollBox {
+    margin: 0 0 0 -20px;
+    padding: 0 0 0 20px;
+  }
+}

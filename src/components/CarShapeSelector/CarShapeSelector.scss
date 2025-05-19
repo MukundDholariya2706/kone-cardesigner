@@ -1,0 +1,189 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.CarShapeSelector {
+  width: 100%;
+  margin: auto;
+  padding: 10px 0 20px;
+  direction: ltr;
+
+  .CarShape {
+    max-width: 12rem;
+  }
+  .sidewalls {
+    display: flex;
+    justify-content: center;
+  }
+
+  .radioButtonsTop {
+    max-width: 218px;
+    display: flex;
+    margin: auto;
+
+    @media only screen and (max-width: $desktop-medium) {
+      max-width: 155px;
+    }
+    
+    .c1 {
+      margin-right: auto;
+      margin-left: 2px;
+
+      @media only screen and (max-width: $desktop-medium) {
+        margin-left: 1px;
+      }
+
+      .radioButton {
+        margin-right: auto;
+
+      }
+    }
+    
+    .cx {
+      margin-left: 38px;
+      margin-right: auto;
+      @media only screen and (max-width: $desktop-medium) {
+        margin-left: 16px;
+      }
+    }
+
+    .c2 {
+      margin-left: auto;
+    }
+  }
+
+  .radioButtonsLeft {
+    margin-top: 9px;
+      .radioButton {
+        margin-right: 1rem;
+      }
+  }
+  .radioButtonsRight {
+    margin-top: 9px;
+    .radioButton {
+      margin-left: 1rem;
+    }
+  }
+  .radioContainer {
+    height: 3rem;
+    margin: 4px 0;
+    display: flex;
+    flex-direction: row;
+    .radioLabel {
+      min-width: 10px;
+      font-size: 14px;
+      color: $darker-gray;
+      line-height: 48px;
+      padding: 0 8px;
+    }
+    &.disabled {
+      pointer-events: none;
+    }
+  }
+  .radioButton {
+      width: 20px;
+      height: 20px;
+      border-radius: 30px;
+      border: 2px solid $light-gray;
+      //background-color: $lighter-gray;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      &.disabled {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .innerRim {
+        margin: 5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        //background-color: $lighter-gray;
+      }
+    }
+    .selected {
+
+      .radioButton {
+        border: 2px solid $light-blue;
+        background-color: $light-blue;
+        
+        .innerRim {
+          background-color: white;
+        }
+      }
+    }
+
+    .selectedItemDisabled {
+
+      .radioButton {
+        border: 2px solid $gray;
+        background-color: white;
+        pointer-events: none;
+        .innerRim {
+          background-color: $gray;
+        }
+      }
+    }
+
+  .car-shape-selector-labels {
+    position: relative;
+    margin: 19px 28px 0 28px;
+
+    .car-shape-selector-label {
+      display: inline-block;
+      width: 50%;
+      text-transform: uppercase;
+      color: $dark-gray;
+      font-size: 14px;
+
+    }
+
+    .car-shape-selector-label-right {
+      text-align: right;
+    }
+  }
+
+  &.theme-white {
+    .radioButton {
+      // border: 1px solid #0172B9;
+      background-color: white;
+      .innerRim {
+        background-color: white;
+      }
+    }
+
+    .selected {
+      .radioButton {
+        border: 2px solid $light-blue;
+        background-color: $light-blue;
+        // background-color: white;
+  
+        .innerRim {
+          // background-color: $light-blue;
+        }
+      }
+    }
+
+    .selectedItemDisabled {
+      .radioButton {
+        border: 2px solid $gray;
+        // background-color: red;
+
+        .innerRim {
+          background-color: $gray;
+        }
+      }
+    }
+  }
+}
+
+.rtl {
+  .CarShapeSelector {
+    .car-shape-selector-label {
+      direction: rtl;
+      &.car-shape-selector-label-left {
+        text-align: left;      
+      }
+    }
+  }
+}

@@ -1,0 +1,257 @@
+@import "../../styles/Variables";
+
+.RadioButtonGroup {
+  padding: 10px 0;
+
+  &.direction-row {
+    display: flex;      
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &.items-per-row-1 {
+      .radioItem {
+        width: 100%;
+      }
+    }
+  
+    &.items-per-row-2 {
+      .radioItem {
+        width: 50%;
+      }
+    }  
+
+  }  
+
+
+  .radioItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 10px;
+    cursor: pointer;
+    
+    &.disabled {
+      cursor: context-menu;
+      pointer-events: none;
+      opacity: 0.4;      
+    }
+    
+    .radioButton {
+      align-self: flex-start;
+      margin: 0.2rem 0 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      border: 1px solid $gray;
+      background-color: $lighter-gray;
+      .innerRim {
+        margin: 5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        // margin: 2px;
+        // width: 16px;
+        // height: 16px;
+        // border-radius: 8px;
+        background-color: $lighter-gray;
+      }
+    }
+
+    .radioLabel {
+      min-width: 90px;
+      padding-left: 20px;
+      font-size: 12pt;
+      color: $darker-gray;
+      align-self: baseline;
+      line-height: 25px;
+    }
+
+    .radioLabel p {
+      font-size: 10pt;
+    }
+
+    .centered {
+      align-self: center;
+    }
+  
+    .shapedeep {
+      width:50px;
+      height:80px;
+      border: $light-gray 1px solid;
+      border-radius: 5px;
+    }
+
+    .shapesquare {
+      width:50px;
+      height:50px;
+      border: $light-gray 1px solid;
+      border-radius: 5px;
+    }
+
+    .shapewide {
+      width:80px;
+      height:50px;
+      border: $light-gray 1px solid;
+      border-radius: 5px;
+    }
+
+    .shapedeep_au_14_20_24 {
+      width:50px;
+      height:80px;
+      border: $light-gray 1px solid;
+      border-radius: 5px;
+    }
+    .shapewide_au_14_16_24 {
+      width:80px;
+      height:50px;
+      border: $light-gray 1px solid;
+      border-radius: 5px;
+    }
+
+  }
+
+
+  .selected {
+
+    .radioButton {
+      border: 1px solid $light-blue;
+      // background-color: white;
+      background-color: $light-blue;
+      
+      .innerRim {
+        background-color: white;
+        // background-color: $light-blue;
+      }
+    }
+
+
+    .radioLabel {
+      color: $light-blue;
+    }
+
+    .shapedeep {
+      border: $light-blue 2px solid;
+    }
+
+    .shapesquare {
+      border: $light-blue 2px solid;
+    }
+
+    .shapewide {
+      border: $light-blue 2px solid;
+    }
+
+
+    .shapedeep_au_14_20_24 {
+      border: $light-blue 2px solid;
+    }
+
+    .shapewide_au_14_16_24 {
+      border: $light-blue 2px solid;
+    }
+
+  }
+
+  &.items-per-row-3 {    
+    display: flex;
+    flex-wrap: wrap;
+    .radioItem {
+      width: (100% / 3);
+      flex-shrink: 0;
+      flex-grow: 1;
+    }
+  }
+
+  // naming? ('_')
+  &.theme-white {
+    .radioItem {
+      
+      &.disabled {
+        
+      }
+      
+      .radioButton {
+        // border: 1px solid #0172B9;
+        background-color: white;
+        .innerRim {
+          background-color: white;
+        }
+      }
+  
+      .radioLabel {
+        color: $darker-gray;
+      }
+
+      .shapedeep {
+        border: $light-gray 1px solid;
+      }
+  
+      .shapesquare {
+        border: $light-gray 1px solid;
+      }
+  
+      .shapewide {
+        border: $light-gray 1px solid;
+      }
+  
+      .shapedeep_au_14_20_24 {
+        border: $light-gray 1px solid;
+      }
+      .shapewide_au_14_16_24 {
+        border: $light-gray 1px solid;
+      }
+  
+    }
+  
+  
+    .selected {
+      .radioButton {
+        border: 1px solid $light-blue;
+        // background-color: white;
+        background-color: $light-blue;
+        
+        .innerRim {
+          background-color: white;
+          // background-color: $light-blue;
+        }
+      }
+  
+      .radioLabel {
+        color: $light-blue;
+      }
+  
+      .shapedeep {
+        border: $light-blue 2px solid;
+      }
+  
+      .shapesquare {
+        border: $light-blue 2px solid;
+      }
+  
+      .shapewide {
+        border: $light-blue 2px solid;
+      }
+  
+  
+      .shapedeep_au_14_20_24 {
+        border: $light-blue 2px solid;
+      }
+  
+      .shapewide_au_14_16_24 {
+        border: $light-blue 2px solid;
+      }
+  
+    }
+  }
+}
+
+.rtl {
+  .RadioButtonGroup {
+    .radioItem {
+      .radioLabel {        
+        padding-left: unset;
+        padding-right: 20px;
+      }
+    }
+  }
+}

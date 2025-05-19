@@ -1,0 +1,55 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.SimpleEditorNavBar {
+  line-height: unset;
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include respond(1000px) { // around this point the buttons overlap
+    .center {
+      width: 100%;
+      
+      .TinyLoadingAnimation {
+        display: none;
+      }
+    }
+    .left, .right {
+      display: none;
+    }
+  }
+
+  .ToggleButtons {
+    height: 100%;
+    width: 24rem;
+
+    @include respond($tablet-portrait-extra) {
+      width: 20rem;
+    }
+
+    .toggle-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .LanguageSelect {
+    height: 50px;
+
+    &__label {
+      line-height: 50px;
+    }
+
+    &__list-container {
+      margin-top: 50px;
+    }
+  }
+
+  .right .LoginComponent {
+    margin-left: 2rem;
+  }
+}

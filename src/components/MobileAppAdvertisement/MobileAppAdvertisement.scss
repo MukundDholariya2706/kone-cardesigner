@@ -1,0 +1,162 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.MobileAppAdvertisement {
+
+  display: flex;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  flex-direction: row;
+  padding: 21px 30px 10px 30px;
+  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: $max-width-layout;
+  z-index: 2;
+
+  @media only screen and (max-width: $tablet-landscape){
+    flex-direction: column;
+  }
+
+  .left {    
+    flex: 10 1;
+    padding: 0 30px 0 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    @media only screen and (max-width: $tablet-landscape){
+      padding: 0 70px 0 30px;
+    }
+
+    .title {
+      font-size: 24px;
+      text-align: left;
+      line-height: 28px;
+      margin-bottom: 17px;
+    }
+  
+    .ingress {
+      text-align: left;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+  }
+
+  .right {
+    flex: 10 0;
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 40px;
+
+    @media only screen and (max-width: $tablet-landscape){
+      justify-content: center;
+      padding-right: 0px;
+      margin-top: 25px;
+    }  
+
+    .osContainer {
+      display: flex;
+      flex-direction: column;
+      margin-right: 40px;
+      align-items: center;
+
+      @media only screen and (max-width: $tablet-portrait){
+        flex-direction: column;
+      }
+
+      &:last-child {
+        @media only screen and (max-width: $tablet-landscape){
+          margin-right: 0px;
+        }  
+      }
+    
+      .qr-code {
+        height: 87px; 
+        width: 87px; 
+        margin-bottom: 10px;        
+      }
+
+      .img-container {
+        display: block;
+        border: none;
+        @media only screen and (max-width: $tablet-portrait){
+          margin-right: 0px;
+          margin-bottom: 20px;
+        }
+        .store-badge {
+        }
+      }
+    }
+
+  }
+
+  .close {
+    display: block;
+    position: absolute;
+    right: 18px;
+    top: 18px;
+  }
+
+}
+
+.rtl {
+  .MobileAppAdvertisement {
+    .left {    
+      .title {
+        text-align: right;
+      }
+    
+      .ingress {
+        text-align: right;
+      }  
+    }
+    .right {
+      justify-content: left;
+      padding-right: 0;
+      padding-left: 40px;
+      @media only screen and (max-width: $tablet-landscape){
+        justify-content: center;
+        padding-left: 0px;
+        margin-top: 25px;
+      }  
+  
+      
+      .osContainer {
+        margin-left: 40px;
+        margin-right: 0;
+
+        @media only screen and (max-width: $tablet-portrait){
+          flex-direction: column;
+        }
+  
+        &:last-child {
+          @media only screen and (max-width: $tablet-landscape){
+            margin-left: 0px;
+          }  
+        }
+
+        .img-container {
+          margin-left: 30px;
+          margin-right: 0;
+          @media only screen and (max-width: $tablet-portrait){
+            margin-left: 0px;
+          }
+  
+        }
+      }
+    }
+    .close {
+      left: 18px;
+      right: auto;
+      top: 18px;
+    }
+  
+  }
+  
+}

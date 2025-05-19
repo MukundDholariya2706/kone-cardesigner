@@ -1,0 +1,73 @@
+@import "../../../../styles/Variables";
+@import "../../../../styles/utils";
+
+.FinishItem {
+  display: flex;
+  align-items: center;
+  .thumbnail {
+    flex: 0 0 2.5rem;
+    position: relative;
+
+    @include respond-wide-edit-panel() {
+      flex: 0 0  3.25rem;
+    }
+  }
+
+  &.disabled {
+    .thumbnail {
+      opacity: 0.4;
+    }
+  }
+
+  .info {
+    font-size: 12px;
+    margin-left: 0.75rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #3B4245;
+    line-height: 1.1rem;
+    width: calc(100% - 3.5rem);
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    &.panel-info {
+      // flex-direction: row;
+      // align-items: center;
+      // max-height: 38px;
+    }
+    
+    .panel-finish {
+      flex: 1;
+      box-sizing: border-box;
+      margin: 0 .25rem;
+      align-items: center;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      
+      
+    }
+  }
+  .tile-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    height: 12px;
+    width: 12px;
+
+    @include respond-wide-edit-panel() {
+      height: 14px;
+      width: 14px;
+    }
+
+    .svg-icon {
+      height: 100%;
+    }
+  }
+  .sapId {}
+  .name {}
+}

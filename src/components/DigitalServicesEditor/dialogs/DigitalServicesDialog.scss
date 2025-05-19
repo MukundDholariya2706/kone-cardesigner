@@ -1,0 +1,191 @@
+@import "../../../styles/Variables";
+@import "../../../styles/utils";
+
+.DigitalServicesDialog {
+  .DialogBody {
+    min-height: (128px + 20px);
+    border-radius: 4px;
+
+    .video-container {
+      position: relative;
+      margin: -15px -30px;
+      width: calc(100% + 60px);
+      height: 0;
+      padding-top: 56.25%;
+      margin-bottom: 20px;
+      @media screen and (max-width: $phone-big) {
+        margin: -10px -15px;
+        width: calc(100% + 30px);
+      }
+      
+      .video-element {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    
+    .heading-image {
+      position: relative;
+      margin: -15px -30px;
+      width: calc(100% + 60px);
+      height: 0;
+      // padding-top: 56.72%;
+      padding-top: 63.1%;
+      margin-bottom: 20px;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media screen and (max-width: $phone-big) {
+        padding-top: 75%;
+        margin: -10px -15px;
+        width: calc(100% + 30px);
+        margin-bottom: 20px;
+      }
+      @media screen and (max-width: $phone-medium) {
+        padding-top: 90%;
+      }
+
+      @media screen and (max-width: $phone) {
+        padding-top: 100%;
+      }
+
+      @media screen and (max-width: $phone-small) {
+        padding-top: 130%;
+      }
+
+      .heading-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+
+        @media screen and (max-width: $phone-big) {
+          top: 15px;
+          right: 15px;
+        }
+        .close-icon {
+          width: 18px;
+          height: 18px;
+          svg {
+            color: white;
+          }
+        }
+      }
+
+      .heading-image-text-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100% - 60px);
+        height: calc(100% - 30px);
+        color: white;
+        margin: 15px 30px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media screen and (max-width: $phone-big) {
+          margin: 10px 15px;
+          width: calc(100% - 30px);
+          height:calc(100% - 20px);
+        }
+  
+        .info-desc {
+          @media screen and (max-width: $phone-big) {
+            font-size: 0.9rem;
+          }
+          @media screen and (max-width: $phone) {
+            font-size: 0.8rem;
+          }
+        }
+    
+
+      }
+
+    }
+
+    .info-heading {
+      font-size: 1.5em;
+      // font-family: $bodyFont;
+      // font-size: 1rem;
+      line-height: 1.4rem;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .info-sub-heading {
+      font-size: 1.2em;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      @media screen and (max-width: $phone-big) {
+        font-size: 1.1em;
+      }
+    }
+
+    .Grid.grid-20-80 {
+      flex-wrap: unset;
+      .GridItem {
+        width: unset;
+        @media screen and (max-width: $phone-big) {
+          text-align: center;
+        }  
+      }
+      .GridItem:first-child {
+        flex-basis: 20%;
+      }
+      .GridItem:last-child {
+        flex-basis: 80%;
+      }
+
+      @media screen and (max-width: $phone-big) {
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+    
+    .list-image {
+      height: 50px;
+    }
+    .list-label {
+      color: $dark-gray;
+      margin-top: 0px;
+      font-size: 1.2em;
+    }
+
+    .info-desc {
+      margin-bottom: 15px;
+      font-family: $bodyFont;
+      font-size: 1rem;
+      line-height: 1.4rem;
+
+    }
+    
+    .info-read-more {
+      font-family: $bodyFont;
+      font-size: 1rem;
+      line-height: 1.4rem;
+      display: inline-block;
+      margin-top: 15px;
+      padding-left: 20%;
+    }
+
+  }
+
+  .DialogFooter {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-portrait) {
+      flex-direction: row;
+      justify-content: flex-end;
+
+      .Button {
+        min-width: 128px;
+      }
+    }
+  }
+}

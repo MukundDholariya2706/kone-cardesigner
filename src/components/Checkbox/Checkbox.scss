@@ -1,0 +1,67 @@
+@import "../../styles/Variables";
+
+.Checkbox {
+  min-height: 2rem; // So the height stays consistent when checkbox is toggled
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  
+  &.disabled {
+    pointer-events: none;
+  }
+
+  .checkBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid $gray;
+    background-color: $lighter-gray;
+    svg {
+      width:18px;
+      height:18px;
+    }
+
+    &.disabled {
+      opacity: 0.6;
+    }
+  
+  }
+
+  .checkLabel {
+    min-width: 90px;
+    padding-left: 20px;
+    font-size: 10.5pt;
+    color: $darker-gray;
+    &.disabled {
+      opacity: 0.6;
+    }
+  }
+
+  &.theme-white {
+    .checkBox {
+      background-color: white;
+      border: 1px solid $kone-blue;
+    }
+  }
+}
+
+.Checkbox.selected {
+  .checkBox {
+    border: 1px solid $light-blue;
+    background-color: $light-blue;
+  }
+}
+
+.rtl {
+  .Checkbox {
+    
+    .checkLabel {
+      padding-left: unset;
+      padding-right: 20px;
+    }
+  }
+}

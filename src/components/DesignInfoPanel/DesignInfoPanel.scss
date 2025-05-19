@@ -1,0 +1,372 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+$horizontal-padding: 2rem;
+$inner-horizontal-padding: 1rem;
+
+.DesignInfoPanel {
+  flex: 1 0;
+  background-color: white;
+  display: flex;
+  position: relative;
+  padding: 0 $horizontal-padding;
+  flex-basis: $xl-width-main-nav + $xl-width-edit-panel;
+  box-sizing: border-box;
+
+  @include respond-narrow-edit-panel {
+    max-width: $l-width-main-nav + $l-width-edit-panel;
+  }
+
+  @include respond-narrow-edit-panel-nav {
+    max-width: $md-width-main-nav + $l-width-edit-panel;
+  }
+
+  @include respond($phone-big) {
+    max-width: unset;
+  }
+
+  .heading-container {
+    border-bottom: 1px solid #e0e4e6;
+    margin-right: -5px; // For some reason the border bottom does not go all the way to the right... adjusting for that
+
+    @include respond($phone-big) {
+      flex: 1 0 1.75rem;
+      max-height: 1.75rem;
+      h1 {
+        display: none;
+      }
+    }
+  }
+
+  .panel-content-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    &.with-button {
+      padding-bottom: 3.6rem; // offset Edit Design button 
+    }
+    
+    @include respond-narrow-edit-panel-nav {
+      width: $md-width-main-nav + $l-width-edit-panel;
+      position: relative;
+    }
+
+    @include respond($phone-big) {
+      width: 100%;
+    }
+  }
+
+  @include respond($tablet-portrait-extra) {
+    &.panel-closed { 
+      flex-basis: 0;
+      padding: 0;
+      .panel-content-container {
+        display: none;
+      }
+    }
+  }
+
+  @include respond($phone-big) {
+    max-height: 50%;
+
+    &.panel-closed {
+      max-height: 30px;
+      padding: 0;
+    }
+  }
+
+  h1 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .ScrollBox {
+    margin-right: -#{$horizontal-padding}; // offset padding
+  }
+
+  .section.section-toggle {
+    color: #0071B9;
+    cursor: pointer;
+    display: none;
+    margin-top: 0.25rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0.5rem 1.25rem 0;
+
+    @include respond($phone-big) {
+      display: flex;
+      border-bottom: 1px solid #E0E4E6;
+    }
+
+    &.toggle-open {
+      .svg-icon {
+        transform: scaleY(-1);
+      }
+    }
+  }
+
+  .section {
+    &:not(:first-of-type) {
+      border-top: 1px solid #E0E4E6;
+    }
+
+    padding: 1rem 0;
+    // transition: max-height .25s ease-in;
+    overflow: hidden;
+
+    @include respond($phone-big) {
+      &.tender-info-section {
+        max-height: 375px;
+        padding: 0;
+      }
+
+      &.design-info-section {
+        max-height: 2500px;
+      }
+
+      &.mobile-hidden {
+        padding: 0;
+        max-height: 0;
+        border: none;
+      }
+
+      .section-header {
+        display: none;
+      }
+    }
+  }
+
+  .section-header {
+    font-weight: 400;
+    font-size: 1.55rem;
+    margin: 0 0 1rem;
+  }
+  
+  .design-info-section {
+    // padding: 0 0 0 $inner-horizontal-padding; 
+ 
+    .section-header {
+      // margin-left: -1rem;
+    }
+  }
+
+  .tender-info-container {
+    background-color: #EEF0F1;
+    padding: 1.5rem $inner-horizontal-padding;
+    line-height: 1.35rem;
+    font-size: 1rem;
+    color: #313131;
+
+
+    @include respond($tablet-portrait-extra) {
+      font-size: 0.875rem;
+      line-height: 1.3rem;
+    }
+
+    @include respond($phone-big) {
+      font-size: 0.75rem;
+      line-height: 1rem;
+      padding: 0.5rem $inner-horizontal-padding;
+    }
+    
+    p {
+      margin: 0;
+    }
+
+    .tender-info-numbers {
+      color: #11161A;
+      margin-top: 6px;
+    }
+
+    .contact-info {
+      color: $kone-blue;
+      margin-top: 6px;
+
+      .contact-info-block {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        margin-top: 4px;
+      }
+
+      .svg-icon {
+        margin-right: 0.45rem;
+        fill: $kone-blue;
+        height: 1.1rem;
+        width: 1.1rem;
+
+        @include respond($tablet-portrait-extra) {
+          height: 0.8rem;
+          width: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .half-width {
+    margin-top: 14px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 50%;
+  }
+
+  .tender-info-header {
+    margin: 14px 0 4px;
+    font-weight: 400;
+    font-size: inherit;
+    color: #717A80;
+    text-transform: uppercase;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    @include respond($tablet-portrait-extra) {
+      .button-icon {
+        width: 1.25rem;
+      }
+      .button-text {
+        display: none;
+      }
+    }
+
+    @include respond($phone-big) {
+      margin-top: 6px;
+      margin-bottom: 2px;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .action-buttons {
+    position: absolute;
+    display: flex;
+    justify-content: stretch;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, .9);
+    z-index: 2;
+
+    .Button {
+      flex-grow: 1;
+      text-transform: uppercase;
+      flex-basis: 0;
+      margin-right: 10px;
+      position: relative;
+      &:last-child {
+        margin-right: unset;
+      }
+
+      .svg-icon {
+        fill: $kone-blue;
+        height: 1.2rem;
+        width: 1.2rem;
+      }
+    }
+  }
+
+  .model {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0 0 1rem 0;
+  }
+
+  .desc {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .DesignInfo {
+    .block {
+      padding: 1.25rem 0;
+    }
+    
+    .item {
+      flex-direction: column;
+
+      .type {
+        margin-bottom: 0.25rem;
+        width: 100%;    
+      }
+    }
+
+    .wallFinishes {
+      width: 100%;
+    }
+  }
+
+  .open-close-toggle {
+    position: absolute;
+    display: none;
+    z-index: 100;
+
+    @include respond($tablet-portrait-extra) {
+      display: block;
+      top: 70px;
+      right: 0;
+      
+      .button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 170px;
+        width: 36px;
+        background-color: $kone-blue;
+        color: white;
+        border-radius: 0px 4px 4px 0px;
+        cursor: pointer;
+
+        .svg-icon {
+          width: 1.5rem;
+          height: 1.5rem;
+          fill: white;
+        }
+      }
+    }
+
+    @include respond($phone-big) {
+      // display: block;
+      padding: 14px 0;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      .button {
+        display: none;
+      }
+    }
+    
+    .open-close-toggle-bg {
+      display: none;
+      position: absolute;
+      height: 6px;
+      width: 75px;
+      border-radius: 4px;
+      background-color: $kone-blue;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+
+      @include respond($phone-big) {
+        display: block;
+      }
+    }
+  }
+}

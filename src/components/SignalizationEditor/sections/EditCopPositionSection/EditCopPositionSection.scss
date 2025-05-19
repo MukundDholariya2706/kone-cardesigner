@@ -1,0 +1,32 @@
+@import "../../../../styles/Variables";
+
+.EditCopPositionSection {
+  // COP 1, COP 2 switch
+  .switch {
+    position: relative;
+    height: 1.5rem;
+    width: 3rem;
+    background-color: white;
+    border: 1px solid $kone-blue;
+    border-radius: 50px;
+
+    .switchButton {
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: $light-blue;
+      border-radius: 50px;
+      transition: all 0.2s linear;
+    }
+
+    .copTwo {
+      right: 0;
+    }
+  }
+
+  .CarShape {
+    .backwall {
+      background-color: $gray;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.SwitchButton {
+    display: flex;
+    position: relative;
+    padding: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+
+    &-label {
+        text-transform: uppercase;
+    }
+
+    &.lowercase {
+        .SwitchButton-label {
+            text-transform: unset;
+        }
+    }
+
+    .switch {
+        height: 1.5rem;
+        position: relative;
+        width: 3rem;
+        background-color: $gray;
+        border: 1px solid $gray;
+        border-radius: 50px;
+        cursor: pointer;
+
+        .switchButton {
+            position: absolute;
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 2px solid $gray;
+            background-color: white;
+            border-radius: 50px;
+            box-sizing: border-box;
+        }
+
+        .on {
+            right: 0;
+            border: 2px solid $light-blue;
+        }
+
+        &.disabled {
+            opacity: 0.4;
+            pointer-events: none;    
+        }
+    }
+
+    .on {
+        background-color: $light-blue; 
+    }
+
+}
+
+.rtl {
+    .SwitchButton {
+        .switch {
+            .on {
+                right: unset;
+                left: 0;
+            }
+        }
+    }
+}

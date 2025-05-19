@@ -1,0 +1,86 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.BufferRailLayout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+
+    .bufferRails {
+
+        border: 5px solid $gray;
+        border-radius: 10px;
+        width: 30%;
+        height: 7rem;
+
+        div {
+            margin-top: 4.7rem;
+        }
+
+        .bufferRail {
+            height: 0.4rem;
+            width: 90%;
+            background-color: $gray;
+            margin: 3px auto;
+        }
+
+        .selected {
+            background-color: $light-blue;
+        }
+    }
+    .selections {
+        margin-left: 20px;
+
+        .selection {
+
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+
+            .selection-icon {
+                flex-shrink: 0;
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 3px;
+                border: 1px solid $light-gray;
+                background-color: $lighter-gray;
+                margin-right: 10px;
+            }
+
+            .checked {
+                background-color: $light-blue;
+                border: 1px solid $light-blue;
+                position: relative;
+
+                svg {
+                    position: absolute;
+                    top: 0; bottom: 2px; right: 0; left: 0;
+                    width: 22px;
+                    height: 22px;
+                    margin:auto;
+                }
+            }
+        }
+    }
+
+
+    .disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+.rtl {
+    .BufferRailLayout {
+        .selections {
+            margin-left: unset;
+            margin-right: 20px;
+
+            .selection-icon {
+                margin-right: unset;
+                margin-left: 10px;
+            }
+        }
+    }
+}

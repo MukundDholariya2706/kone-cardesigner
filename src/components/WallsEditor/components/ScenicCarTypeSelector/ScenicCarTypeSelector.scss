@@ -1,0 +1,42 @@
+@import "../../../../styles/Variables";
+@import "../../../../styles/utils";
+
+.ScenicCarTypeSelector {
+  .HeadingComponent {
+    padding-top: 1rem;
+  }
+
+  .scenic-type-accordion {
+    border: none;
+    padding-top: 0;
+
+    .inner-heading {
+      margin-top: 1.5rem;
+    }
+
+    .AccordionItem.open .SectionAccordion__body {
+      max-height: 50rem; // for smoother transition
+    }
+
+    .SectionAccordion__body {
+      & > :first-child {
+        // Cheating padding for the accordion body.
+        // If directly in the body itself it also shows when the accordion is closed
+        padding-top: 1.5rem;
+      }
+    }
+  }
+
+  .displayed-value {
+    display: flex;
+    align-items: center;
+    padding: 0 0.75rem;
+    color: $base-text-color;
+
+    &__thumbnail {
+      width: 32px;
+      height: auto;
+      margin-right: 1rem;
+    }
+  }
+}

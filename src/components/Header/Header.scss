@@ -1,0 +1,247 @@
+@import "../../styles/Variables";
+
+.Header {
+  background: $header-bg;
+  height: $header-height;
+  padding: 0 2.5rem;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+
+  @media only screen and (max-width: $tablet-portrait){
+    padding: 0 1rem;
+  }
+
+  @media only screen and (max-width: $phone-big){
+    height: $header-height-mobile;
+  }
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: $max-width-layout;
+    z-index: 3;
+  }
+
+  &.border {
+    height: $header-height + 1px;
+    border-bottom: 1px solid $gray;
+  }
+
+  h1 {
+    margin: 0;
+    line-height: $header-height;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.375rem;
+  }
+
+  .logo {
+    height: 38px;
+  }
+
+  .left {
+    flex-basis: 100%;
+  }
+
+  .center {
+
+  }
+
+  .LoginComponent {
+    padding: 0 0.1rem;
+  }
+
+  .SignOutComponent__button.theme-circle {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
+  .right {
+    flex-basis: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .contact {
+      font-size: inherit;
+    }
+
+    // Margin for all the immediate child elements
+    & > * {
+      &:not(:last-child) {
+        margin-right: 2rem;
+
+        @media screen and (max-width: $tablet-portrait) {
+          margin-right: .75rem;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: $tablet-portrait-small) {
+    font-size: 0.8rem;
+    .logo {
+      height: 30px;
+
+      .svg-kone-logo-dims {
+        height: 100%;
+      }
+    }
+
+    .LanguageSelect {
+      // margin-left: auto;
+      margin-right: 0;
+    }
+
+    .LoginComponent {
+      padding: 0 0.1rem;
+    }
+
+    .SignOutComponent__button.theme-circle {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+  
+
+  @media only screen and (max-width: $phone-big) {
+    padding: 0;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+
+    .left {
+      flex: 0 0 100%;
+      text-align: center;
+      border: 1px solid $gray;
+      margin: 0;
+      line-height: 50px;
+    }
+
+    .logo {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      padding: 0;
+
+      height: 25px;
+
+      .svg-kone-logo-dims {
+        height: 100%;
+      }
+
+      transform: translate(-50%, -100%);
+    }
+
+    .right {
+      font-size: inherit;
+      justify-content: flex-start;
+      padding: 0 1rem;
+
+      .LoginComponent {
+        padding: 0 0.5rem;
+      }
+
+      .LanguageSelect {
+        margin-left: auto;
+        margin-right: 0.35rem;
+      }
+
+      .SignOutComponent__button.theme-circle {
+        width: 1.75rem;
+        height: 1.75rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $phone-small) { 
+    .right {
+      font-size: inherit;
+      justify-content: flex-start;
+      padding: 0 0.5rem;
+
+      .contact {
+        font-size: inherit;
+      }
+
+      .LanguageSelect {
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .SignOutComponent__button.theme-circle {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+
+  a.backToLanding {
+    color:black;
+  }
+
+  .contact {
+    text-decoration: none;  
+    color: $light-blue;
+    display: flex;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    line-height: 1em;
+    @media screen and (max-width: $tablet-portrait) {
+      max-width: 115px;
+    }
+    // line-height: $header-height;
+
+    span {
+      padding-right: 0.5rem;
+    }
+
+    svg {
+      align-self: center;
+    }
+  }
+
+  .flag {
+    display: inline-block;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    top: ($header-height - 32px) / 2;
+    border-radius: 999px;    
+    background: #eee;
+    background-image: url('../../assets/icons/flag-us.png') ;
+    background-position: center center
+  }
+}
+
+.rtl {
+  .Header {
+    .contact{ 
+      span {
+        padding: 0 0 0 0.5rem;
+      }
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    .right {
+      text-align: left;
+  
+      // Margin for all the immediate child elements
+      & > * {
+        &:not(:last-child) {
+          margin-left: 2rem;
+          margin-right: 0;
+  
+          @media screen and (max-width: $tablet-portrait) {
+            margin-left: .75rem;
+          }
+        }
+      }
+    }
+  }
+}

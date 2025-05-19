@@ -1,0 +1,49 @@
+.LightTile {
+  cursor: pointer;
+
+  padding: 0 5px;
+
+  opacity: .5;
+
+  &.selected {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .underline {
+    opacity: 0;
+    margin: 0 auto;
+    background: white;
+    width: 17px;
+    height: 4px;
+    border-radius: 4px;
+    margin-top: 2px;
+  }
+
+  &.selected {
+    .underline {
+      opacity: 1;
+    }
+  }
+
+  &.yellow {
+    .underline {
+      background-color: #FFC627;
+    }
+  }
+  &.blue {
+    .underline {
+      background-color: #ABFEFE;
+    }
+  }
+  &.copper {
+    .underline {
+      background-color: #c69e6e;
+    }
+  }
+
+}
+

@@ -1,0 +1,27 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.SmileySelector {
+  display: flex;
+
+
+  .SmileyOption + .SmileyOption {
+    margin-left: 0.8rem;
+  }
+}
+
+.SmileyOption {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+
+  .svg-icon {
+    width: 100%;
+    height: 100%;
+    fill: $kone-blue;
+  }
+
+  &.not-selected {
+    opacity: 0.4;
+  }
+}

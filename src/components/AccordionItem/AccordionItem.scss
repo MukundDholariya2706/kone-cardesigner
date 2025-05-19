@@ -1,0 +1,74 @@
+@import "../../styles/Variables";
+
+$icon-size: 19px;
+
+.AccordionItem {
+  .AccordionHead {
+    position: relative;
+    box-sizing: border-box;
+    padding-right: 1.5rem;
+    cursor: pointer;
+
+    &.disabled {
+      cursor: default;
+    }
+
+    .AccordionHead-chevron {
+      position: absolute;
+      top: 50%;
+      right: $icon-size;
+      margin-top: (-$icon-size/2);
+      width: 0;
+      height: 0; 
+      align-items: center;
+      
+      svg {        
+        transition: transform 0.3s ease-out;
+        width: $icon-size;
+        height: $icon-size; 
+      }
+    }
+
+    &.padding-sm {
+      padding: 10px 0;
+    }
+  
+    &.padding-md {
+      padding: 20px 0;
+    }  
+  }
+  .AccordionBody {
+    box-sizing: border-box;
+    max-height: 0;
+    border-top: 1px solid transparent;
+    transition: max-height .5s ease-out, border-top 0s .5s;
+    overflow: hidden;
+  }
+  
+  &.open {
+    .AccordionHead {
+      .AccordionHead-chevron {
+        svg {
+          transform: rotate(180deg);
+          transition: transform 0.3s ease-in;
+        }
+      }
+    }
+    .AccordionBody {
+      max-height: 500rem;
+      border-top: 1px solid $gray;
+      transition: max-height .5s ease-in, border-top 0s;
+    }
+  }
+}
+
+.rtl {
+  .AccordionItem {
+    .AccordionHead {
+      .AccordionHead-chevron{
+        right: unset;
+        left: $icon-size;
+      }
+    }
+  }
+}

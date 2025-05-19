@@ -1,0 +1,254 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.ShareDialog {
+
+    textarea {
+        height: 5.75rem;
+    }
+
+    .getLink {
+        margin: 16px 0; //   2rem 1.25rem 0; 
+    }
+
+    .FormInput {
+        &:not(:last-of-type) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .shareLink {
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+
+        @media screen and (max-width: $phone-big) {
+          flex-direction: column;
+          padding-left: 1.5rem;
+        }
+
+        .shareIcon {
+            width: 4.5rem;
+      
+            .svg-icon	{
+              fill: $kone-blue;
+              height: 2.7rem;
+              width: 2.7rem;
+            }
+          }
+
+        .link {
+            margin: 0.75rem 1.5rem;
+            margin-left: 1rem;
+            font-size: 0.9rem;
+
+            @media screen and (max-width: $phone-big) {
+                margin-left: 1.5rem;
+                margin-right: 0;        
+              }
+
+            .link-placeholder {
+                color: black;
+                display: inline;
+            }
+
+            a {
+                color: black;
+            }
+
+            p {
+                color: $light-gray;
+                margin-top: 0.5rem;
+            }
+        }
+
+        .copy {
+            margin: 0.75rem 1.5rem;
+            flex-shrink: 0;
+            color: $light-blue;
+            cursor: pointer;
+
+            @media screen and (max-width: $phone-big) {
+                margin-top: 0;    
+                margin-bottom: 2rem;     
+              }
+            
+            p {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+
+        .send {
+            @include create-kone-button();
+            width: 20rem;
+
+            @media screen and (max-width: $phone-big) {
+                padding: 0;          
+                width: 100%;
+            }
+        }
+        .close {
+            @include create-navbar-button();
+            position: absolute;
+            border: 2px solid $kone-blue;
+        }
+        .disabled {
+            background-color: $light-gray;
+            pointer-events: none;
+        }
+    }
+
+    /* 
+    @include custom-scrollbar(firstView);
+    background-color: white;
+    border: 1px solid $gray;
+    filter: blur(0px);
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    left: 0;
+    top: 5rem;
+    margin: auto;
+    width: 42rem;
+    height: 80vh;
+    max-height: 36rem;
+
+    &.sent { // For the second dialog view.
+        height: auto;
+    }
+
+    .firstView {
+        overflow: auto;
+        height: calc(100% - 10rem);
+    }
+
+    // dialog...
+    .head {
+        display: flex;
+        position: relative;
+        border-bottom: 1px solid $border-color;
+        p {
+            font-size: 18px;
+            margin: 1.25rem;
+        }
+        .x {
+            width: 18px;
+            height: 18px;
+            margin: 1.25rem 1.25rem 0 auto;
+            color: $kone-blue;
+            cursor: pointer;
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    .form {
+        margin: 2rem 1.25rem 0;
+        .location {
+            display: flex;
+        }
+        .invalidLocation {
+            border: 1px solid #C71F25;
+        }
+        .required {
+            color: #C71F25;
+            padding-left: 0.3rem;
+        }
+    }
+
+    textarea {
+        height: 5.75rem;
+    }
+
+    .getLink {
+        margin: 2rem 1.25rem 0; 
+    }
+
+    .shareLink {
+        margin: 1.25rem 1.25rem 0;
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: 1px solid $border-color;
+        .shareIcon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border: 1px solid $light-blue;
+            border-radius: 50px;
+            position: relative;
+            img {
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                top:0; bottom:0; right: 0; left: 0;
+                margin: auto;
+            }
+        }
+        .link {
+            margin: 0.75rem 0 0 1.5rem;
+            width: 25rem;
+            font-size: 0.9rem;
+
+            .link-placeholder {
+                color: black;
+                display: inline;
+            }
+
+            a {
+                color: black;
+            }
+            p {
+                color: $light-gray;
+                margin-top: 0.5rem;
+            }
+        }
+        .copy {
+            margin-left: auto;
+            color: $light-blue;
+            cursor: pointer;
+            p{
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    .recaptcha {
+        margin-top: 1rem;
+
+        div {
+        margin: auto;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+
+        .send {
+            @include create-kone-button();
+            padding: 0 25%;
+        }
+        .close {
+            @include create-navbar-button();
+            position: absolute;
+            border: 2px solid $kone-blue;
+        }
+        .disabled {
+            background-color: $light-gray;
+            pointer-events: none;
+        }
+    }
+
+    .textContent {
+        color: gray;
+    } 
+    */
+
+}

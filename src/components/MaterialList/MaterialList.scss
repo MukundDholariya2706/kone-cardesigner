@@ -1,0 +1,320 @@
+@import "../../styles/Variables";
+
+.MaterialList {
+  border-bottom: 1px solid $gray;
+
+  &.no-border {
+    border-bottom: none;
+  }
+
+  .accordion-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        max-width: 30rem;
+        overflow: hidden;
+        
+        .accordion-item {
+          .accordion-item-line {
+            display: block;
+            background-color: #fff;
+            z-index: 2;
+            position: relative;
+            cursor: pointer;
+            margin-bottom: 10px;
+
+            .accordion-item-title{
+              display: flex;
+              flex-direction: row;
+              padding-left: .75rem;
+              justify-content: space-between;
+              align-items: center;
+              // color: black;
+
+              &.large {
+                border-bottom: 1px solid $gray;
+                margin-bottom: 14px;
+              }
+
+              .materialItem {
+                display: flex;
+                flex-direction: row;
+                
+                .materialIcon {
+                  margin: 9px 9px 9px 0;
+                  border-radius: 100%;
+                  display: flex;
+                  flex: 0 0 40px;
+                  justify-content: center;
+                  overflow: hidden;
+                  position: relative;
+                  width: 40px;
+                  height:40px;
+                  img {
+                    height: 100%;
+                  }
+                }
+
+                .materialIconSquare {
+                  margin: 0 10px 0 0;
+                  display: flex;
+                  flex: 1 0 auto;
+                  width: 35px;
+                  height: 40px;
+
+                  img {
+                    height: 100%;
+                  }
+
+                  &.large {
+                    width: 55px;
+                    height: 55px;
+                  }
+                }
+
+                .materialLabel {
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  display: flex;
+                  align-items: center;
+                  line-height: 17px;
+                  font-size: 14px;
+                  color: $base-text-color;
+                }
+              }
+
+              .accordion-item-icon {
+                display: flex;
+                width: 19px;
+                height: 19px; 
+                transition: transform 0.3s ease-in-out;
+                align-items: center;
+                
+                svg {
+                  width: 19px;
+                  height: 19px; 
+                }
+              }
+
+            }
+
+  
+            }
+            .accordion-item-inner{
+              max-height: 0;
+              overflow: hidden;
+              text-transform: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+              transition-duration: 0.5s;
+              transition-property: max-height;
+              z-index: 1;
+              position: relative;
+              
+              .accordion-item-content{
+                display: flex;
+                flex-direction: column;
+                opacity: 0;
+                transform: translateY(-1rem);
+                transition-timing-function: linear, ease;
+                transition-duration: 0.1s;
+                transition-property: opacity, transform;
+                transition-delay: 0.5s;
+                border-top: 1px solid $gray;
+
+                .materialListItem {
+                  
+                  margin: 5px 0;
+                  
+                  display: flex;
+                  flex-direction: row;
+                  
+                  justify-content: space-between;
+                  cursor: pointer;
+
+                  &:first-child {
+                    margin-top: 15px;
+                  }
+
+                  &:last-child {
+                    margin-bottom: 15px;
+                  }
+                  
+                  .border {
+                    width: 100%;
+                    border-bottom: 1px solid $border-color;
+                  }
+
+                  .border:first-child {
+                    border-top: 1px solid $border-color;
+                  }
+
+                  &--selected {
+                    outline: 2px solid $kone-blue;
+                  }
+
+                  .materialItem {
+                    display: flex;
+                    flex-direction: row;
+
+
+                    .materialIcon {
+                      margin: 9px 11px 9px 2px;
+                      border-radius: 100%;
+                      display: flex;
+                      justify-content: center;
+                      overflow: hidden;
+                      position: relative;
+                      flex: 0 0 36px;
+                      width: 36px;
+                      height:36px;
+                      img {
+                        height: 100%;
+                      }
+                    }
+
+                    .materialIconSquare {
+                      margin: 0 10px 0 0;
+                      display: flex;
+                      width: 35px;
+                      height: auto;
+                      flex: 1 0 auto;
+
+                      img {
+                        height: 100%;
+                      }
+                    }
+
+                    .selectedIcon{
+                      flex: 0 0 32px;
+                      width: 32px;
+                      height:32px;
+                      border: 2px solid $light-blue;
+                    }
+
+                    .materialLabel {
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      display: flex;
+                      align-items: center;
+                      line-height: 17px;
+                      font-size: 14px;
+                    }
+
+                    .materialLabelDescription {
+                      line-height: 16px;
+                      margin: 9px 0 9px 5px;
+                      p {
+                        font-size: 10pt;
+                        margin: 5px 5px 5px 0;
+                      }
+                      .description {
+                        font-size: 9.5pt;
+                      }
+                    }                
+                  }
+
+                  .itemChecked {
+                    display: block;
+                    line-height: 54px;
+                  }
+
+                  .itemNotChecked {
+                    display: none;
+                  }
+
+                  .premium {
+                    //display: block;
+                    //line-height: 54px;
+                    color: $light-gray;
+                    line-height: 54px;
+                    font-size: 9pt;
+                    text-transform: uppercase;
+                  }
+
+                  .materialSeparator {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding-top: 13px;
+                    text-transform: uppercase;
+                    color: $darker-gray;
+                    height:24px;
+                    width:100%;
+                    cursor: default;
+                    .materialSeparatorLabel {
+                      line-height: 12px;
+                      font-size: 9pt;
+                    }
+                    .materialSeparatorPremium {
+                      color: $light-gray;
+                      line-height: 12px;
+                      font-size: 9pt;
+                    }    
+                  }
+
+                }
+              }            
+            }
+            
+        }
+        .accordion-item-opened { 
+          .accordion-item-line{
+            .accordion-item-icon{
+              transform: rotate(180deg);
+            }
+          }       
+
+          .accordion-item-inner{
+            max-height: 100rem;
+            transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+            transition-duration: 0.5s;
+            transition-property: max-height;
+            .accordion-item-content{
+              opacity: 1;
+              transform: translateY(0);
+              transition-delay: 0.2s;
+              transition-timing-function: ease-in-out;
+              transition-duration: 0.2s;
+              transition-property: opacity, transform;
+            }
+          }
+        }
+        .disabled {
+          div {
+            opacity: 0.7 !important;
+            cursor: default !important;
+          }
+
+        }
+    }
+}
+
+.rtl {
+  .MaterialList {    
+    .accordion-list {
+      .accordion-item {
+        .accordion-item-line {
+          .accordion-item-title {
+            .materialItem {
+              .materialIconSquare {
+                margin: 0 0 0 10px;
+              }
+            }
+          }
+        }
+
+        .accordion-item-inner {
+          .accordion-item-content {
+            .materialListItem {
+              .materialItem {
+                .materialIconSquare {
+                  margin: 0 0 0 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

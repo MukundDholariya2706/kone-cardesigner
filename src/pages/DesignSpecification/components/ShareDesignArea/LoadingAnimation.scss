@@ -1,0 +1,41 @@
+.LoadingAnimation {
+  svg { /*svg sizes, layouts*/
+    height: 40px; 
+    width: 80px;
+    display: inline-block;
+    vertical-align: middle; fill: #0071B9; }
+  #logo {transform: translate(18px,8px);}
+  .rect {fill: #0071B9; height:22px;}
+  .txt {fill: #fff; opacity: 0; }
+  #k {transform: translate(0px,0);}
+  #o {transform: translate(2px,0);}
+  #n {transform: translate(4px,0);}
+  #e {transform: translate(6px,0);}
+  #k_rect {
+    opacity: 0;
+    animation: drop1 2s cubic-bezier(0,.64,.69,1) 0s infinite normal;}
+  #o_rect {
+    opacity: 0;
+    animation: rise1 2s cubic-bezier(0,.64,.69,1) 0.5s infinite normal;}
+  #n_rect {
+    opacity: 0;
+    animation: drop1 2s cubic-bezier(0,.64,.69,1) 1s infinite normal;}
+  #e_rect {
+    opacity: 0;
+    animation: rise1 2s cubic-bezier(0,.64,.69,1) 1.5s infinite normal;}
+  
+  @keyframes drop1 {
+    0%   {opacity: 0;transform: translateY(-36px);}
+    20%   {opacity: 0;transform: translateY(-36px);-webkit-filter: url('#blur1'); filter: url('#blur1');}
+    54%  {transform: translateY(0);-webkit-filter: url('#blur2'); filter: url('#blur2');}
+    68% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+  @keyframes rise1 {
+    0%   {opacity: 0;transform: translateY(36px);}
+    20%  {opacity: 0;transform: translateY(36px);-webkit-filter: url('#blur1'); filter: url('#blur1');}
+    54%  {transform: translateY(0);-webkit-filter: url('#blur2'); filter: url('#blur2');}
+    68% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+}

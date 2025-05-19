@@ -1,0 +1,115 @@
+@import '../../styles/Variables.scss';
+@import '../../styles/utils.scss';
+
+.CustomFinishEditor {
+  position: relative;
+  height: 100%;
+  
+  .space-between {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .preview {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  button {
+    @include btn();
+  }
+  
+  .FileInput {
+    margin-top: 20px;
+  }
+  
+  .offset-inputs, .repeat-inputs {
+    display: flex;
+    justify-content: space-between;
+    .NumericInput, .spacer  {
+      flex-grow: 1;
+      flex-basis: 0;
+      max-width: (100% / 3); 
+    }
+  }
+
+  .sliders {
+    display: block;
+
+    .Slider {
+      &:not(:last-of-type) {
+        margin-bottom: .75rem;
+      }
+    }
+  }
+
+  .action-buttons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, .9);
+    z-index: 2;
+    .Button {
+      min-width: 128px;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: unset
+      }
+    }
+  }
+
+  .image-view-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .crop-container {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    background-color: black;
+  }
+
+  .material-radio-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    .radioItem {
+      width: 50%;
+    }
+  }
+
+  .slider-container {
+    position: relative;
+    background-color: $darker-gray;
+    padding: 5px 20px;
+    color: white;
+    
+    .Slider {
+      margin-left: auto;
+      width: 150px;      
+    }
+  }
+}
+
+.rtl {
+  .CustomFinishEditor {
+    .action-buttons {
+      text-align: left;
+      .Button {
+        margin-right: unset;
+        margin-left: 10px;
+        &:last-child {
+          margin-left: unset;
+        }
+      }
+    }
+  }
+}

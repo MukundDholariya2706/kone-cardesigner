@@ -1,0 +1,37 @@
+@import "../../styles/Variables";
+
+.AirPurifier {
+  height: 100%;
+    
+  
+  .info-heading {
+    font-size: 1.2em;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+  .info-content {
+    .text {
+      margin-bottom: 20px;
+    }
+    .read-more {
+      font-size: 0.9rem;
+      color: $kone-blue;
+      cursor: pointer;
+    }
+
+  }
+
+  .sticker {
+    padding-top: 20px;
+    text-align: center;
+    .image {
+
+    }
+
+    .label {
+      color: $dark-gray;
+      font-size: 0.7em;
+    }
+  }
+
+}

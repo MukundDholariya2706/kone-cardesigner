@@ -1,0 +1,23 @@
+@import "../../styles/Variables";
+
+.ThumbnailItem {
+  position: relative;
+  width: 100%;
+  background-color: $gray;
+  box-sizing: border-box;
+  padding: 1px;
+
+  .caption {
+    margin: 0 -1px -1px -1px;
+    background-color: $darker-gray;
+    padding: 10px;
+    color: white;
+  }
+
+  .image {
+    width: 100%;
+    background-color: #ffffff;
+    height: auto;
+
+  }
+}

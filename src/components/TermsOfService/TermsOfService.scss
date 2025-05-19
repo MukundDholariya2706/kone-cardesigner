@@ -1,0 +1,29 @@
+@import "../../styles/Variables";
+
+.TermsOfServiceDialog {
+  .Container {
+    padding-bottom: 1rem;
+  }
+
+  .DialogFooter {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-portrait) {
+      flex-direction: row;
+      justify-content: flex-end;
+
+      .Button {
+        min-width: 128px;
+      }
+    }
+
+    .btn-cancel {
+      margin: 0 0 10px 0;
+
+      @media (min-width: $tablet-portrait) {
+        margin: 0 10px;
+      }
+    }
+  }
+}

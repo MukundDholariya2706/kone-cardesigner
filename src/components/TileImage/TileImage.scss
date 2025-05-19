@@ -1,0 +1,54 @@
+.TileImage {
+  position: relative;
+  box-sizing: border-box; 
+
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Sprite styles for mixed floor materials */
+  .Sprite:not(:first-child) {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  .Sprite:nth-child(1) {   
+    &.MIXED-WALL {
+      /* values are from-top, from-right, from-bottom, from-left */
+      clip-path: inset(0 69% 0 0);
+    }
+  }   
+  
+  .Sprite:nth-child(2) {      
+    &.MIXED-PVC {
+      $outter: 12%;
+      $inner: 22%;
+      clip-path: polygon($outter $outter, $outter (100%-$outter), $inner (100%-$outter), $inner $inner, (100%-$inner) $inner, (100%-$inner) (100%-$inner), $inner (100%-$inner), $inner (100%-$outter), (100%-$outter) (100%-$outter), (100%-$outter) $outter);      
+    }
+    &.MIXED-STONE {
+      $outter: 0%;
+      $inner: 12%;
+      clip-path: polygon($outter $outter, $outter (100%-$outter), $inner (100%-$outter), $inner $inner, (100%-$inner) $inner, (100%-$inner) (100%-$inner), $inner (100%-$inner), $inner (100%-$outter), (100%-$outter) (100%-$outter), (100%-$outter) $outter);      
+    }
+    &.MIXED-WALL {
+      /* values are from-top, from-right, from-bottom, from-left */
+      clip-path: inset(0 29% 0 30%);
+    }
+  }
+
+  .Sprite:nth-child(3) {
+    &.MIXED-STONE {
+      $outter: 12%;
+      $inner: 18%;
+      clip-path: polygon($outter $outter, $outter (100%-$outter), $inner (100%-$outter), $inner $inner, (100%-$inner) $inner, (100%-$inner) (100%-$inner), $inner (100%-$inner), $inner (100%-$outter), (100%-$outter) (100%-$outter), (100%-$outter) $outter);      
+    }
+
+    &.MIXED-WALL {
+      /* values are from-top, from-right, from-bottom, from-left */
+      clip-path: inset(0 0 0 70%);
+    }
+  }
+}

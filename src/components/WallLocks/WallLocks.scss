@@ -1,0 +1,92 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.WallLocks {
+  margin: 0 62.5px 10px 62.5px;
+
+  @media only screen and (max-width: $desktop-medium) {
+    margin: 0 42.5px 10px 42.5px;
+  }
+
+  .wall-locks-container {
+    position: relative;
+    height: 24px;
+    margin: 0 auto;
+    color: $gray;
+
+    .wall-locks-lines {
+      height: 12px;
+      color: inherit;
+      border-left: 1px solid;
+      border-bottom: 1px solid;
+      border-right: 1px solid;
+    }
+    
+    .wall-locks-center-line {
+      display: none;
+      position: absolute;
+      margin: 0;
+
+      width: 1px;
+      height: 12px;
+      background-color: $gray;
+      
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, 0);
+      
+    }
+
+    .wall-locks-lock {
+      position: absolute;
+      width: 24px;
+      height: 20px;
+      margin: 4px 0 0 0;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);      
+      text-align: center;
+    }
+  }
+  
+  &.active{
+    .wall-locks-container {
+      .wall-locks-lines {
+        border-left: 1px solid $light-blue;
+        border-bottom: 1px solid $light-blue;
+        border-right: 1px solid $light-blue;  
+      }
+      .wall-locks-center-line {
+        background-color: $light-blue;
+      }
+    }
+  }
+
+  &.d0c0b0 {
+    .wall-locks-container {
+      .wall-locks-center-line {
+        display: block;
+      }
+    }
+  }
+
+  /*   
+  &.d0c1b0 {
+    .wall-locks-container {
+      
+    }
+  } 
+  */
+
+  &.d0c0b1 {
+    .wall-locks-container {
+      margin-right: 50%;
+    }
+  }
+
+  &.d0c1b1 {
+    .wall-locks-container {
+      margin-left: 50%;
+    }
+  }
+}

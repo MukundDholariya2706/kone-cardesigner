@@ -1,0 +1,128 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/utils";
+
+.AccessoryBlock {
+  border-bottom: 1px solid $border-color;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    .add-button {
+      @include create-add-button();
+    }
+    
+    .edit-container {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 10px 0 20px 0;
+
+      .edit-buttons {
+        display: flex;
+        align-items: center;
+        
+        .delete-button {
+          svg {
+            width: 25px;
+            height: 25px;
+          } 
+          &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+          }
+        }
+        
+      }
+    }
+  }
+
+  .edit-button {
+    margin-left: 5px;
+    width: 28px;
+    height: 28px;
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+  }
+
+  .delete-button {
+    margin-left: 6px;
+    width: 28px;
+    height: 28px;
+    svg {
+      width: 28px;
+      height: 28px;
+    } 
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+}
+
+  .FinishLayout {
+    display: flex;
+    align-items: center;
+  }
+
+  .finish-image {
+    background-color: $border-color;
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin-right: 10px;
+    svg {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  .component-name {
+    font-size: 10.5pt;
+    line-height: 1.5em;
+    // color: $light-blue;
+    &.uppercase {
+      text-transform: uppercase; 
+    }
+  }
+
+  .finish-name {
+    font-size: 10.5pt;
+    line-height: 1.5em;
+  }
+}
+
+.rtl {
+  .AccessoryBlock {
+    &__content {
+      .add-button {
+        &__text {
+          margin-left: unset;
+          margin-right: 10px;
+        }
+      }
+
+      .edit-container {
+        .edit-buttons {
+          .delete-button {
+            margin-right: unset;
+            margin-left: 10px;
+          }          
+        }
+      }
+    }
+
+    .finish-image {
+      margin-right: unset;
+      margin-left: 10px;
+    }
+  }
+}

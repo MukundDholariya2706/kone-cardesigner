@@ -1,0 +1,103 @@
+@import "../../styles/Variables";
+
+.EditorLayout {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  padding: 0 $editpanel-padding;
+  height: 100%;
+
+  .editorHeading {
+    border-bottom: 1px solid $gray;
+    .mainTitleContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .actionLink {
+        padding-bottom: 0px;
+      }
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 18pt;
+      font-weight: normal;
+      line-height: 29px;
+      color: $darker-gray;
+      padding-top: 36px;
+      padding-bottom: 34px;
+      margin:0;
+
+      &.actionPadding {
+        padding-bottom: 10px;
+      }
+
+      &.descPadding {
+        font-size: 10pt;
+        font-weight: normal;
+        padding-top: 30px;
+        padding-bottom: 6px;    
+      }
+    }
+
+    .descHeader {
+      .descLabel {
+        font-size: 1.5rem;
+        padding-bottom: 9px;
+      }
+      .descText {
+        font-family: $bodyFont;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        padding-bottom: 12px;
+        // font-size: 10pt;
+      }
+    }
+
+    .actionLink {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 19px;
+      cursor: pointer;
+      padding-bottom: 10px;
+
+      .actionClickContainer {
+        display: flex;
+      }
+
+      svg {
+        margin:auto;
+        margin-right: 10px;
+        transform: rotate(90deg);
+      }
+      .actionLabel {                
+        font-size: 12pt;
+        color: $light-blue;
+        text-transform: uppercase;
+      }        
+    }  
+  }
+}
+
+.rtl {
+  .EditorLayout {
+    .editorHeading {
+      .mainTitleContainer {
+        flex-direction: row-reverse;
+      }
+  
+      .actionLink {
+        svg {
+          transform: rotate(-90deg);
+          margin-right: unset;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+

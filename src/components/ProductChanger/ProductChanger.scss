@@ -1,0 +1,49 @@
+@import '../../styles/Variables.scss';
+@import '../../styles/utils.scss';
+
+.ProductChanger {
+
+  label {
+    @include respond($phone-big) {
+      display: none;
+    }
+  }
+
+  @include respond($phone-big) {
+    .dropdown {
+      width: 100%;
+      .dropdown__trigger {
+        width: 100%;
+      }
+
+      .content-container {
+        max-width: unset;
+      }
+    }
+  }
+
+  .product {
+
+    margin-bottom: 20px;
+    cursor: default;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    &.selected, &:hover {
+      color: #B7E2FF;
+    }
+  
+    .product-name {
+      font-size: 16px;
+    }
+    .product-description {
+      font-size: 14px;
+    }
+  
+    &.disabled {
+      pointer-events: none;
+      color: $light-gray;
+    }
+  }
+}

@@ -1,0 +1,241 @@
+@import "../../../../styles/Variables";
+@import "../../../../styles/utils.scss";
+
+
+$tablet-portrait-bp: $tablet-portrait + 100px;
+$share-icon-width: 4.5rem;
+
+.ShareDesignArea {
+  background: #EEF0F1;
+  display: flex;
+  padding: 1.5rem 2rem;
+  border-radius: 4px;
+
+  @include respond($tablet-portrait-bp) {
+    flex-direction: column;
+  }
+
+  @include respond($phone-big) {
+    padding: 1.25rem 1rem;
+  }
+
+
+  &__section {
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+      @include respond($tablet-portrait-bp) {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__section-header {
+    color: #717A80;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 1.4rem;
+  }
+
+  &__section-content {
+    
+  }
+
+  .design-link-section {
+    flex: 1 0;
+
+    .ShareDesignArea__section-content {
+      display: flex;
+    }
+
+    .ShareDesignArea__icon-container {
+      width: $share-icon-width;
+
+      .svg-icon	{
+        fill: $kone-blue;
+        height: 2.7rem;
+        width: 2.7rem;
+      }
+    }
+
+    .content-container {
+      max-width: 90%;
+      .design-link-info-text {
+        margin: .5rem 0;
+
+        @include respond($phone-big) {
+          margin-top: 2.5rem;
+          margin-left: -2.75rem;
+        }
+      }
+
+      @include respond($phone-big) {
+        padding-top: 0.75rem;
+        margin-left: 0.5rem;
+      }
+
+      .buttons-container {
+        margin-top: 0.5rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include respond($phone-big) {
+          margin-left: -2.75rem;
+        }
+
+        .ButtonWithIcon {
+          margin-right: 2.5rem;
+
+          @include respond($phone) {
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+
+        @include respond($phone-big) {
+          width: 100%; // two rows
+          margin-top: 0.5rem;
+        }
+
+        .info-icon {
+          margin-left: .75rem;
+          width: 16px;
+          height: 16px;
+        }
+        
+        .enable-editing-checkbox {
+          // Should these be global checkbox styles or specific to this component...?
+          .checkBox {
+            box-sizing: border-box;
+            border-radius: 2px;
+            height: 16px;
+            width: 16px;
+
+            .svg-icon {
+              width: 14px;
+              height: 14px;
+            }
+          }
+          .checkLabel {
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+
+    .link-container {
+      font-size: 1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      .design-link {
+        border-bottom: 1px solid $kone-blue;
+
+        .design-link-end {
+          @include respond($phone-big) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .download-section {
+    flex: 0 1 18rem;
+
+    @include respond($tablet-portrait-bp) {
+      flex: 0 1;
+      width: 18rem;
+    }
+
+    @include respond($phone-big) {
+      width: 100%;   
+    }
+
+
+    button {
+      @include create-kone-button(white, $light-blue, $hover-blue);
+      width: 100%;
+      margin: 0;
+      margin-top: 0.5rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      height: 2.5rem;
+      font-size: 1.1rem;
+
+      &:disabled {
+        cursor: default;
+      }
+    }
+  }  
+
+  &__info-box {
+    display: inline-flex;
+    background-color: #CCE3F1;
+    border-radius: 4px;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding: 11px 15px;
+    box-sizing: border-box;
+    max-width: 750px;
+    width: 100%;
+
+    .info-box-text {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+
+      span {
+        display: block;
+      }
+
+      .update-button {
+        cursor: pointer;
+        margin-left: 1.5rem;
+        color: $kone-blue;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        
+        &.loading {
+          cursor: default;
+          color: $darkest-grey;
+          opacity: .5;
+        }
+      }
+
+      @include respond($phone-big) {
+        flex-direction: column;
+
+        .update-button {
+          margin-left: 0;
+          margin-top: .5rem;
+          width: 100%;
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    .icon-container {
+      margin-right: .5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .info-icon.svg-icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

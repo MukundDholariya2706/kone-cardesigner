@@ -1,0 +1,35 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.PreDesigns {
+  width: 100%;
+  height: auto;
+  // padding: 10px 20px 30px 20px;
+  box-sizing: border-box;
+  //max-width: 100rem;
+
+  // Overide card styles
+  .Card {
+    margin: 0;
+    .card-body {
+      padding-bottom: 80px;
+    }
+
+    @media only screen and (max-width: $phone) {
+      .card-header {
+        h2 {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+
+  .toggleView {
+    margin: 1rem auto;
+    .toggleButton {
+      width: auto;
+    }
+  }
+}

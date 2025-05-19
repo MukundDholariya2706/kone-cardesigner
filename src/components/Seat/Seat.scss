@@ -1,0 +1,25 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+// @include custom-scrollbar(Seat);
+
+.Seat {
+  // overflow-y: auto;
+  // position: relative;
+  height: 100%;
+  
+/*   .configurationHeader, .panel-header {       
+    @include create-edit-panel-subheader();
+    padding: 10px 0;
+    border-top: 1px solid $gray;
+
+    &:first-child, &.panel-header-top {
+      padding-top: 20px;
+      border-top: none;
+    }
+  } */
+
+  .ImageTitle {
+      margin-bottom: 20px;
+  }
+}

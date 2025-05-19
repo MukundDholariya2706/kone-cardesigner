@@ -1,0 +1,92 @@
+@import '../../styles/Variables.scss';
+@import '../../styles/utils.scss';
+
+$head-vertical-padding: 0.9rem;
+$body-vertical-padding: 0.9rem;
+
+.SectionAccordion {
+  border-top: 1px solid #E0E4E6;
+  padding-top: $head-vertical-padding;
+
+  &__heading {
+    color: #717A80;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin: 0;
+  } 
+  
+  &__selected-value {
+    color: $kone-blue;
+    margin-top: 0.5rem;
+    margin-bottom: $head-vertical-padding;
+    font-family: $bodyFont;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  // font-size: 1rem;
+  }
+
+  &__body {
+    background-color: #F5F6F7;
+    padding: 0 0.75rem;
+
+    // Using 'padding' causes some of the content to show even when
+    // the accordion is closed so using margin instead. 
+    & > :first-child {
+      margin-top: $body-vertical-padding;
+    }
+
+    & > :last-child {
+      margin-bottom: $body-vertical-padding;
+    }
+
+    .HeadingComponent {
+      padding: 0.8rem 0;
+      margin: 0;
+      // margin-top: 0.8rem;
+
+      &:not(:first-of-type) {
+        border-top: 1px solid $gray;
+      }
+    }
+
+    .HeadingComponent.category-heading {
+      &:first-of-type {
+        padding-top: 0;
+      }
+
+      border: none;
+      margin: 0;
+      // padding-top: 0;
+
+      .headerLabel {
+        color: #1C2226;
+        // font-size: 0.9rem;
+        text-transform: none;
+      }
+    }
+  }
+
+  &--no-animation {
+    .AccordionItem {
+      .AccordionHead {
+        .AccordionHead-chevron {
+          svg {
+            transition: transform 0.1s ease-in
+          }
+        }
+      }
+
+      .AccordionBody {
+        transition: none;
+      }
+    }
+  }
+
+  // .AccordionItem .AccordionBody {
+  //   border-top: none !important;
+  // }
+
+  // .AccordionItem.open .AccordionBody {
+  //   border-top: 2px solid #E0E4E6 !important;
+  // }
+}

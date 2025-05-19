@@ -1,0 +1,96 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.CarShape {
+    display: block;
+    position: relative;
+    width: 100%;
+    .position {
+        background-color: $dark-gray;
+        height: 3rem;
+        width: 9px;
+        margin: 4px 0;
+        &.disabled {
+            opacity: 0.4;
+            pointer-events: none;
+            background-color: $dark-gray;
+        }
+    }
+    .throughwall {
+        position: absolute;
+        width: 25%;
+        height: 9px;
+        margin: 0 0;
+        background-color: $gray;
+        z-index: 2;
+    }
+    .left {
+        position: absolute;
+        left: 0;
+    }
+    .right {
+        position: absolute;
+        right: 0;
+    }
+    .center {
+        position: absolute;
+        right: 0; left: 0;
+        margin: auto;
+        width: 45%;
+    }
+
+    .backwall {
+        margin:auto;
+        background-color: $lighter-gray;
+        width: 100%;
+        height: 9px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+    }
+    .backwall-through {
+        padding-bottom: 9px;
+        .left {
+            border-top-right-radius: 0px;
+            border-top-left-radius: 100px;
+        }
+        .right {
+            border-top-left-radius: 0px;
+            border-top-right-radius: 100px;
+        }
+    }
+    .backwallSelectable {
+        background: $dark-gray;
+    }
+    
+    .frontwallSelectable {
+        background: $dark-gray;
+    }
+
+    .throughwall .right .front {
+        bottom: 0;
+    }
+    .selected{
+        background-color: $light-blue;
+    }
+    .selectedItemDisabled {
+        background-color: $gray;
+    }
+    .frontwall {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        .throughwall {
+            margin-top: 0;
+            right: 0;
+        }
+        .right {
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 100px;            
+        }
+        .left {
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 100px;
+        }
+    }
+
+}

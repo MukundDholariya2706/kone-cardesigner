@@ -1,0 +1,198 @@
+@import '../../styles/Variables.scss';
+
+$mult: 3;
+
+.ModelAndLayoutEditor {
+  height: 100%;
+
+  .car-shape {
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    
+    .car-shape-icon {
+      border: 2px solid $light-gray;
+      width: 35px;
+      height: 35px;
+      border-radius: 5px;
+      margin: 0 auto;
+
+      // 21x11
+      &.deep {
+        height: $mult * 21px;
+        width: $mult * 11px;
+      }
+
+      // 14x11
+      &.square {
+        height: $mult * 14px;
+        width: $mult * 11px;
+      }
+      // 14x11
+      &.square_10_13_24 {
+        height: $mult * 13px;
+        width: $mult * 10px;
+      }
+      // 14x16
+      &.wide {
+        height: $mult * 14px;
+        width: $mult * 16px;
+      }
+      // 14x20
+      &.deep_au_14_20_24 {
+        height: $mult * 20px;
+        width: $mult * 14px;
+      }      
+      // 14x16
+      &.wide_au_14_16_24 {
+        height: $mult * 16px;
+        width: $mult * 14px;
+      }
+      // 23x17
+      &.wide_23_17_26 {
+        height: $mult * 23px;
+        width: $mult * 17px;
+      }
+      // 12x9
+      &.homelift_9_12_24 {
+        height: $mult * 12px;
+        width: $mult * 9px;
+      }
+      // 14x11
+      &.transys_12_23_24 {
+        height: $mult * 23px;
+        width: $mult * 12px;
+      }
+      // 14x11
+      &.transys_12_26_24 {
+        height: $mult * 26px;
+        width: $mult * 12px;
+      }
+      // 14x11
+      &.transys_14_24_24 {
+        height: $mult * 24px;
+        width: $mult * 14px;
+      }
+      // 14x11
+      &.transys_15_27_24 {
+        height: $mult * 27px;
+        width: $mult * 15px;
+      }
+    }
+
+    .car-shape-name {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+    
+    .car-shape-size {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    &.selected {
+      color: $kone-blue;
+      .car-shape-icon {
+        border-color: $kone-blue;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .car-type-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    .car-type-label {
+      font-size: 14px;
+      padding: 0 10px;
+    }
+  }
+  
+  .editCustomDimensions {
+    padding-bottom: 20px;
+    color: $dark-gray;
+    .icon {
+      padding: 0 10px;
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+    }
+    
+    .editPanelClosed {
+      padding: 20px 0;
+      display: flex;
+      flex-direction: row;  
+      cursor: pointer;
+
+      .editText {
+        color: $kone-blue;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+    }
+
+    .editPanelOpen {
+      padding: 10px 14px;
+      background-color: $gray;
+      
+      .editPanelHeader {
+        width: 100%;
+        .Info {
+          padding: 0 8px;
+        }
+        .iconContainer {
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
+          .icon {
+            padding: 0;
+          }
+        }
+        .editText {
+        }
+      }
+
+      .editPanelFields {
+        .editFieldLabel {
+          padding: 10px 0;
+          font-size: 1.1rem;
+        }
+        .editFieldContainer {
+          background-color: white;
+          border-radius: 4px;
+          .NumericInput {            
+            width: 100%;
+            justify-content: center;
+            .input-with-unit {
+              width: 90%;
+              background-color: white;
+              border: none;
+              border-radius: 4px;
+              padding: 4px;
+              font-size: 0.9rem;
+              input {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+
+      .InfoBox {
+        align-items: unset;
+      }
+    }
+  }
+}
+
+.rtl {
+  .editCustomDimensions {
+    flex-direction: row-reverse;
+  }
+}

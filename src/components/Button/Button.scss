@@ -1,0 +1,149 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.Button {
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &.theme-sm {
+    padding: 6px 12px;
+  }
+
+  &.theme-md {
+    padding: 10px 20px;    
+  }
+
+  &.theme-lg {
+    padding: 15px 30px;    
+  }
+
+  &.theme-rounded-full {
+    border-radius: 999px;
+  }
+
+  &.theme-center {
+    text-align: center;
+  }
+
+  &.theme-outline {
+    border: 2px solid $kone-blue;
+    border-radius: 4px;
+    color: $kone-blue;        
+  }
+
+  &.theme-outline-thin {
+    border-width: 1px;
+  }
+
+  &.theme-link {
+    color: $kone-blue;
+    &:not(.theme-no-hover):hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.theme-primary {
+    background-color: $kone-blue;
+    border: 2px solid $kone-blue;
+    border-radius: 4px;
+    color: white;
+  }
+
+  &.theme-circle {
+    border-radius: 100%;
+    width: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+  }
+
+  &.theme-uppercase {
+    text-transform: uppercase;
+  }
+
+  &.theme-outline-gray {
+    border-color: $gray;
+    background-color: white;
+    &:not(.theme-no-hover):hover {
+      border-color: $kone-blue;
+    }
+  }
+
+  &:not(.theme-no-hover):hover {
+    &.theme-white-blue {
+      background-color: $kone-blue;
+      color: white;
+    }
+  }
+
+  &.selected {
+    &.theme-white-blue {
+      background-color: $kone-blue;
+      color: white;
+    }
+  }
+
+  &.theme-with-icon {
+    svg {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.theme-with-icon-right {
+    svg {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.inline-block{
+    display: inline-block;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: .5;
+  }
+
+  &.theme-primary.disabled {
+    background-color: #C6CACC;
+    border-color: #C6CACC;
+    color: white;
+    opacity: 1;
+  }
+}
+
+.rtl {
+  .Button {
+    &.theme-with-icon {
+      svg {
+        left: unset;
+        right: 15px;
+      }
+    }
+
+    &.theme-with-icon-right {
+      svg {
+        position: absolute;
+        right: unset;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &.theme-flip-icon-rtl {
+      svg {
+        transform: rotate(180deg) translateY(50%);
+      }
+    }
+  }
+}

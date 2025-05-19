@@ -1,0 +1,95 @@
+@import "../../../../styles/Variables";
+@import "../../../../styles/utils.scss";
+
+.MobileAppSection {
+  .WideContent {
+    position: relative;
+    overflow: hidden;
+    height: 344px;
+    padding: 0;
+
+    @include respond($tablet-landscape) {
+      height: 420px;
+    }
+
+    @include respond($tablet-portrait) {
+      height: 320px;
+    }
+
+    .background, .body {
+      position: absolute;
+      overflow: hidden;
+      left: 10%;
+      right: 10%;
+      width: 80%;
+      bottom: 0;
+      top: 0;
+
+      @include respond($tablet-landscape) {
+        left: 0;
+        right: 0;
+        width: 100%;
+      }
+    }
+
+    .background {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color:#11161A;
+        opacity: .6;
+        z-index: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+      }
+
+      img {
+        width: 1440px;
+        transform: translate(0, -160px);
+        height: auto;
+      }
+    }
+
+    .content-container {
+      z-index: 1;
+
+      padding: 2.5rem 15%;
+      text-align: center;
+
+      color: white;
+
+      @include respond($phone) {
+        padding: 2rem 1.5rem; 
+      }
+    }
+
+    .store-links-bar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 430px;
+      height: 6rem;
+      margin: 0 auto;
+      margin-top: 2rem;
+
+      @include respond($tablet-portrait) {
+        height: 4.5rem;
+      }
+    }
+
+    .img-container {
+      display: inline-block;
+      width: 140px;
+
+      // @include 
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+}

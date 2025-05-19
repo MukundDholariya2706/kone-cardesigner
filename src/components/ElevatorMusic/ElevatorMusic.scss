@@ -1,0 +1,132 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.ElevatorMusic {
+  height: 100%;
+    
+  
+  .info-heading {
+    font-size: 1.1em;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+  .info-content {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    .image {
+      width:100%;
+    }
+    
+    .text {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .read-more {
+      font-size: 0.9rem;
+      color: $kone-blue;
+      cursor: pointer;
+    }
+
+  }
+
+  .music-sample-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .music-sample {
+      border: 2px solid $kone-blue;
+      border-radius: 4px;
+      background-color: white;
+      padding: 4px 12px;
+      color: $kone-blue;
+      cursor: pointer;
+      margin: 0 8px 8px 0;
+      font-size: 0.8em;
+    }
+    .selected {
+      color: white;
+      background-color: $kone-blue;
+    }
+  }
+
+  .music-player {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+    .music-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 5px;
+
+      .music-time {
+        font-size: 0.9em;
+        flex-basis: 20%;
+        &:first-of-type {
+          text-align: left;
+        }
+        &:last-of-type {
+          text-align: right;
+        }
+      }
+
+      .music-play {
+        height: 50px;
+        width: 50px;
+        background-color: $kone-blue;
+        border: none;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        .music-control {
+          height:25px;
+          width: 25px;
+        }
+      }
+
+    }
+
+    .music-progress-total {
+      width: 100%;
+      background-color: #E3E5E6;
+      height: 4px;
+      border-radius: 2px;
+      margin-bottom: 5px;
+      .music-progress-now {
+        width: 0px;
+        background-color: $kone-blue;
+        height: 4px;
+        border-radius: 2px;
+      }
+    }
+
+    .music-title {
+      width: 100%;
+      text-align: center;
+      font-size: 0.8em;
+    }
+
+  }
+
+}
+
+.rtl {
+  .ElevatorMusic {
+
+    ul {
+      padding-right: 20px;
+      padding-left: unset;
+    }
+
+  }
+}

@@ -1,0 +1,58 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.MaterialItem {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  .materialItem {
+    display: flex;
+    flex-direction: row;
+    .materialIcon {
+      margin: 9px 16px 9px 5px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      flex: 0 0 35px;
+      width: 35px;
+      height: 35px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+      &.selectedIcon {
+        margin: 7px 9px 7px 0;
+        border: 2px solid $light-blue;
+        padding: 1px;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        //animation: select-icon 0.3s ease-in;
+      }
+
+/*       @keyframes select-icon {
+        from {width: 35px; height: 35px; flex: 0 0 35px;}
+        to { width: 40px; height: 40px; flex: 0 0 40px;}
+      } */
+
+    }
+    .materialLabel {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 5px;
+      display: flex;
+      align-items: center;
+      line-height: 1.2rem;
+      font-size: 10.5pt;
+    }                  
+  }
+
+  .selectedLabel {
+    color: $light-blue;
+  }
+  
+}

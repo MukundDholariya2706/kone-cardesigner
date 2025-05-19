@@ -1,0 +1,33 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.Alert {
+  min-height: 250px;
+
+  .footer-buttons {
+    text-align: right;
+    .Button {
+      min-width: 128px;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: unset;
+      }
+    }
+  }
+
+}
+
+.rtl {
+  .Alert {  
+    .footer-buttons {
+      text-align: left;      
+      .Button {        
+        margin-right: unset;
+        margin-left: 10px;
+        &:last-child {
+          margin-left: unset;
+        }
+      }
+    }
+  }
+}

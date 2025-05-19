@@ -1,0 +1,90 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.DcsDialog {
+  .DialogBody {
+    min-height: (128px + 20px);
+
+    .info-desc {
+      margin-bottom: 15px;
+    }
+
+    .v-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .h-container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .quide-items {
+      display: flex;
+      flex-direction: column;
+      margin: -10px;
+
+      @media (min-width: $tablet-portrait) {
+        flex-direction: row;
+      }
+
+      .quide-item {
+        padding: 10px;
+        flex: 1 1 0px;
+
+        .quide-heading {
+          // rtl styling
+          margin: 0 -5px 10px -5px;
+        }
+
+        .quide-heading > div {
+          // rtl styling
+          padding: 0 5px;
+        }
+
+        .quide-number {
+          color: $kone-blue;
+          line-height: 1em;
+          font-size: 61px;
+        }
+        .quide-heading-1 {
+          color: $kone-blue;
+          text-transform: uppercase;
+          font-size: 24px;
+          margin-top: 6px;
+        }
+        .quide-heading-2 {
+          color: $kone-blue;
+          font-size: 16px;
+        }
+        .quide-img {
+          width: 100%;
+          height: auto;
+          margin-bottom: 15px;
+        }
+        .quide-desc {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .info-read-more {
+      display: inline-block;
+      margin-top: 20px;
+    }
+  }
+
+  .DialogFooter {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-portrait) {
+      flex-direction: row;
+      justify-content: flex-end;
+
+      .Button {
+        min-width: 128px;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.SignalizationEditor {
+  height: 100%;
+
+  .editorHeading {
+    border-bottom: none;
+  }
+
+  .ScrollBox {
+    padding-top: 20px;
+  }
+
+  .copSelector {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 16px;
+    line-height: 16px;
+    padding-top: 16px;
+    .selectorItem {
+      font-size: 14px;
+      line-height: 26px;
+      padding: 0 16px 14px 16px;
+      color: $darker-gray;
+      cursor: pointer;
+      &.selected {
+        color: $light-blue;
+      }
+    } 
+    
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .ToggleButtons {
+    &.type-number {
+      margin: 10px 0 20px 0;
+    }
+  } 
+
+  .ImageTitle.selection-list {
+    padding-bottom: 0.8rem;
+    .sprite-container {
+      background-color: white;
+      height: 8rem;
+    }
+
+    .tile {
+      .label {
+        text-transform: none;
+      }
+    }
+
+    .tile-wrapper.wide {
+      .sprite-container {
+        height: 10rem;
+      }
+    }
+  }
+}
+
+.rtl {
+  .SignalizationEditor {
+    .copSelector {
+      .copTwo {
+        right: unset;
+        left: 0;
+      }
+    }
+  }
+}

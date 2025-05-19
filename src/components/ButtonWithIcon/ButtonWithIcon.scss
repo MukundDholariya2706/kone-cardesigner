@@ -1,0 +1,149 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+
+
+.ButtonWithIcon {
+
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: center;
+  text-decoration: none;
+  margin: 0;
+  height: 1.5rem;
+  color: #0071B9;
+  white-space: nowrap;
+  cursor: pointer;
+
+  .button-icon {
+    margin-right: 0.5rem;
+    fill: $kone-blue;
+    height: 100%;
+    width: 1.3rem;
+  }
+
+  .button-icon2 {
+    margin-left: 0.5rem;
+    fill: $kone-blue;
+    height: 100%;
+    width: 1.3rem;
+  }
+
+  &.roundButtonBlue {
+    background-color: $kone-blue;
+    border-radius: 100px;
+    color: white;
+    line-height: 32px;
+    font-size: 20px;
+    height: 61px;
+    padding: 8px 20px;
+    z-index: 1;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $tablet-landscape) {
+      line-height: 24px;
+      font-size: 18px;
+      height: 48px;
+      padding: 8px 14px;
+    }
+
+    @media screen and (max-width: $phone-big) {
+      line-height: 24px;
+      font-size: 14px;
+      height: 32px;
+      padding: 8px 10px;
+    }
+
+
+    .button-icon {
+      margin-right: 0.75rem;
+      fill: white;
+      width: 1rem;
+
+      @media screen and (max-width: $tablet-landscape) {
+        width: 0.9rem;
+        margin-right: 0.6rem;
+      }
+
+      @media screen and (max-width: $phone-big) {
+        width: 0.7rem;
+        margin-right: 0.42rem;
+      }
+    }
+    
+    .button-icon2 {
+      margin-left: 0.75rem;
+      fill: white;
+      width: 1rem;
+      
+      @media screen and (max-width: $tablet-landscape) {
+        width: 0.9rem;
+        margin-left: 0.6rem;
+      }
+
+      @media screen and (max-width: $phone-big) {
+        width: 0.7rem;
+        margin-left: 0.42rem;
+      }
+    }
+  }
+
+  &.responsiveButton {
+    color: white;
+    line-height: 32px;
+    font-size: 20px;
+    height: 20px;
+    margin: 8px 20px;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $tablet-landscape) {
+      line-height: 24px;
+      font-size: 18px;
+      height: 18px;
+      margin: 8px 14px;
+    }
+
+    @media screen and (max-width: $phone-big) {
+      line-height: 24px;
+      font-size: 14px;
+      height: 14px;
+      margin: 8px 10px;
+    }
+
+
+    .button-icon {
+      margin-right: 0.75rem;
+      fill: white;
+      width: 1rem;
+
+      @media screen and (max-width: $tablet-landscape) {
+        width: 0.9rem;
+        margin-right: 0.6rem;
+      }
+
+      @media screen and (max-width: $phone-big) {
+        width: 0.7rem;
+        margin-right: 0.42rem;
+      }
+    }
+    
+    .button-icon2 {
+      margin-left: 0.75rem;
+      fill: white;
+      width: 1rem;
+
+      @media screen and (max-width: $tablet-landscape) {
+        width: 0.9rem;
+        margin-left: 0.6rem;
+      }
+
+      @media screen and (max-width: $phone-big) {
+        width: 0.7rem;
+        margin-left: 0.42rem;
+      }
+    }
+  }
+
+
+}
+

@@ -1,0 +1,116 @@
+@import "../../styles/Variables";
+
+.EditPanel {
+  width: $l-width-edit-panel;
+  background-color: $edit-panel-bg;
+  flex-shrink: 0;
+  height: 100%;
+  z-index: 99;
+
+  position: absolute;
+  left: $md-width-main-nav;
+  
+  p, ul, ol {
+    font-family: $bodyFont;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+
+  ul {
+    li {
+      margin-bottom: 16px;
+    }
+  }
+
+  &.closed {
+    display: none;
+  }
+
+  @media (min-width: ($tablet-portrait + 1px)) {
+    position: relative;
+    left: unset;
+
+    &.closed {
+      display: block;
+    }
+  }
+
+  @media (min-width: ($desktop-medium + 1px)) {
+    width: $xl-width-edit-panel;
+  }
+
+  .close-button-container {
+    position: absolute;
+    top: 131px;
+    right: 0;
+
+    @media (min-width: ($tablet-portrait + 1px)) {
+      display: none;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      background-color: $kone-blue;
+      color: white;
+      border-radius: 0px 4px 4px 0px;
+      cursor: pointer;
+    }
+  }
+
+  // Text stylings for various editor accordions
+  .SectionAccordion_head.disabled .FinishItem .info {
+    color: $disabled-color;
+  }
+  .AccordionHead.disabled {
+    color: $disabled-color;
+    .TileComponent {
+      cursor: default;
+    }
+  }
+}
+
+.with-custom-finish-editor,
+.with-floor-mixer {
+  .EditPanel {
+    width: $l-width-edit-panel + $md-width-main-nav;
+    left: 0;
+
+    @media (min-width: ($tablet-portrait + 1px)) {
+      width: $l-width-edit-panel + $xl-width-main-nav;
+    }
+
+    @media (min-width: ($desktop-medium + 1px)) {
+      width: $xl-width-edit-panel + $xl-width-main-nav;
+    }
+  }
+}
+
+.rtl {
+  .EditPanel {
+    left: unset;
+    right: $md-width-main-nav;
+    @media (min-width: ($tablet-portrait + 1px)) {
+      right: unset;
+    }
+
+    .close-button-container {
+      right: unset;
+      left: 0;
+      .close-button {
+        left: unset;
+        right: 0;
+        border-radius: 4px 0px 0px 4px;
+      }
+    }
+  }
+
+  .with-custom-finish-editor,
+  .with-floor-mixer {
+    .EditPanel {
+      right: 0;
+    }
+  }
+}

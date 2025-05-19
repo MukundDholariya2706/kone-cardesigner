@@ -1,0 +1,70 @@
+@import '../../styles/Variables.scss';
+
+$card-padding: 20px;
+$card-padding-phone: 10px;
+
+.SelectableCard {
+  border: 1px solid #EDEFF0;
+  padding: $card-padding;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $phone){
+    padding: $card-padding-phone;
+  }
+
+  @media only screen and (max-width: $phone-small){
+    padding: $card-padding-phone 5px;
+  }
+
+  &-sprite-container {
+    max-width: 136px;
+    margin: 0 auto;
+
+    &.image-style-full {
+      max-width: unset;
+      margin: -#{$card-padding};
+      margin-bottom: 0;
+
+      @media only screen and (max-width: $phone){
+        margin: -#{$card-padding-phone};
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-icon-container {
+    max-width: 136px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width: $phone-big) {        
+      height: 40px;
+
+      svg {
+        height: 100%;
+        width: 50px;
+      }
+    }
+  }
+
+  &-label {
+    margin-top: 15px;    
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    min-height: 36px;    
+
+    @media only screen and (max-width: $phone-big) {        
+      margin-bottom: 16px;
+    }
+  }
+  
+  &-button {
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+  }
+}

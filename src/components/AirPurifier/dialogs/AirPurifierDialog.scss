@@ -1,0 +1,95 @@
+@import "../../../styles/Variables";
+@import "../../../styles/utils";
+
+.AirPurifierDialog {
+  .DialogBody {
+    min-height: (128px + 20px);
+
+    .video-container {
+      position: relative;
+      margin: -15px -30px;
+      width: calc(100% + 60px);
+      height: 0;
+      padding-top: 56.25%;
+      margin-bottom: 15px;
+      @media screen and (max-width: $phone-big) {
+        margin: -10px -15px;
+        margin-bottom: 10px;
+        width: calc(100% + 30px);
+      }
+      
+      .video-element {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .fallbackImage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    
+    .info-heading {
+      font-family: $bodyFont;
+      font-size: 1rem;
+      line-height: 1.4rem;
+/*       font-size: 1.5em;
+      line-height: 1.5em; */
+      padding-bottom: 20px;
+    }
+
+    .info-desc {
+      margin-bottom: 15px;
+      font-family: $bodyFont;
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+    // line-height: 1.5em;
+
+      .list-label {
+        font-size: 1.5em;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+    }
+    
+
+    .info-read-more {
+      display: inline-block;
+      font-family: $bodyFont;
+      font-size: 1rem;
+      line-height: 1.4rem;
+      margin-top: 5px;
+    }
+  }
+
+  .DialogFooter {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-portrait) {
+      flex-direction: row;
+      justify-content: flex-end;
+
+      .Button {
+        min-width: 128px;
+      }
+    }
+  }
+}
+
+.rtl {
+  .AirPurifierDialog {
+    ul {
+      padding-left: unset;
+      padding-right: 20px;
+    }
+  }
+}

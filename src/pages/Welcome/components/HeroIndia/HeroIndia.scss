@@ -1,0 +1,50 @@
+@import "../../../../styles/Variables";
+@import "../../../../styles/utils.scss";
+
+.HeroIndia {
+  // margin-top: $header-height;
+  background: center / cover no-repeat url('./india-hero-banner.png');
+  color: white;
+  padding: 5% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+  // -12rem amounts to exactly the remaining view port height (not clue why...) 
+  // Then remove 2rem for some space on the bottom
+  height: calc(100vh - 12rem - 2rem);
+  max-height: 50rem;
+  min-height: 350px;
+
+  @include respond($phone-big) {
+    height: calc(100vh - 10rem);
+  }
+
+  @media 
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) { 
+    background-image: url('./india-hero-banner@2x.png');
+  }
+
+  .subtitles-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: clamp(1.5rem, 5vh, 3rem) 0;
+
+    .hero-subtitle + .hero-subtitle {
+      margin-left: clamp(2.5rem, 6vw, 5rem);
+    }
+  }
+
+  .hero-subtitle {
+    font-size: clamp(16px, 3vw, 24px);
+    text-transform: none;
+    margin: 0;
+  }
+
+  .lead {
+    font-size: clamp(14px, 2vw, 20px);
+  }
+}

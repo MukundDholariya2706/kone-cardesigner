@@ -1,0 +1,134 @@
+@import "../../styles/Variables";
+
+.ThumbnailList {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+
+    .thumbnailItemContainer {
+        display: inline-block;
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5px;
+        animation: open-list 0.2s;
+    }
+
+    .thumbnailItem {
+        position: relative;
+        width: 100%;        
+        cursor: pointer;
+        background-color: $gray;
+        box-sizing: border-box;
+
+        .thumbnailCaption {
+            background-color: $darker-gray;
+            padding: 10px;
+            color: white;
+        }
+
+        .thumbnailImg {
+            width: 100%;
+            background-color: #ffffff;
+            height: auto;
+        }
+
+        .thumbnailLabel {            
+            font-size: 14px;                        
+        }
+
+        .thumbnailDescription {            
+            margin-top: 5px;
+            font-family: $bodyFont;
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+                // font-size: 14px;                        
+        }
+
+        &.with-border {            
+            padding: 1px;
+            .thumbnailCaption {
+                margin: 0 -1px -1px -1px;
+            }
+        }
+
+        &.only-option {
+            cursor: default;
+            margin-bottom: 20px;
+        }
+
+        &.selected {
+            .thumbnailCaption {
+                background-color: $light-blue;
+            }
+            background-color: $light-blue;
+        }
+    }
+
+/*     .header {
+        &:hover {
+         background-color: $darker-gray;
+         cursor: default;
+        }        
+    }
+ */
+
+
+    .listToggle {
+        width: 100%;
+        text-align: center;
+        color: $light-blue;
+        margin: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+        background-color: #ffffff;
+
+        .arrowIcon{
+            margin: 5px auto;
+            width: 1.2rem;
+            height: 1.2rem;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('../../assets/icons/icon-chevron-down.svg');
+            opacity: 0.6;
+            animation: rotate-in 0.3s ease-in-out;
+        }
+        .closedIcon {
+            animation: rotate-out 0.3s ease-in-out;
+            transform: rotate(180deg);  
+        }
+    }
+
+    .closedList {
+        position: sticky;
+        bottom: 0;
+        z-index: 10;
+    }
+
+    @keyframes rotate-out {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(180deg)}
+    }
+    @keyframes rotate-in {
+        from {transform: rotate(180deg)}
+        to {transform: rotate(0deg)}
+    }
+    @keyframes close-list {
+        from {transform: translateY(0); opacity: 1;}
+        to {transform: translateY(-1rem); opacity: 0;}
+    }
+    @keyframes open-list {
+        from {transform: translateY(-1rem); opacity: 0;}
+        to {transform: translateY(0); opacity: 1;}
+    }
+
+    .finishList {
+        margin-top: 7px;
+
+        .check img {
+            visibility: hidden;
+        }
+    }
+    
+}

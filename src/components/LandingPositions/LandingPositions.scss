@@ -1,0 +1,198 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.LandingPositions {
+    width: 100%;
+    position: relative;
+    max-width: 332px;
+    margin: 0.5rem auto 1rem;
+    @media only screen and (max-width: $desktop-medium) {
+        max-width: 232px;
+    }
+
+    .background {
+        margin: auto;
+        width: 100%;
+        height: 300px;
+        position: relative;
+        z-index: 0;
+
+        svg {
+            position: absolute;
+            right: 0; left: 0;
+            margin: auto;
+            @media only screen and (max-width: $desktop-medium) {
+                max-width: 232px;
+                height: 260px;
+            }
+        }
+    }
+
+    .selected {
+        opacity: 1;
+    }
+
+    .hl-horizontal {
+        position: absolute;
+        width: 36px;
+        height: 16px;
+        left: 0; right: 0;
+        margin: auto;
+
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;    
+        border: 2px solid #E0E4E6;
+        border-radius: 1px;
+        background-color: #fff;
+
+        svg {
+            display: none;
+        }
+
+        &.selected {
+            border: none;
+            svg {
+                display: block;
+            }
+        }
+
+        &.disabled {
+            display: none;
+        }
+        
+        @media only screen and (max-width: $desktop-medium) {
+            width: 31.5px;
+            height: 14px; 
+
+            svg {
+                width: 33px;
+                height: 15px;
+            }
+        }
+    }
+
+    .top {
+        top: 10px;
+    }
+    .bottom {
+        top: 44px;
+        @media only screen and (max-width: $desktop-medium) {
+            top:41px;
+        }
+    }
+
+    .hl-vertical {        
+        position: absolute;
+        height: 33px;
+        width: 16px;      
+        top: 69px;
+
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;    
+        border: 2px solid #E0E4E6;
+        border-radius: 1px;
+        background-color: #fff;
+
+        svg {
+            display: none;
+        }
+
+        &.selected {
+            border: none;
+            svg {
+                display: block;
+            }
+        }      
+
+        &.disabled {
+            display: none;
+        }
+
+        @media only screen and (max-width: $desktop-medium) {
+            right: 0;
+            top: 65px;
+            width: 14px;
+            height: 28.875px;
+            svg{
+                width: 14px;
+                height: 28.875px;
+            }
+        }
+    }
+
+    .lcs {
+        width: 16px;
+        height: 30px;
+        position: absolute;
+        top: 169px;
+
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;    
+        border: 2px solid #E0E4E6;
+        border-radius: 1px;
+        background-color: #fff;
+
+        svg {
+            display: none;
+        }
+
+        &.selected {
+            border: none;
+            svg {
+                display: block;
+            }
+        }
+
+        &.disabled {
+            display: none;
+        }        
+
+        @media only screen and (max-width: $desktop-medium) {
+            top: 145px;
+            width: 14px;
+            height: 26.25px;
+
+            svg {
+                width: 15px;
+                height: 27px;
+            }
+        }
+    }
+
+    .left {
+        &.outer {
+            left: 20px;
+            @media only screen and (max-width: $desktop-medium) {
+                left: 0px;
+            }
+        }
+
+        &.inner {
+            left: 70px;
+            @media only screen and (max-width: $desktop-medium) {
+                left: 36px;
+            }
+        }
+    }
+
+    .right {
+        &.outer {
+            right: 20px;
+            @media only screen and (max-width: $desktop-medium) {
+                right: 0px;
+            }
+        }
+
+        &.inner {
+            right: 68px;
+            @media only screen and (max-width: $desktop-medium) {
+                right: 34px;
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,133 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/utils";
+
+.ServiceBlock {
+  border-bottom: 1px solid #e0e4e6;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    .add-button {
+      @include create-add-button();
+    }
+    
+    .edit-container {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 10px 0 20px 0;
+
+      .edit-buttons {
+        display: flex;
+        align-items: center;
+
+        div {
+          border-radius: 100%;
+
+          border: none;
+          outline: none;
+          
+          &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+          }
+        }
+
+        
+      }
+    }
+
+  }
+  .edit-button {
+    margin-left: 5px;
+    width: 28px;
+    height: 28px;
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+
+  .delete-button {
+    margin-left: 6px;
+    width: 28px;
+    height: 28px;
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+
+  .ServiceLayout {
+    display: flex;
+    align-items: center;
+  }
+
+  .service-image {
+    background-color: #EDEFF0;
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin-right: 10px;
+    svg {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  .service-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    svg {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  .service-name {
+    font-family: $bodyFont;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+/*     font-size: 10.5pt;
+    line-height: 1.5em; */
+  }
+}
+
+.rtl {
+  .ServiceBlock {
+    &__content {
+      .add-button {
+        &__text {
+          margin-left: unset;
+          margin-right: 10px;
+        }
+      }
+
+      .edit-container {
+        .edit-buttons {
+          .delete-button {
+            margin-right: unset;
+            margin-left: 10px;
+          }          
+        }
+      }
+    }
+
+    .finish-image {
+      margin-right: unset;
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.HeadingComponent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .headerLabel {
+    text-transform: uppercase;
+    color: $dark-gray;
+    line-height: 1.2;
+    font-size: 10.5pt;
+    flex-grow: 1;
+  }
+
+  .headerInfoIcon {
+    cursor: pointer;
+  }
+
+  &.white {
+    .headerLabel {
+      color: white;
+    }
+  }
+
+  &.padding-sm {
+    padding: 10px 0;
+  }
+
+  &.padding-md {
+    padding: 20px 0;
+  }
+
+  &.border-top {
+    border-top: 1px solid $gray;
+  }
+
+  &.border-bottom {
+    border-top: 1px solid $gray;
+  }
+
+  &.align-center {    
+    text-align: center;
+  }
+  
+  &.align-right {    
+    text-align: right;
+  }
+
+  &.disabled{
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+}
+

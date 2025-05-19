@@ -1,0 +1,31 @@
+.Map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #CADAE3;
+  
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .rsm-geography {
+      fill: #F5FBFF;
+      stroke: #A9B7C0;
+      stroke-width: 0.25px;
+
+      &:focus {
+        // fill: #0071B9;
+        outline: none;
+      }
+      
+      &.rsm-geography-selected {
+        fill: #0071B9;
+      }
+    }
+  }
+}

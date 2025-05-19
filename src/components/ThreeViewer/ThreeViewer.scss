@@ -1,0 +1,80 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.ThreeViewer { 
+  position: relative;
+  flex-grow: 1;
+  // use clear color
+  background-color: #f8f8f8;
+
+  .canvas-container {
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    cursor: move;
+    background-color: transparent;
+  }
+
+  &.edit-panel-open {
+    .canvas-container {
+      @media only screen and (max-width: $tablet-portrait) {        
+        left: $l-width-edit-panel;
+      }
+    }
+  }
+}
+
+.with-custom-finish-editor, .with-floor-mixer {
+  .ThreeViewer { 
+    &.edit-panel-open {
+      .canvas-container {
+        @media only screen and (max-width: $tablet-portrait) {        
+          left: $l-width-edit-panel + $md-width-main-nav;
+        }
+      }
+    }
+  }
+}
+
+// Gendoc viewer specific styling
+.editor-mode-view {
+  .ThreeViewer { 
+    &.edit-panel-open {
+      .canvas-container {
+        @media only screen and (max-width: $tablet-portrait-extra) {        
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+.rtl {
+  .ThreeViewer {
+    &.edit-panel-open {
+      .canvas-container {
+        @media only screen and (max-width: $tablet-portrait) {        
+          left: 0;
+          right: $l-width-edit-panel;
+        }
+      }
+    }    
+  }
+
+  .editor-mode-view {
+    .ThreeViewer { 
+      &.edit-panel-open {
+        .canvas-container {
+          @media only screen and (max-width: $phone-big) {        
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}

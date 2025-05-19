@@ -1,0 +1,272 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+
+$wall-thickness: 0.6rem;
+$wall-gap: 0.25rem;
+$wall-color: #C6CACC;
+$through-wall-width: 2.2rem;
+$door-position-selector-color: #A9B7C0;
+$car-width: 45%;
+$car-width-small-screen: 60%;
+$car-height: 7rem;
+$padding-for-selections: 2rem;
+
+// TODO cleanup unnecessary styles
+
+.PositionSelectorJamb {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    // Element height is the height of the sidewalls and thickness and gab of both back and front wall
+    height: calc(#{$car-height + #{$wall-gap * 2} + #{$wall-thickness * 2}});
+    padding-bottom: $padding-for-selections; // Space for selections
+
+    &.through-type {
+      padding-top: $padding-for-selections; // Space for selections
+    }
+
+    p{
+        margin: 0.5rem 0;
+    }
+
+    .wall-label {
+      position: absolute;
+      font-size: 0.9rem;
+      color: $light-gray;
+      text-transform: uppercase;
+      top: 50%;
+      
+      &--left {
+        left: -0.5rem;
+        // Making sure the element is centered and that the right edge of the label stays always on the same place so it never overlaps with the car wall regardless of length
+        transform: translate(-100%, -100%);
+      }
+      
+      &--right {
+        right: -0.5rem;
+        transform: translate(100%, -100%); // See above comment
+      }
+    }
+
+    .center {
+      width: $car-width-small-screen;
+      position: relative;
+      
+      @include respond-larger-than($desktop-medium + 1px) {
+          width: $car-width;
+        }
+    }
+    .left {
+        position: absolute;
+        left: 0;
+        .bottom.throughwall {
+            border-bottom-left-radius: 100px;
+        }
+
+        .top.throughwall {
+            border-top-left-radius: 100px;
+        }
+    }
+    .right {
+        position: absolute;
+        right: 0;
+        .bottom.throughwall {
+            border-bottom-right-radius: 100px;
+        }
+
+        .top.throughwall {
+            border-top-right-radius: 100px;
+        }
+    }
+    .sidewall {
+        background-color: $wall-color;
+        height: $car-height;
+        width: $wall-thickness;
+        margin: calc(#{$wall-thickness} + #{$wall-gap}) 0;
+    }
+
+    .door-position {
+        height: $wall-thickness;
+        width: $wall-thickness;
+        background-color: $door-position-selector-color;
+        position: absolute;
+    }
+
+    .bottom.door-position {
+        bottom: 0;
+    }
+
+    .top.door-position {
+        top: 0;
+    }
+
+    .right > .door-position {
+        left: -#{$through-wall-width};
+    }
+
+    .left > .door-position {
+        right: -#{$through-wall-width};
+    }
+    
+    .position.selected {
+        background-color: $light-blue;
+    }
+
+    .throughwall {
+        position: absolute;
+        width: $through-wall-width;
+        height: $wall-thickness;
+        margin: 0 0;
+        background-color: $wall-color;
+    }
+
+    .bottom.throughwall {
+        bottom: 0;
+    }
+
+    .top.throughwall {
+        top: 0;
+    }
+
+    .selection {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 3px;
+        border: 1px solid $kone-blue;
+        background-color: $lighter-gray;
+        &.selected {
+            background-color: $light-blue;
+        }
+        &.checked {
+            background-color: $light-blue;
+            border: 1px solid $light-blue;
+            position: relative;
+            svg {
+                position: absolute;
+                top: 0; bottom: 2px; right: 0; left: 0;
+                width: 0.9rem;
+                height: 0.9rem;
+                margin:auto;
+            }        
+        }
+        &.radio {
+            border-radius: 0.75rem;
+            &.checked {
+                background-color: white;
+                align-self: flex-start;
+                .innerRim {
+                    margin: 2px;
+                    width: calc(1.5rem - 4px);
+                    height: calc(1.5rem - 4px);
+                    border-radius: calc( (1.5rem - 4px) / 2);
+                    background-color: $light-blue;
+                }
+            }
+    
+        }
+    
+    }
+    .rear {
+        text-align: center;
+        cursor: pointer;
+
+        .selection {
+            display: inline-block;
+            margin: 0 0 0.5rem;
+        }
+        .selected {
+            background-color: $light-blue;
+        }
+    }
+
+    .backwall {
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin:auto;
+        background-color: $wall-color;
+        width: 100%;
+        height: $wall-thickness;
+        border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
+        &.disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    }
+
+    .WallSelection {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        cursor: pointer;
+        
+        &.label-position-top {
+            flex-direction: column-reverse;
+        }
+
+        &.bottom {
+          bottom: -1.75rem;
+        }
+
+        &.top {
+          top: -1.75rem;
+        }
+
+        &.disabled {
+          .selection {
+            border: 1px solid $dark-gray;
+          }
+        }
+    }
+
+    .left .WallSelection {
+      left: calc(#{$through-wall-width} / 2);
+    }
+
+    .right .WallSelection {
+      right: calc(#{$through-wall-width} / 2);
+    }
+
+    .selectionsLeft {
+        position: absolute;
+        left: 15%;
+        bottom: 3.7rem;
+        text-align: center;
+        cursor: pointer;
+        .selection {
+            display: inline-block;
+        }
+    }
+    .selectionsRight {
+        position: absolute;
+        right: 15%;
+        bottom: 3.7rem;
+        text-align: center;
+        cursor: pointer;
+        .selection {
+            display: inline-block;
+        }
+    }
+
+    @media only screen and (max-width: $desktop-medium) {
+        .selectionsLeft {
+            left: 10%;
+        }
+        .selectionsRight {
+            right: 9%;
+        }
+    }
+    .disabled {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+
+    .hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}

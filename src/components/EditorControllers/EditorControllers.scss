@@ -1,0 +1,132 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.EditorControllers {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  pointer-events: none;
+
+  & > * {
+    pointer-events: auto;
+  }
+
+  .timeOfDay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+    .day {
+      display: none;
+      padding-bottom: 20px;
+      cursor: pointer;
+    }
+    .night {
+      display: none;
+      cursor: pointer;
+    }
+  }
+
+  .LandingFinishSelector {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ZoomAndRotate {
+    display: flex;
+    align-self: flex-end;
+    margin-right: 2.5rem;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond($phone-big) {
+      display: none;
+    }
+
+    .Zooms {
+      cursor: pointer;
+      .ZoomTop {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 4px 4px 0 0;
+        background-color: $light-blue;
+        margin-bottom: 1px;
+        text-align: center;
+        color: white;
+        font-size: 1.6rem;
+
+        @media only screen and (max-width: $desktop-small) {
+          width: 25px;
+          height: 25px;
+          line-height: 25px;
+        }
+
+        &:hover {
+          background-color: $kone-blue;
+        }
+      }
+
+      .ZoomBottom {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 0 0 4px 4px;
+        background-color: $light-blue;
+        margin-top: 1px;
+        text-align: center;
+        color: white;
+        font-size: 1.6rem;
+
+        @media only screen and (max-width: $desktop-small) {
+          width: 25px;
+          height: 25px;
+          line-height: 25px;
+        }
+
+        &:hover {
+          background-color: $kone-blue;
+        }
+      }
+    }
+
+    .Rotate {
+      cursor: pointer;
+      margin-top: 15px;
+      svg {
+        display: block;
+        margin: auto;
+      }
+      .Label {
+        text-align: center;
+        text-transform: uppercase;
+        color: $light-blue;
+        font-size: 10pt;
+      }
+    }
+  }
+}
+
+// Hide bottom bar when custom finish editor is open
+.with-custom-finish-editor,
+.with-floor-mixer {
+  .EditorControllers {
+    // padding: 24px 0;
+  }
+}
+
+.rtl {
+  .EditorControllers {
+    right: unset;
+    left: 0;
+  }
+}

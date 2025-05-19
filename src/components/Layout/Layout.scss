@@ -1,0 +1,161 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.Layout {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+
+  // Gendoc viewer styling 
+  &.editor-mode-view {
+    @include respond($phone-big) {
+      flex-direction: column-reverse;
+    }
+
+    main {
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: $phone) {
+    // flex-direction: column;
+  }
+
+  &.with-bottom-nav {
+    padding-bottom: 3rem;
+  }
+
+  main {
+    flex-grow: 1;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: $app-bg;
+
+    .content {
+      margin-top: ($header-height + $nav-bar-height);
+
+      @media only screen and (max-width: $phone-big){
+        margin-top: ($header-height-mobile + $nav-bar-height);
+      }
+    }
+
+    @media only screen and (max-width: $tablet-landscape) {
+      width: calc(100vw - #{$l-width-main-nav} );
+    }  
+
+    @media only screen and (max-width: $tablet-portrait) {
+      order:1;
+    }    
+  }
+
+  .cookieConsent {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: $darker-gray;
+    color: white;
+    max-width: 100%;
+    z-index: 199;
+
+    @media only screen and (max-width: $tablet-portrait-small) {
+      flex-direction: column;
+    }
+
+    .container {
+      flex: 1 0 300px;
+      margin: 20px 20px 20px 40px;
+      text-align: center;
+
+      @media only screen and (max-width: $tablet-portrait-small) {
+        flex: 1;
+      }
+
+      @media only screen and (max-width: $phone) {
+        text-align: left;
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.875rem;
+      }
+    }
+    button {
+      @include create-button(white, transparent, white);
+      min-width: 10rem;
+      flex: 0 0 auto;
+      padding: 5px 10px;
+      margin: 20px 40px 20px 20px;       
+
+      @media only screen and (max-width: $tablet-portrait-small) {
+        width: calc(100% - 40px);
+        margin: 10px auto;
+      }
+
+      @media only screen and (max-width: $phone) {
+        margin-bottom: 25px;
+        
+      }
+    }
+  }
+
+  &.maxWidth {    
+    max-width: $max-width-layout;
+    .cookieConsent {
+      width: $max-width-layout;
+    }
+
+    .bottom-navigation {
+      max-width: $max-width-layout;
+      z-indeX: 2;
+      padding: 15px 90px;
+    }
+  }
+
+  &.blur {    
+    filter: blur(4px) brightness(50%);
+    pointer-events: none;
+  }
+
+  .bottom-navigation {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    background: hsla(0, 0, 100, .9);
+    padding: 10px 40px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .feedback-button-container {
+    // height: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2000;
+    width: 100%;
+    max-width: calc(#{$max-width-layout} + 6rem);
+    position: fixed;
+    top: 50vh;
+    background-color: transparent;
+    pointer-events: none;
+
+    @include respond($max-width-layout + 200px) {
+      max-width: $max-width-layout;
+    }
+
+    &.editor-mode {
+      max-width: unset;
+      left: 0;      
+      right: 0;
+    }
+
+    & > * {
+      pointer-events: all;
+    }
+
+    .GiveFeedbackButton {
+      margin-right: 1rem;
+    }
+  }
+}
+

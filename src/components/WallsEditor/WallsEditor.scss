@@ -1,0 +1,208 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.WallsEditor {
+  position: relative;
+  height: 100%;
+
+  .EditorLayout .ToggleButtons {
+    margin-bottom: 1.5rem;
+  }
+
+  .InfoBox {
+    margin-bottom: 10px;
+  }
+
+  // 
+  .deco-info {
+    text-align: center;
+    border-top: 1px solid $gray;
+    padding: 20px 0;
+    font-size: 14px;
+    line-height: 16px;
+
+    .deco-info-glass {
+      display: inline-block;
+      margin-right: 20px;
+      
+      .deco-info-glass-color {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 10px; 
+        background-color: #E0E4E6;
+        vertical-align: top;
+      }
+    }
+
+    .deco-info-mirror {
+      display: inline-block;
+
+      .deco-info-mirror-color {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        background-color: #86C2EB;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .WallItemSelector.panel-selection {
+    .WallItem__label {
+      color: $base-text-color;
+    }
+
+    
+    .WallItem:not(.selected) {
+      .WallItem__selectionState {
+        background-color: #C6CACC;
+      }
+    }
+
+
+    .wall-locks-container {
+      color: #C6CACC;
+    }
+
+    .WallItemSelector__items {
+      // margin: 10px 7px;
+    }
+  }
+
+  .all-panels-checkbox {
+    margin-bottom: 1.5rem;
+  }
+
+  .FormSelect {
+    margin-bottom: 10px;
+  }
+
+  .panelOrientation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &.disabled {
+      cursor: context-menu;
+      pointer-events: none;
+      opacity: 0.4;      
+    }
+
+    .orientationItem {
+      display: flex;
+      flex-direction: column;
+      padding: 0 9px;
+      text-align: center;
+      cursor: pointer;
+      img {
+        padding-top:20px;
+      }
+      .orientationLabel {
+        padding-top: 6px;
+        font-size: 0.7rem;
+        line-height: 14px;
+        color: $darker-gray;
+      }
+    }
+
+    .selected {
+      .orientationLabel {
+        color: $light-blue;
+      }
+    }
+  }
+
+  .action-buttons {
+    position: absolute;
+    display: flex;
+    justify-content: stretch;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, .9);
+    z-index: 2;
+
+    .Button {
+      flex-grow: 1;
+      min-width: 128px;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: unset
+      }
+    }
+  }
+
+  .custom-wall-finishes {
+    margin-top: 20px;
+  }
+
+  .material-dropdown {
+    text-align-last: left;
+  }
+
+  .FinishSelector {
+    .FinishSelector-heading {
+      margin-top: 1.5rem;
+      padding-top: 10px;
+    }
+
+    .SectionAccordion__body {
+      .FormSelect {
+        margin-top: 1.25rem;
+      }
+    }
+
+    .finish-section-accordion {
+      border: none;
+    }
+
+    .ListItem {
+      .HeadingComponent {
+        .headerLabel {
+          color: #262E33;
+        }
+      }
+    }
+  }
+
+  .MaterialList.gray-bg {
+    .accordion-item-content {
+      background-color: #F5F6F7;
+      padding: 0 1rem;
+    }
+  }
+}
+
+// right to left style overrides
+.rtl {
+  .WallsEditor {
+    .deco-info {
+      .deco-info-glass {
+        margin-right: unset;
+        margin-left: 20px;
+        .deco-info-glass-color {
+          margin-right: unset;
+          margin-left: 10px;
+        }
+      }
+      .deco-info-mirror {
+        .deco-info-mirror-color {
+          margin-right: unset;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .material-dropdown {
+      text-align-last: right;
+    }
+  }
+}
+
+.DecoSelector {
+
+}

@@ -1,0 +1,15 @@
+.EditLandingPositionsSection {
+
+  .SectionAccordion__body {
+    padding: 0;
+
+    // Hack to get the landing position SVG to line up correctly.
+    & > * {
+      padding: 0 0.8rem;
+    }
+
+    .LandingPositions {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,166 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.BottomBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #d8dbdd;
+  height: 50px;
+  z-index: 1;
+
+  .bar-left {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 30%;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include respond($phone-big) {
+      flex-basis: 60px;
+    }
+  }
+
+  .bar-center {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 40%;
+    justify-content: center;
+    align-items: center;
+
+    @include respond($phone-big) {
+      flex: 1;
+    }
+  }
+
+  .bar-right {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 30%;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include respond($phone-big) {
+      flex-basis: 60px;
+    }
+  }
+
+  .btn-settings {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 40px;
+    color: $kone-blue;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-right: 34px;
+    margin-left: 10px;
+
+    @include respond($phone-big) {
+      margin-right: 15px;
+      margin-left: 0;
+    }
+
+    .label {
+      display: none;
+      white-space: nowrap;
+    }
+
+    @media (min-width: $tablet-landscape) {
+      .label {
+        display: block;
+      }
+      svg {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  /* FlexButton */
+  .btn-download-design {
+    @include create-ripple();
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+
+    white-space: nowrap;
+    background-color: $light-blue;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0 1rem;
+    margin: unset; // unset margin definitions, included from create-ripple()
+    height: 40px;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $hover-blue;
+    }
+
+    svg {
+      margin-right: 10px;
+      height: 1rem;
+    }
+
+    .btn-left {
+      display: flex;
+      flex-direction: row;
+      flex-basis: 100%;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  
+    .btn-center {
+      display: flex;
+      flex-direction: row;
+      flex-basis: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .btn-right {
+      display: flex;
+      flex-direction: row;
+      flex-basis: 100%;
+      justify-content: flex-end;
+      align-items: center;
+    }    
+  }
+
+  .pdf-button {
+    padding: 0 2rem;
+  }
+}
+
+.settings-menu {
+  display: block;
+  background-color: white;
+  padding: 20px 15px;
+  width: 170px;
+  margin-right: 11px; // fix: to pull menu under scroll bar. Is there better solution for this?
+}
+
+/* TODO: RTL jutut */
+.rtl {
+  .btn-settings {
+    margin-right: 10px;
+    margin-left: 34px;
+    @media (min-width: $tablet-landscape) {
+      svg {
+        margin-right: unset;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .btn-download-design {
+    svg {
+      margin-right: unset;
+      margin-left: 10px;
+    }
+  }
+  // NOTE: .settings-menu {} can't be set here, because it's opened outside of .rtl class
+}

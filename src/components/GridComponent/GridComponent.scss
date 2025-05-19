@@ -1,0 +1,116 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.Grid {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  &.disabled {
+    pointer-events: none;
+    opacity: .6; 
+  }
+  
+  .GridItem {
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  &.gap-xsm {
+    margin: -2px;
+    .GridItem {
+      padding: 2px;
+    }
+  }
+
+  &.gap-sm {
+    margin: -5px;
+    .GridItem {
+      padding: 5px;
+    }
+  }
+  
+  &.gap-md {
+    margin: -10px 0;
+    .GridItem {
+      padding: 10px 0;
+    }
+  }
+
+  &.padding-sm {
+    padding: 10px 0;
+  }
+
+  &.padding-md {
+    padding: 20px 0;
+  }
+
+  &.cols-1 {
+    .GridItem {
+      width: 100%;
+    }
+  }
+
+  &.cols-2 {
+    .GridItem {
+      width: (100%/2);
+    }
+  }
+
+  &.cols-3 {
+    .GridItem {
+      width: (100%/3);
+    }
+  }
+
+  &.cols-4 {
+    .GridItem {
+      width: (100%/4);
+    }
+  }
+  
+  &.cols-5 {
+    .GridItem {
+      width: (100%/5);
+    }
+  }
+
+  &.cols-6 {
+    .GridItem {
+      width: (100%/6);
+    }
+  }
+
+  &.tablet-cols-1 {
+    .GridItem {
+      @media only screen and (max-width: $tablet-landscape) {
+        width: 100%;
+      }
+    }
+  }
+
+  &.tablet-cols-2 {
+    .GridItem {
+      @media only screen and (max-width: $tablet-landscape) {
+        width: (100%/2);
+      }
+    }
+  }
+
+  &.tablet-cols-3 {
+    .GridItem {
+      @media only screen and (max-width: $tablet-landscape) {
+        width: (100%/3);
+      }
+    }
+  }
+
+  &.tablet-cols-4 {
+    .GridItem {
+      @media only screen and (max-width: $tablet-landscape) {
+        width: (100%/4);
+      }
+    }
+  }
+
+}

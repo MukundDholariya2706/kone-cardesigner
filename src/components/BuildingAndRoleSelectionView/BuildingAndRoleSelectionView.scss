@@ -1,0 +1,42 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.BuildingAndRoleSelectionView {
+  position: relative;
+  
+  h2 {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 25px 0;
+
+    @media only screen and (max-width: $phone-big) {
+      flex-direction: column;
+      margin: 10px 0 20px 0;
+
+      font-size: 18px;
+    }
+  }
+
+  .Grid.building-type-grid {
+    @media only screen and (max-width: $phone-big) {
+      .GridItem {
+        width: (100% / 2);
+      }
+    }
+  }
+}
+
+
+
+
+.rtl {
+
+  .BuildingAndRoleSelectionView {
+
+  }
+}

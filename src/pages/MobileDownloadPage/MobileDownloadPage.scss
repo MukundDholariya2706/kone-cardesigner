@@ -1,0 +1,236 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.MobileDownloadPage {
+  margin-top: $header-height;
+  background: center / cover no-repeat url('./images/background.png');
+  color: white;
+  height: 100%;
+  max-height: 100rem;
+  padding: 5% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+
+  @include respond(1700px) {
+    padding: 1.5% 0 2% 0;
+  }
+
+  @include respond($desktop-medium) {
+    padding: 1% 0 1.25% 0;
+  }
+
+  .page-content {
+    
+  }
+
+  @media 
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) { 
+    background-image: url('./images/background@2x.png');
+  }
+
+  @include respond($desktop-small) {
+    padding: 1rem 0;
+  }
+
+  @include respond($tablet-landscape) {
+    padding: 5rem 0;
+  }
+
+  @include respond($tablet-portrait) {
+    padding: 3.5rem 0;
+  }
+
+  @include respond($phone-big) {
+    background-position: 25% 0rem;
+  }
+
+  @include respond($phone) {
+    background-position: 34% 0rem;
+  }
+
+  .heading-container {
+    text-align: center;
+    
+    .sub-heading {
+      font-weight: 400;
+      font-size: 1.25rem;
+    }
+    
+    .main-heading {
+      margin-top: 1rem;
+      font-weight: 400;
+      font-size: 2rem;;
+    }
+  }
+
+  .content-container {
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    width: 60rem;
+    display: flex;
+
+    @include respond($desktop-small) {
+      margin-top: 1.5rem;
+    }
+
+    @include respond($tablet-landscape) {
+      width: 100%;
+    }
+
+    @include respond($tablet-portrait) {
+      width: 25rem;
+      margin: 0 auto;
+    }
+
+    @include respond($tablet-portrait) {
+      flex-direction: column;
+      width: 85%;
+    }
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0;
+    img {
+      width: 30rem;
+      height: auto;
+
+      @include respond($desktop-medium) {
+        width: 29rem;
+      }
+      
+      @include respond($desktop-small) {
+        width: 27rem;
+      }
+  
+      @include respond($tablet-portrait) {
+        width: 25rem;
+      }
+
+      @include respond($phone-big) {
+        width: 22rem;
+      }
+
+      @include respond($phone) {
+        width: 19rem;
+      }
+
+      @include respond($phone-small) {
+        width: 18rem;
+      }
+    }
+  }
+
+  .text-container {
+    text-align: center;
+    flex: 1 1;
+    padding: 2.5rem 1.5rem;
+    line-height: 1.6rem;
+    &__description {}
+
+    &__action-text {
+      margin: 2rem 0;
+
+      @include respond($desktop-small) {
+        margin: 1.25rem 0;
+      }
+
+      @include respond($phone-big) {
+        margin: 1rem 0;
+      }
+    }
+
+    @include respond($desktop-small) {
+      padding: 1.25rem 0.5rem;
+    }
+
+    @include respond($tablet-landscape) {
+      padding: 2.5rem 0.5rem;
+    }
+
+    @include respond($tablet-portrait) {
+      margin-top: 0.5rem;
+      padding: 0 2rem;
+    }
+
+    @include respond($phone-big) {
+      padding: 0 1rem;
+    }
+  }
+
+  .ios-huawei-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .action-button-container {
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+
+      @include respond($desktop-small) {
+        margin-bottom: 1.5rem;
+      }
+
+      @include respond($phone-big) {
+        margin-bottom: 1rem;
+      }
+      
+    }
+
+    &__text {
+      margin: 1rem 0;
+    }
+
+    &.android-action-button-container {}
+
+    &.ios-action-button-container {
+      margin-right: 0.7rem;
+      .action-button-container__text {
+        margin-bottom: 0.4rem;
+      }
+
+      img {
+        cursor: pointer;
+      }
+    }
+
+    &.huawei-action-button-container {
+      margin-left: 0.7rem;
+      .action-button-container__text {
+        margin-bottom: 0.4rem;
+      }
+
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .action-button {
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 22rem;
+    // height: 2.5rem;
+    margin: 0 auto;
+  }
+  
+  .store-badge {
+    height: 2.58em; 
+    width: auto; 
+/*     width: 7em; 
+    height: auto;  */
+  }
+}
+
+.footer-div {
+  width: 100%;
+  height: 1.5rem;
+  background-color: white;
+}

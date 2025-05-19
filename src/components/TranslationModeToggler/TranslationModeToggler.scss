@@ -1,0 +1,36 @@
+@import '../../styles/Variables.scss';
+@import '../../styles/utils.scss';
+
+.TranslationModeToggler {
+  // Using absolute positioning so this element has no chance to affect the layout of anything else
+  // (so the layout in Preview Car Designer and Prod Car Designer should remain exactly the same)
+  position: absolute; 
+  right: 7rem;
+  top: 0;
+  padding: 0;
+
+  @include respond(1000px) {
+    display: none;
+  }
+
+  .SwitchButton-label {
+    text-transform: none;
+  }
+
+  .switch {
+    margin-left: 0.75rem;
+  }
+}
+
+.design-specification {
+  .TranslationModeToggler {
+    right: 16rem;
+  }
+}
+
+.SimpleEditorNavBar {
+  .TranslationModeToggler {
+    top: .75rem;
+    right: 14rem;
+  }
+}

@@ -1,0 +1,62 @@
+@import "../../styles/Variables";
+
+.FileInput {
+  display: flex;
+  padding: 30px;
+  border: 2px dashed $kone-blue;
+  border-radius: 7px;
+  align-items: center;
+  cursor: pointer;
+  
+  svg {
+    flex-shrink: 0;
+    margin-right: 24px;
+    pointer-events: none;
+  }
+
+  .container-text {
+    flex-grow: 1;
+    .FileInput-label {
+      color: $kone-blue;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+    .FileInput-description {
+      color: #A9B7C0;
+      font-size: 14px;
+    }
+    pointer-events: none;
+  }
+
+  .fileInput {
+    display: none;
+  }
+
+  &.highlight {
+    background-color: $lightest-blue;
+  }
+}
+
+.rtl {
+  .FileInput {
+    svg {
+      margin-right: unset;
+      margin-left: 24px;
+    }
+  
+/*     .container-text {
+      flex-grow: 1;
+      .FileInput-label {
+        color: $kone-blue;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+      .FileInput-description {
+        color: #A9B7C0;
+        font-size: 14px;
+      }
+      pointer-events: none;
+    } */
+
+  }
+}

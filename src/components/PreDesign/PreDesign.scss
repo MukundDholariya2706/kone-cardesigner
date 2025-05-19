@@ -1,0 +1,267 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.PreDesign {
+  position: relative;
+  margin: 0 auto 5px auto; 
+  max-width: 980px; // --> TODO: use some variable ???  
+  
+  .pre-design-container {
+    clear: both;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: -5px;
+    
+
+    .pre-design-tile-container {
+      position: relative;
+      box-sizing: border-box;
+      width: (100% / 3);
+      padding: 5px;
+    }
+    
+    .aspect-ratio-1-1 {
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+    }
+    
+    .pre-design-tile {
+      display: block;
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .theme {
+      color: white;
+      background-color: $darker-gray;
+      padding: 40px 25px;
+
+      @media only screen and (max-width: $tablet-landscape) {
+        padding: 20px 20px;
+      }
+
+      h3 {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 1.25em;
+        margin: 0;
+
+        @media only screen and (max-width: $tablet-landscape) {
+          font-size: 20px;
+        }
+      }
+
+      h4 {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.5em;
+        margin:0;
+        top:70px;
+
+        @media only screen and (max-width: $tablet-landscape) {
+          font-size: 14px;
+        }
+
+      }
+      .description {
+        margin-top: 30px; 
+        font-size: 16px;
+        line-height: 1.5em;
+        
+        @media only screen and (max-width: $tablet-landscape) {
+          margin-top: 10px; 
+          font-size: 14px;
+        }
+
+        .description-line {
+
+        }
+      }
+
+      .readMore {
+        position: absolute;
+        font-size: 16px;
+        color: $lightest-blue;
+        bottom: 30px;
+        cursor: pointer;
+        text-decoration: none;
+
+        @media only screen and (max-width: $tablet-landscape) {
+          bottom: 20px;
+        }
+      }
+    }
+
+    .design-item {
+      
+      background-color: #EDEFF0;
+      color: $darker-gray;
+
+      .sprite-container {
+        position: absolute;
+        width: 50%;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &.shape-HOMELIFT_9_12_24, &.shape-NANOSPACE_11_10_21 {
+          width: 36%;
+        }
+      }
+
+      .local-design-container {
+        height: 66%;
+        text-align: center;
+
+        img {
+          height: 100%;
+        }
+
+        .shape-SQUARE {
+          width: 75%;  
+        }
+
+        
+      }
+
+      .label {
+        position: absolute;
+        left: 25px;
+        right: 25px;
+        bottom: 20px;
+        margin: 0;
+        font-size: 18px;
+        text-align: center;
+
+        @media only screen and (max-width: $tablet-landscape) {
+          bottom: 15px;
+          left: 20px;
+          right: 20px;
+        }
+      }
+    }
+  
+    @media only screen and (max-width: $phone-big) {
+      .pre-design-tile-container {
+        width: 100%;
+
+        .pre-design-tile {
+          &.theme {
+            h3 {
+              font-size: 1.5rem;
+              margin: 3rem 0;
+            }
+
+            .description {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: $phone) {
+      .pre-design-tile-container {
+        .pre-design-tile {
+          &.theme {
+            h3 {
+              margin: 2rem 0;
+            }
+
+            .description {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  } 
+
+  &.natural-wellness {
+    .pre-design-container {
+      .theme {
+        color: black;
+        h3 {
+          color: $darker-gray;
+        }
+        .readMore {
+          color: $light-blue;
+        }
+      }
+    }
+  }
+  
+  &.creative-life {
+    .pre-design-container {
+      .theme {
+        color: black;
+        h3 {
+          color: $darker-gray;
+        }
+        .readMore {
+          color: $light-blue;
+        }
+      }
+      .design-item {
+        background-color: $darker-gray;
+        color: white;
+      }
+    }
+  }
+
+  &.industrial-chic {
+    .pre-design-container {
+/*       .theme {
+        color: black;
+        h3 {
+          color: $darker-gray;
+        }
+        .readMore {
+          color: $light-blue;
+        }
+      } */
+      .design-item {
+        background-color: $darker-gray;
+        color: white;
+      }
+    }
+  }
+
+  &.noveau-glamour {
+    .pre-design-container {
+/*       .theme {
+        color: black;
+        h3 {
+          color: $darker-gray;
+        }
+        .readMore {
+          color: $light-blue;
+        }
+      } */
+      .design-item {
+        background-color: $darker-gray;
+        color: white;
+      }
+    }
+  }
+
+  &.local-kone {
+    .pre-design-container {
+      .theme {
+        .readMore {
+          color: $light-blue;
+        }
+      }
+    }
+  }
+}

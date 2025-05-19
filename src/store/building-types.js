@@ -1,0 +1,15 @@
+module.exports = [
+  { id: 'residential', name: 'building-residential', image: 'thumbnails/building-and-roles/Residential.png' },
+  { id: 'hotel', name: 'building-hotel', image: 'thumbnails/building-and-roles/Hotel.png' },
+  { id: 'office', name: 'building-office', image: 'thumbnails/building-and-roles/Office.png' },
+  { id: 'retail', name: 'building-retail', image: 'thumbnails/building-and-roles/Retail.png' },
+  { id: 'airport', name: 'building-airport', image: 'thumbnails/building-and-roles/Airport.png' },
+  { id: 'medical', name: 'building-medical', image: 'thumbnails/building-and-roles/Medical.png' },
+  { id: 'industrial', name: 'building-industrial', image: 'thumbnails/building-and-roles/Industrial.png' },
+  { id: 'educational', name: 'building-leisure-educational', image: 'thumbnails/building-and-roles/Leisure & Educational.png' },
+  { id: 'multiuse', name: 'building-public-transportation-multiuse', image: 'thumbnails/building-and-roles/Public transport & Multiuse.png' },
+  { id: 'other', name: 'building-other', image: 'thumbnails/building-and-roles/Other.png' },
+  { id: 'cruise-ship', name: 'marine-cruise-ship', image: 'thumbnails/building-and-roles/cruise-ship.jpg', marine: true },
+  { id: 'ferry', name: 'marine-ferry', image: 'thumbnails/building-and-roles/ferry.jpg', marine: true },
+  { id: 'cargo-vessels', name: 'marine-cargo-vessels-and-special', image: 'thumbnails/building-and-roles/cargo-vessels.jpg', marine: true },
+]

@@ -1,0 +1,30 @@
+@import "../../../../styles/Variables";
+@import "../../../../styles/utils";
+
+.ComponentSelector {
+  &__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 45px;
+    font-size: 14px;
+    padding-right: 0.5rem;
+
+    &.selected {
+      outline: 2px solid $kone-blue;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 0.75rem;
+    }
+  }
+  &__sprite {
+    width: 32px;
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+  &__label {
+    margin-left: 1rem;
+  }
+}

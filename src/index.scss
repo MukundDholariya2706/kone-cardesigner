@@ -1,0 +1,69 @@
+@import './styles/Variables.scss';
+
+$light-blue: #0071B9;
+$button-border-radius: 0.25rem;
+$border-color-darker: #C4C4C4;
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;    
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $base-text-color;
+
+  // These values used when opening a modal sets body position: fixed.
+  left: 0;
+  right: 0;
+
+  // Will be set visible if 3d enabled. This way can avoid showing the
+  // 3D Car Designer before redirection to 2D.
+  display: none; 
+  
+  font-family: $headingFont;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  .unsupported {
+    margin: 4rem auto;
+    width: 13rem;
+  }
+}
+
+input {
+  font-family: inherit;
+}
+
+code {
+  font-family: source-code-pro, monospace;
+}
+
+a {
+  color: #0071B9;
+  text-decoration: none;
+}
+
+#root.modal-open {    
+  filter: blur(4px) brightness(50%);
+  pointer-events: none;
+}
+
+.rtl {
+  select {    
+    background-position: left;
+    background-position-x: 10px;
+  }
+}
+
+.no-selection-highlight {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                            supported by Chrome, Edge, Opera and Firefox */
+}
+

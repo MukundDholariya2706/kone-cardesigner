@@ -1,0 +1,49 @@
+@import "../../styles/Variables";
+
+.ConnectedServices {
+  height: 100%;
+    
+  
+  .info-heading {
+    font-size: 18pt;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    line-height: 1.5em;
+  }
+  .info-content {
+    .text {
+      margin-bottom: 20px;
+    }
+    .read-more {
+      font-size: 0.9rem;
+      color: $kone-blue;
+      cursor: pointer;
+    }
+
+  }
+
+  .facts {
+    text-align: center;
+    
+    .info-fact-heading {
+      font-size: 1.1em;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    
+    .info-desc {
+      font-family: $bodyFont;
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+/*       font-size: 0.8em;
+      line-height: 1.5em; */
+    }
+    
+    .image {
+      margin-top: 20px;
+      width:40%;
+    }
+
+  }
+
+}

@@ -1,0 +1,98 @@
+@import "../../styles/Variables";
+
+.Dialog {
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  z-index: 999;
+  border-radius: 4px;
+  transform: translateX(-50%);
+
+  width: calc(100% - 40px);
+  max-height: calc(100% - 90px - 20px);
+
+  @media (min-width: 640px + 40px) {
+    width: 640px;
+  }
+
+  .DialogHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    border-bottom: 1px solid $border-color;
+    flex-shrink: 0;
+
+    @media screen and (max-width: $phone-big) {
+      padding: 10px 15px;
+    }
+
+    &-close {
+      cursor: pointer;
+      padding: 10px;
+      margin-right: -10px;
+
+      svg {
+        display: block;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .DialogBody {
+    padding: 15px 30px;
+    margin: 0;
+    position: relative;
+
+    @media screen and (max-width: $phone-big) {
+      padding: 10px 15px;
+    }
+  }
+
+  .DialogFooter {
+    padding: 10px 30px;
+    border-top: 1px solid $border-color;
+    flex-shrink: 0;
+
+    @media screen and (max-width: $phone-big) {
+      padding: 10px 15px;
+    }
+  }
+
+  .DialogNotification {
+    position: absolute;
+    width: 100%;
+    top: -3.5rem;
+    .Toast {
+      margin: 0;
+    }
+    // transform: translateY(-100%);
+  }
+}
+
+.rtl {
+  .Dialog {
+    .DialogHead {
+      &-close {
+        margin-right: unset;
+        margin-left: -10px;
+      }
+    }
+    .DialogBody {
+      &.ScrollBox {
+        padding: 10px 30px;
+        margin: 0;
+
+        @media screen and (max-width: $phone-big) {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

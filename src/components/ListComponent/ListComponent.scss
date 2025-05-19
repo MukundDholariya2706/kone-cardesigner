@@ -1,0 +1,62 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.List {
+  position: relative;
+  
+  &.disabled {
+    pointer-events: none;
+    opacity: .6; 
+  }
+
+  .ListItem {
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  &.gap-sm {
+    margin: -5px 0;
+    .ListItem {
+      padding: 5px 0;
+    }
+  }
+
+  &.gap-md {
+    margin: -10px 0;
+    .ListItem {
+      padding: 10px 0;
+    }
+  }
+
+  &.padding-sm {
+    padding: 10px 0;
+  }
+
+  &.padding-md {
+    padding: 20px 0;
+  }
+
+  &.direction-row {
+    .ListItem {
+      display: inline-block;
+    }
+
+    &.gap-sm {
+      margin: 0 -5px;
+      .ListItem {
+        padding: 0 5px;
+      }
+    }
+
+    &.gap-sm {
+      margin: 0 -10px;
+      .ListItem {
+        padding: 0 10px;
+      }
+    }    
+  }
+
+  &.align-center {
+    text-align: center;
+  }
+}

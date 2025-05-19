@@ -1,0 +1,118 @@
+@import "../../../../styles/Variables";
+@import "../../../../styles/utils.scss";
+
+.EditButtonsSections {
+ 
+  .read-more {
+    color: $kone-blue;
+    cursor: pointer;
+  }
+
+  .finishItem {
+    width: 100%;
+    background-color: white;
+    color: $base-text-color;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    &:hover {
+      background-color: $lighter-gray;
+    }
+  }
+
+  .selected {
+    background-color: $lighter-gray;
+
+  }
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    color: $base-text-color;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    
+  }
+
+  .dropdown {
+    display: inline-block;
+  
+    .dropdown__trigger {    
+      @include create-select();
+      display: inline-block;
+      cursor: default;
+      text-align: left;
+      width: 320px;
+      box-sizing: border-box;
+      background: url(../../../../assets/icons/icon-select.svg) no-repeat right;
+      background-color: white;
+      color: $base-text-color;
+    }
+  
+    .content-container {
+      // padding-right: 1rem;
+      box-sizing: border-box;
+      display: none;
+      position: absolute;
+      background-color: white;
+      color: white;
+      line-height: 1.5em;
+      max-width: 320px;
+      border: 1px solid $light-gray;
+      width:100%;
+      z-index: 99;
+  
+      .dropdown__content {
+        padding: 0px;
+        max-height: 20rem;
+        // overflow-y: scroll;
+        scrollbar-color: $lightest-blue rgba($kone-blue, 0);
+  
+  
+        &::-webkit-scrollbar {
+          background-color: transparent;
+          width: .75rem;
+        }
+  
+        &::-webkit-scrollbar-button {
+          display: none;
+        }
+  
+        &::-webkit-scrollbar-thumb {
+          background-color: $lightest-blue;
+          border-radius: 50px;
+          height: 3rem;
+        }
+  
+        .product:last-child {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  
+    &.dropdown--active {
+      .dropdown__trigger {
+        border: solid 1px $light-blue;
+        color: $base-text-color;      
+        background: url(../../../../assets/icons/icon-select-active.svg) no-repeat right;
+        background-color: white;
+      }
+      .content-container {
+        display: block;
+      }
+    }
+  }
+  
+  .rtl {
+    .dropdown {
+      .dropdown__trigger {
+        background-position: left;
+        background-position-x: 10px;
+      }
+      .content-container {
+        // padding-left: 1rem;
+      }  
+    }
+  }
+}

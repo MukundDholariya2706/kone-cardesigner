@@ -1,0 +1,240 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.NavBar {
+  display: flex;
+  background: $nav-bar-bg;
+  min-height: $nav-bar-height;
+  line-height: $nav-bar-height;
+  padding: 0 24px;
+  justify-content: space-between;
+  color: $darker-gray;
+  box-sizing: border-box;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: $max-width-layout;
+    z-index: 2;
+  }
+
+  .dropdown__content {
+    z-index: 3;
+  }
+
+  &.navbar-lg {
+    min-height: $nav-bar-height-lg;
+    line-height: $nav-bar-height-lg;
+  }
+
+  .left {
+    flex-basis: 100%;
+    white-space: nowrap;
+  }
+
+  .center {
+    flex: 1;
+    min-width: 0; /* or some value */
+    position: relative;
+    flex-basis: 300%;
+    text-align: center;
+  }
+
+  .right {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .LoginComponent {
+      margin-left: auto;
+    }
+  }
+
+  .back-link {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: $darker-gray;
+    padding: 0 15px 0 10px;
+    margin-left: -10px;
+    box-sizing: border-box;
+
+    // label
+    span {
+      @media screen and (max-width: $tablet-landscape) {
+        display: none;
+      }
+    }
+
+    .small-label {
+      display: none;
+      @media screen and (max-width: $tablet-landscape) {
+        display: inline;
+      }      
+    }
+
+    @media only screen and (max-width: $phone-big) {
+      padding: 0;
+    }
+
+    &.hide-on-mobile {
+      @media only screen and (max-width: $phone-big) {
+        span {
+          display: none;
+        }
+      }
+    }
+
+    svg {
+      display: inline-block;
+      margin: 0 10px 0 0;
+      transform: translateY(3px) rotate(90deg);
+    }
+  }
+
+  .title {
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+
+    /* ... styling */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  button {
+    @include create-navbar-button();
+  }
+
+  label {
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  select {
+    @include create-select();
+    background: url(../../assets/icons/icon-select.svg) no-repeat right;
+    min-width: 250px;
+    text-align-last: center;
+    // font-size: 16px;
+    // line-height: 33px;
+
+    // font-family: 'KoneFont', sans-serif;
+  }
+
+  .mr-1 {
+    margin-right: 5px;
+  }
+
+  .mr-2 {
+    margin-right: 10px;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  .navbar-item {
+    display: inline-block;
+    box-sizing: border-box;
+    // border: 1px solid red;
+    text-decoration: none;
+    margin: 0 15px;
+    color: $light-blue;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img,
+    svg {
+      margin-right: 10px;
+      vertical-align: text-bottom;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+
+  &.predesigns {
+    @media only screen and (max-width: $phone-big) {
+      .center {
+        flex: 1 0 95%;
+      }
+    }
+  }
+}
+
+.sticky-header {
+  .NavBar {
+    &.sticky {
+      position: fixed;
+      top: $header-height;
+      width: 100%;
+      max-width: $max-width-layout;
+      z-index: 2;
+
+      @media only screen and (max-width: $phone-big) {
+        top: $header-height-mobile;
+      }
+    }
+  }
+}
+
+.with-custom-finish-editor,
+.with-floor-mixer {
+  .NavBar {
+    @media only screen and (max-width: $tablet-portrait) and (min-width: $phone) {
+      margin-left: $md-width-main-nav;
+    }
+  }
+}
+
+.rtl {
+  .NavBar {
+    .back-link {
+      svg {
+        display: inline-block;
+        margin: 0 0 0 10px;
+        transform: translateY(3px) rotate(-90deg);
+      }
+    }
+
+    .mr-1 {
+      margin-right: unset;
+      margin-left: 5px;
+    }
+
+    .mr-2 {
+      margin-right: unset;
+      margin-left: 10px;
+    }
+
+    .right {
+      .LoginComponent {
+        margin-right: auto;
+        margin-left: 0;
+      }
+    }
+
+    .navbar-item {
+      &:last-child {
+        margin-right: unset;
+        margin-left: 0;
+      }
+
+      img,
+      svg {
+        margin-right: unset;
+        margin-left: 10px;
+      }
+    }
+  }
+}

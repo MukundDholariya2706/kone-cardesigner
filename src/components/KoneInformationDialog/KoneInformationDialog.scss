@@ -1,0 +1,218 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+// @import '../../../node_modules/react-responsive-carousel/lib/styles/carousel.css';
+
+.KoneInformationDialog {
+  .DialogBody {
+    min-height: (128px + 20px);
+
+/*     .carouselContainer {
+
+      position: relative;
+      margin: -15px -30px;
+      width: calc(100% + 60px);
+      height: 0;
+      padding-top: 56.25%;
+      margin-bottom: 30px;
+      @media screen and (max-width: $phone-big) {
+        margin: -10px -15px;
+        margin-bottom: 15px;
+        width: calc(100% + 30px);
+      }
+  
+      .carousel-root {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        .carousel {
+          padding: 0;
+          width: 100%;
+          height: 100%;  
+          // box-sizing: border-box;
+          
+          .slider-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .slider {
+              display: flex;
+              align-items: center;
+              width: 100%;
+              height: 100%;
+              margin: 0;
+            }
+        
+            .slide {
+              background: none;
+              width: 100%;
+              height: 100%;  
+              opacity: 0;
+              transition: opacity 500ms;
+        
+              &.selected {
+                opacity: 1;
+              }
+        
+            }
+          }
+      
+      
+          .control-dots {
+            .dot {
+              opacity: 1;
+              background-color: #C6CACC;
+              box-shadow: none;
+            }
+      
+            .dot.selected {
+              background-color: $kone-blue;
+            }
+          }
+      
+          .arrow {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 0;
+            bottom: 0;
+            cursor: pointer;
+            z-index: 2;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            // height: 100%;
+            flex-direction: row;
+      
+            .icon-container {
+              width: 2.5rem;
+              height: 2.5rem;
+            }
+      
+            .svg-icon {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          
+          .prev-arrow {
+            left: 1.5rem;  
+      
+            .svg-icon {
+              transform: rotateZ(90deg);
+            }
+          }
+      
+          .next-arrow {
+            right: 1.5rem;
+      
+            .svg-icon {
+              transform: rotateZ(-90deg);
+            }
+          }      
+        }
+      }
+    } */
+
+    .headerImage {
+      margin: -15px -30px;
+      width: calc(100% + 60px);
+      margin-bottom: 30px;
+      @media screen and (max-width: $phone-big) {
+        margin: -10px -15px;
+        margin-bottom: 15px;
+        width: calc(100% + 30px);
+      }
+
+    }
+
+    .info-heading {
+      font-family: $bodyFont;
+      font-size: 1rem;
+      line-height: 1.4rem;
+      // font-size: 1.5em;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .info-desc {
+      margin-bottom: 15px;
+      font-family: $bodyFont;
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+      // line-height: 1.5em;
+
+      .list-label {
+        font-size: 1.5em;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+    }
+    
+    .gridLine {
+      display: flex;
+      flex-direction: row;
+      padding: 15px 15px;
+      border-bottom: 1px solid $gray;
+      .title {
+        flex-basis: 50%;
+      }
+      .value {
+        flex-basis: calc(50% / 3);
+        text-align: center;
+
+        .checkMark {
+          height: 18px;
+          width: 18px;
+          svg {
+            height: 18px;
+            width: 18px;
+          }
+        }
+      }
+      .heading {
+        color: $kone-blue;
+      }
+    }
+
+
+    .info-read-more {
+      display: inline-block;
+      margin-top: 20px;
+      font-family: $bodyFont;
+      font-size: 1rem;
+      line-height: 1.4rem;
+    }
+    
+  }
+
+  .DialogFooter {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-portrait) {
+      flex-direction: row;
+      justify-content: flex-end;
+
+      .Button {
+        min-width: 128px;
+      }
+    }
+  }
+}
+
+.rtl {
+  .KoneInformationDialog {
+
+    ul {
+      padding-right: 20px;
+      padding-left: unset;
+    }
+
+  }
+}

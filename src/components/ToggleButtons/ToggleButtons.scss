@@ -1,0 +1,86 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.ToggleButtons {
+  display: flex;
+  flex-shrink: 0;
+  
+  &.type-underline {
+    justify-content: center;
+
+    .toggle-button {
+      color: $darker-gray;
+      padding: 15px 0;
+      margin: 0 15px;
+
+      cursor: pointer;
+
+      &.selected {
+        color: $light-blue;
+        border-bottom: 1px solid $light-blue;
+      }
+    }
+  }
+
+  &.type-number {
+    justify-content: center;
+  
+    .toggle-button {
+      text-align: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 15px; 
+      box-sizing: border-box;
+      background-color: $gray;
+      line-height: 30px;
+      margin: 0 5px;
+      cursor: pointer;
+      
+      &.selected {
+        width: 30px;
+        height: 30px;
+        background-color: $light-blue;
+        color: white;
+        border: none;
+      }
+    }
+  }
+
+  &.type-box {
+    .toggle-button {
+      flex-grow: 1;
+      position: relative;
+      padding: 10px;
+      color: $darker-gray;
+      background-color: $gray;
+      text-align: center;        
+      cursor: pointer;
+
+      &.selected {
+        color: white;
+        background-color: $kone-blue;
+
+        // arrow down
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0.5px; // if 0, there is a small gap visible on some screen sizes.
+          left: 50%;
+          width: 0;
+          height: 0;
+          border: 8px solid transparent;
+          border-top-color: $kone-blue;
+          border-bottom: 0;
+          margin-left: -8px;
+          margin-bottom: -8px;
+          z-index: 10;
+        }
+      }
+
+      &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+  }
+}

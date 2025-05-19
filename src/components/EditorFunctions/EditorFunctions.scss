@@ -1,0 +1,112 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+/* 
+.blurBackground {
+    background: rgba(249, 249, 249, 0.90);
+    height: 48px;
+    position: absolute;
+    z-index: 1;
+    
+    width: calc(100% - #{$xl-width-main-nav} - #{$xl-width-edit-panel});
+    @media only screen and (max-width: $desktop-medium) {
+        width: calc(100% - #{$l-width-main-nav} - #{$l-width-edit-panel});
+    }  
+    @media only screen and (max-width: $tablet-portrait) {
+        width: calc(100% - #{$sm-width-main-nav});
+    }
+}
+ */
+.EditorFunctions {
+  
+  z-index: 89;
+  position: absolute;
+  top: 0;
+  right: 0;  
+  
+  box-sizing: border-box;
+  text-align: right;
+  padding: 12px 24px;
+  
+  button {
+    @include create-kone-button($light-blue, transparent, white, $light-blue);
+    min-width: 68px;
+    min-height: 25px;
+    height: 27px;
+    line-height: 23px;
+    border-width: 2px;
+    padding: 0 24px;
+    margin: 0;
+  }
+
+/* 
+    clear: right;
+    float: right;
+    margin: 0 0 0 18px;
+    overflow:hidden;
+    height: 50px;
+
+    width: calc(100% - #{$xl-width-main-nav} - #{$xl-width-edit-panel} - 14px - 18px);
+    @media only screen and (max-width: $desktop-medium) {
+        width: calc(100% - #{$l-width-main-nav} - #{$l-width-edit-panel} - 14px - 18px);
+    }  
+    @media only screen and (max-width: $tablet-portrait) {
+        width: calc(100% - #{$sm-width-main-nav} - #{$sm-width-edit-panel} - 14px - 18px);
+    }
+  
+    .editorFunctionsWrapper {
+        display: flex;
+        flex-direction: row;
+        margin: 14px 0 0;
+        z-index: 9999;
+
+        .functions {
+            display: flex;
+            flex-basis: 35%;
+            flex-shrink: 0;
+            justify-content: flex-end;
+
+            .reset {
+                padding: 0 1.5rem;
+            }
+            
+            .save {
+                background-color: $light-blue;
+                color: white;
+                margin-right: 20px;
+                display: none;
+            }
+            
+        }
+        
+        .viewSelector {
+            flex-shrink: 0;
+            height: 20px;
+            flex-basis: 32%;
+        }
+
+        .flexHelper {
+            flex-basis: 35%;
+            text-align: right;
+        }
+    }
+*/
+}
+// Hide bottom bar when custom finish editor is open
+.with-custom-finish-editor, .with-floor-mixer {
+    .EditorFunctions {
+      display: none;
+    }
+}
+
+// Gendoc viewer mode
+.editor-mode-view {
+    .LandingFinishSelector {
+        display: none;
+    }
+}
+
+.rtl {
+    .EditorFunctions {
+        text-align: left;
+    }
+}

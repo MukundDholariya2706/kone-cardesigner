@@ -1,0 +1,428 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+
+.SelectionsMarine {
+
+  display: flex;
+  flex-grow: 1;
+
+  .Container.chevron-container.sticky {
+    top: 120px;
+    z-index: 2;
+
+    @media only screen and (max-width: $phone-big){
+      top: 175px;
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 40px 0;
+    padding: 10px 0 0 0;
+  }
+
+  .Card {
+    &.building-selector, &.role-selector {
+      .card-header {
+        h2 {
+          border: none;
+        }
+      }
+      .card-body {        
+        padding-bottom: 0;
+      }
+    }
+
+    &.process-selector {
+      .card-body {  
+        padding-top: 10px;
+        padding-bottom: 0;
+      }
+    }
+
+  }
+
+  .divider {
+    display: flex;
+
+    &.narrow {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
+    @media only screen and (max-width: $tablet-landscape) {
+      flex-direction: column;
+    }
+
+    .divider-item {
+      flex-grow: 1;
+      flex-basis: 0;
+      padding: 40px;
+      border-right: 1px solid $border-color;
+      margin: 0 auto;
+            
+      @media only screen and (max-width: $tablet-landscape) {
+        width: 100%; 
+        border-right: none;
+        max-width: 480px;       
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &.hidden {
+        display: none;
+      }
+
+      &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .head-container {
+    position: relative;
+    text-align: center;
+  }
+
+  .circle {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $light-blue;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    color: $light-blue;
+  }
+
+  .product-item {
+    padding: 20px 20px 15px 20px;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+
+    .product-name {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0 0 5px 0;
+    }
+
+    .product-description {
+      margin: 0;
+      line-height: 1.5rem;
+    }
+
+    &.active {
+      background-color: $kone-blue;
+      color: white;
+    }
+  }
+
+  .next-step {
+    display: flex;
+    
+    
+    position: relative;
+    border: 1px solid $border-color;
+    color: white;
+    cursor: pointer;
+    height: 170px;
+    background-size: cover;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+    align-items: center;
+
+
+
+    &.next-step-gallery {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.3)), url(../../assets/icons/background-modify-new.png);
+    }
+
+    &.next-step-empty-design {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.3)), url(../../assets/icons/background-empty.png);
+    }
+
+    .next-step-label {
+      font-size: 20px;
+      max-width: 200px;
+      margin: 0 20px;
+      
+    }
+
+    .icon-container {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      box-sizing: border-box;
+      padding: 9px;
+      width: 40px;
+      height: 40px;
+      border: 1px solid white;
+    }
+  }
+}
+
+.navbar-selections {
+  @media only screen and (max-width: $phone-big) {
+    .center {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .back-link {
+      padding: 0 0.75rem;
+      margin-left: -1.75rem;
+      .small-label {
+        display: none;
+      }
+    }
+
+    .settings-button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .settings-item {
+      margin-left: auto;
+    }
+
+    .settings-country-selection {
+      // margin-left: auto;
+      .settings-label {
+        display: none;
+      }
+    }
+  }
+}
+
+.role-dialog {
+  width: 750px;
+
+  @media only screen and (max-width: $tablet-landscape){
+    width: 600px;
+  }
+
+  @media only screen and (max-width: $phone-big){
+    width: 95%;
+
+    .SelectableCard-label {
+      margin-bottom: 10px;
+      min-height: 54px; // Three rows OK
+    }
+  }
+
+  .footer-buttons {
+    text-align: right;
+    .Button {
+      min-width: 128px;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: unset;
+      }
+    }
+
+    @media only screen and (max-width: $phone-big){
+      display: flex;
+
+      .Button {
+        flex: 1;
+      }
+    }
+
+    @media only screen and (max-width: $phone-small){
+      padding: 10px 15px;
+    }
+  }
+}
+
+.bottom-navigation.bottom-navigation.bottom-navigation {
+  .buttons {
+    display: flex;
+    margin-left: auto;
+    text-align: center;
+
+    .Button {
+      min-width: 10rem;
+
+      &:not(:last-of-type) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $phone-big) {
+    padding: 12px;
+
+    .buttons {
+      margin: 0;
+      width: 100%;
+
+      .Button {
+        max-width: 50%;
+        flex: 50%;
+      }
+      
+      .next-button {
+        margin-left: auto;
+      }
+      
+      .previous-button {
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.settings-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: $kone-blue;
+  height: 100%;
+  cursor: pointer;
+
+  &.disabled {
+    cursor: default;
+  }
+
+  .settings-item {
+    display: flex;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: $phone-big) {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  .settings-label {
+    max-width: 14rem;
+    line-height: 1.2rem;
+
+    @media only screen and (max-width: $desktop-small){
+      max-width: 11.5rem;
+    }
+
+    @media only screen and (max-width: $tablet-landscape){
+      max-width: 9rem;
+    }
+  }
+
+  & > * {
+    margin-right: 1.5rem;
+
+    @media only screen and (max-width: $tablet-landscape){
+      margin-right: .5rem;
+    }
+  }
+
+  .settings-sprite-container {
+    width: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .svg-icon {
+      fill: $kone-blue;
+    }
+
+    &.role-sprite-container {
+      margin-right: 1rem;
+
+      @media only screen and (max-width: $phone-big) {
+        margin-right: 0.5rem;
+      }
+    }
+
+    @media only screen and (max-width: $phone-big) {
+      margin-left: 1.4rem;
+    }
+  }
+
+  .settings-label {
+    @media only screen and (max-width: $tablet-landscape){
+      
+    }
+  }
+}
+
+.rtl {
+  .role-dialog {
+    .footer-buttons {
+      text-align: left;
+
+      .Button {
+        min-width: 128px;
+        margin-right: unset;
+        margin-left: 10px;
+        &:last-child {
+          margin-left: unset;
+        }
+      }
+    }
+  }
+
+  .settings-button {
+    left: unset;
+    right: 0;
+    // background-color: red;
+    & > * {
+      margin-right: 0;
+      margin-left: 1rem;
+
+      @media only screen and (max-width: $tablet-landscape){
+        margin-left: .5rem;
+      }
+    }
+  }
+
+  .Selections {
+    .divider-item {
+      border-right: none;
+      border-left: 1px solid $border-color;
+      &:last-child {
+        border-left: none;
+      }
+      @media only screen and (max-width: $tablet-landscape){
+        border-left: none;
+      }
+    }
+
+    .next-step {
+      .icon-container {
+        right: unset;
+        left: 0;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .bottom-navigation {
+    .buttons {
+      margin-left: unset;
+      margin-right: auto;
+  
+      .Button {
+        margin-right: unset;
+  
+        &:not(:last-of-type) {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}

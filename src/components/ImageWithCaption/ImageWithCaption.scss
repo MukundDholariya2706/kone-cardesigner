@@ -1,0 +1,64 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.ImageWithCaption {
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  margin: 0 auto;
+  
+  @media only screen and (max-width: $phone) {
+    flex-direction: column;
+  }
+
+  .thumbnailItem {
+    position: relative;
+    width: 100%;        
+    cursor: pointer;
+    background-color: $gray;
+    box-sizing: border-box;
+
+    .thumbnailCaption {
+        background-color: $darker-gray;
+        padding: 10px;
+        color: white;
+    }
+
+    .thumbnailImg {
+        width: 100%;
+        background-color: #ffffff;
+        height: auto;
+    }
+
+    .thumbnailLabel {            
+        font-size: 14px;                        
+    }
+
+    .thumbnailDescription {            
+        margin-top: 5px;
+        font-family: $bodyFont;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+            // font-size: 14px;                        
+    }
+
+    &.with-border {            
+        padding: 1px;
+        .thumbnailCaption {
+            margin: 0 -1px -1px -1px;
+        }
+    }
+
+    &.only-option {
+        cursor: default;
+        margin-bottom: 20px;
+    }
+
+    &.selected {
+        .thumbnailCaption {
+            background-color: $light-blue;
+        }
+        background-color: $light-blue;
+    }
+}}
+

@@ -1,0 +1,42 @@
+@import "../../styles/Variables";
+
+.RobotApi {
+  height: 100%;
+    
+  
+  .info-heading {
+    font-size: 18pt;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+  .info-content {
+    
+    .image {
+      width:100%;
+    }
+
+    .text {
+      margin-bottom: 20px;
+    }
+    .read-more {
+      font-size: 0.9rem;
+      color: $kone-blue;
+      cursor: pointer;
+    }
+
+  }
+
+  .sticker {
+    padding-top: 20px;
+    text-align: center;
+    .image {
+
+    }
+
+    .label {
+      color: $dark-gray;
+      font-size: 0.8em;
+    }
+  }
+
+}

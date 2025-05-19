@@ -1,0 +1,27 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+
+.NumberRatingSelector {
+  display: flex;
+  justify-content: space-between;
+}
+
+.NumberRatingOption {
+  border-radius: 100%;
+  font-size: clamp(12px, 2vw, 16px);
+  color: $kone-blue;
+  border: 2px solid $kone-blue;
+  width: clamp(1.25rem, 5vw, 2rem);
+  height: clamp(1.25rem, 5vw, 2rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+
+  &.selected {
+    background-color: $kone-blue;
+    color: white;
+  }
+}

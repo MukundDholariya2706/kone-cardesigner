@@ -1,0 +1,192 @@
+@import '../../styles/Variables.scss';
+
+
+.ChevronProcess {
+  display: flex;
+  justify-content: stretch;
+
+  .ChevronProcessItem {
+    &:first-child {
+      .ChevronProcessItem-start {
+        border-left-color: #EDEFF0;
+      }
+    }
+
+    &.selected {
+      &:first-child {
+        .ChevronProcessItem-start {
+          border-left-color: $kone-blue;
+        }
+      }
+    }
+  }
+
+  &.margin-sm {
+    margin: 10px 0;
+  }
+
+  &.margin-md {
+    margin: 20px 0;
+  }
+
+  &.margin-lg {
+    margin: 40px 0;
+  }
+}
+
+.ChevronProcessItem {
+  display: flex;
+  flex-grow: 1;
+  color: $kone-blue;
+  cursor: pointer;
+
+  
+
+  
+  &-container {
+    background-color: #EDEFF0;
+    color: $kone-blue;  
+
+    display: flex;
+    flex-grow: 1;
+    align-items: center;  
+  }
+
+  &.disabled {
+    cursor: unset;
+  }
+
+  &.disabled &-container {
+    color: #A9B7C0;
+  }
+
+  &-number {
+    flex-grow: 0;
+    font-size: 32px;
+    margin: 0 15px;
+
+    @media only screen and (max-width: $tablet-portrait-small) {
+      font-size: 28px;
+      margin: 0 6px 0 4px;
+    }
+
+    @media only screen and (max-width: $phone-big) {
+      font-size: 30px;
+      margin: 0 6px 0 8px;
+    }
+    
+    @media only screen and (max-width: $phone) {
+      font-size: 28px;
+      margin: 0 6px 0 6px;
+    }
+  }
+  
+  &-label {
+    font-size: 16px;
+    flex-grow: 1;
+    line-height: 1em;
+
+    @media only screen and (max-width: $tablet-portrait-small) {
+      font-size: 14px;
+    }
+
+    @media only screen and (max-width: $phone-big) {
+      font-size: 16px;
+    }
+
+    @media only screen and (max-width: $phone) {
+      font-size: 14px;
+    }
+  }
+
+  &.selected &-container {
+    background-color: $kone-blue;
+    color: white;
+  }
+
+  &-start {
+    width: 0; 
+    height: 0; 
+    border-top: 25px solid #EDEFF0;
+    border-bottom: 25px solid #EDEFF0;
+    border-left: 10px solid transparent;
+  }
+
+  &.selected &-start {
+    border-top-color: $kone-blue;
+    border-bottom-color: $kone-blue;
+  }
+
+  &-end {
+    width: 0; 
+    height: 0; 
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 10px solid #EDEFF0;
+  }
+
+  &.selected &-end {
+    border-left-color: $kone-blue;
+  }
+
+  
+
+  @media only screen and (max-width: $phone-big) {
+    &.selected &-container {
+
+    }
+
+
+    &:not(.selected) {
+      flex: 0;
+      .ChevronProcessItem-label {
+        display: none;
+      }
+    }
+  }
+}
+
+.rtl {
+  .ChevronProcessItem {
+    &-start {
+      width: 0; 
+      height: 0; 
+      border-top: 25px solid #EDEFF0;
+      border-bottom: 25px solid #EDEFF0;
+      border-left: unset;
+      border-right: 10px solid transparent;
+    }
+
+    &:first-child {
+      .ChevronProcessItem-start {
+        border-right-color: #EDEFF0;
+      }
+    }  
+    
+    &.selected .ChevronProcessItem-start {
+      border-top-color: $kone-blue;
+      border-bottom-color: $kone-blue;
+    }
+
+    &.selected {
+      &:first-child {
+        .ChevronProcessItem-start {
+          border-right-color: $kone-blue;
+        }
+      }
+    }
+  
+    &-end {
+      width: 0; 
+      height: 0; 
+      border-top: 25px solid transparent;
+      border-bottom: 25px solid transparent;
+      border-left: unset;
+      border-right: 10px solid #EDEFF0;
+    }
+  
+    &.selected .ChevronProcessItem-end {
+      border-right-color: $kone-blue;
+    }
+  }
+}

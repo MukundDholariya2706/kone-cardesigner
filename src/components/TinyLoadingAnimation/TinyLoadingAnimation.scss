@@ -1,0 +1,24 @@
+.TinyLoadingAnimation {
+  position: absolute;
+  top: 5px;
+  left: (-64px - 10px);
+  width: 64px;
+  height: 40px;
+
+  img {
+    height: 40px;
+    width: auto;
+    -webkit-animation: opacityOn 0.4s linear 1s both;
+	          animation: opacityOn 0.4s linear 1s both;
+  }
+
+  @keyframes opacityOn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+}

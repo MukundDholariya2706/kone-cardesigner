@@ -1,0 +1,6 @@
+@import "../../assets/icons-bundle.css";
+
+.svg-icon {
+  // MS Edge (click events not passing without this)
+  pointer-events: none;
+}

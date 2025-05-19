@@ -1,0 +1,107 @@
+@import '../../styles/Variables.scss';
+
+.Container {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+
+  &.sticky {
+    position: fixed;
+    
+    left: 50%;
+    top: 0;
+    width: 100%;
+    transform: translateX(-50%);
+
+    max-width: $desktop-medium;
+    
+    z-index: 1;
+  }
+  
+  &.padding-xs {
+    padding: 5px;
+  }
+
+  &.padding-sm {
+    padding: 10px;
+  }
+
+  &.padding-md {
+    padding: 20px;
+  }
+
+  &.padding-lg {
+    padding: 40px;
+
+    @media only screen and (max-width: $tablet-landscape) {
+      padding: 20px;
+    }
+  }
+
+  &.v-padding-xs {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &.v-padding-sm {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &.v-padding-md {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &.v-padding-lg {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media only screen and (max-width: $tablet-landscape) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &.h-padding-xs {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  &.h-padding-sm {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &.h-padding-md {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &.h-padding-lg {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    @media only screen and (max-width: $tablet-landscape) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  } 
+
+  &.h-padding-xlg {
+    padding-left: 90px;
+    padding-right: 90px;
+
+    @media only screen and (max-width: $tablet-landscape) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &.grow-1 {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+  }
+}

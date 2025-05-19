@@ -1,0 +1,53 @@
+@import "../../styles/Variables";
+@import "../../styles/utils";
+
+.Loader {    
+    
+  position: absolute;
+  top: 0; 
+  right: 0; 
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  text-align: center;
+  
+
+  .loader-container {
+    position: absolute;
+    top: 45%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+  .loadBar {
+      display: inline-block;
+      position: relative;
+      width: 300px;
+      height: 10px;
+      border-radius: 20px;
+      background-color: $gray;
+
+      //border: 1px solid $light-blue;
+  }
+  .progress {
+      position: absolute;
+      height: 10px;
+      border-radius: 20px;
+      background-color: $light-blue;
+  }
+
+  .loader-bottom-container {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+
+    img {
+      margin: auto;        
+    }
+  }
+
+    
+
+}

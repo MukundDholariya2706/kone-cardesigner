@@ -1,0 +1,215 @@
+@import '../../styles/Variables.scss';
+@import "../../styles/utils.scss";
+
+@include custom-scrollbar(LanguageSelect__list);
+
+$font-size: 16px;
+
+.LanguageSelect {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  background: transparent;
+  z-index: 1000;
+  height: $header-height;
+  cursor: pointer;
+
+  &--closed {
+    overflow: hidden;
+    .LanguageSelect__icon-chevron {
+      transform: rotate(0deg);
+    }    
+  }
+
+  /* &__input {
+    
+    width: 1rem; // Default width, real width is calculated based on text lenght
+    height: $header-height;
+    box-sizing: border-box;
+    border: none;
+    padding: 0;
+    margin: 0;
+    
+    // Hiding the caret
+    color: transparent;
+    // Setting the text color
+    font-family: KoneFont, sans-serif;
+    font-size: $font-size;
+    text-transform: uppercase;
+    line-height: $header-height;
+    text-align: right;
+
+    &::placeholder {
+      color: $kone-blue;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  } */
+
+  &__label {
+    display: inline;
+    color: $kone-blue;
+    line-height: $header-height;
+    text-transform: uppercase;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__selection { // selected option
+    text-transform: uppercase;
+    color: $kone-blue;
+    font-weight: 800;
+    font-size: $font-size;
+  }
+
+  &__list-container {
+    position: absolute; // NEW
+    right: 0;
+    top: 0;
+    width: 15.75rem;
+    z-index: 4;
+
+    // margin-right: -1rem;
+    margin-top: $header-height;
+    // padding-right: 1rem;
+    background-color: rgba($kone-blue, .9);
+  }
+
+  &__list { // list of options
+    color: white;
+    margin: 0;
+    // margin-top: 1.4rem;
+    // padding: 0;
+    list-style: none;
+    font-weight: 400;
+    text-transform: capitalize;
+    max-height: 20rem;
+    overflow: scroll;
+    overflow-x: hidden;
+    text-align: left;
+    padding: 1rem 0;
+
+    scrollbar-color: $lightest-blue rgba($kone-blue, 0);
+
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      width: .75rem;
+    }
+    
+    &::-webkit-scrollbar-track {
+      // border: solid 3px transparent;
+    }
+
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $lightest-blue;
+      border-radius: 50px;
+      height: 3rem;
+    }
+  }
+
+  &__subtitle {
+    // padding: .3rem 0 .3rem 3rem;
+    // font-size: 1.1rem;
+    cursor: default;
+    margin-right: -1.6rem;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    border-bottom: 2px solid #ffffff1f;
+    position: relative;
+  }
+
+  &__option { // a single option
+    padding: .3rem 0 .3rem 3rem;
+    font-size: 1.1rem;
+
+    &--selected {
+      opacity: .5;
+      position: relative;
+
+      &::before {
+        content: "";
+        background-image: url(../../assets/icons/icon-check-white.svg);
+        background-repeat: no-repeat;
+        background-size: 18px;
+        position: absolute;
+        display: block;
+        left: 18px;
+        top: 5px;
+        width: 40px;
+        height: 100%;
+      }
+    }
+
+    &:hover, &:focus {
+      opacity: .5;
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+  
+  .LanguageSelect__icon-chevron {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(180deg);
+  }
+  &--closed {
+    .LanguageSelect__icon-chevron {
+      transform: rotate(0deg);
+    }    
+  }
+}
+
+.rtl {
+  .LanguageSelect {
+
+    margin-left: unset;
+    margin-right: 30px;
+
+    &__icon-chevron {
+      margin-left: unset;
+      margin-right: 15px;
+    }
+
+    &__list-container {
+      right: unset;
+      left: 0;
+      padding-right: unset;
+      // padding-left: 1rem;
+    }
+
+    &__option { // a single option
+      padding: .3rem 3rem .3rem 0;
+  
+      &--selected {  
+        &::before {
+          content: "";
+          left: unset;
+          right: -7px;
+        }
+      }
+    }
+
+    &__list { // list of options
+      text-align: right;
+    }
+  }
+}
+
+.ErrorPage .Header {
+  .LanguageSelect {
+    height: $header-height - 1px;
+  }
+}

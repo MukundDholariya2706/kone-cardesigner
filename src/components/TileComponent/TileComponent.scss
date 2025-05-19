@@ -1,0 +1,94 @@
+@import "../../styles/Variables";
+@import "../../styles/utils.scss";
+
+.TileComponent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  &.direction-row {
+    flex-direction: row;
+    .TileComponent-thumbnail {
+      width: 55px;
+      height: 55px;
+      margin-right: 10px;
+    }
+    .TileComponent-label {
+      margin-top: 0;
+      font-size: 14px;
+      .subLabel {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &.selected {
+    .select-rect {
+      display: block;
+    }
+    .TileComponent-label {
+      color: $light-blue;
+    }
+  }
+
+  &-thumbnail {   
+    .select-rect {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 3px solid $light-blue;      
+    }
+
+    .tile-icon {
+      position: absolute;
+      right: 6px;
+      bottom: 3px;
+    }
+  }
+
+  &-label {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+
+    margin-top: 5px;
+    text-overflow: ellipsis;
+    line-height: 14px;
+    font-size: 12px;
+
+    &.selected {
+      color: $light-blue;
+    }
+
+    .subLabel {
+      font-size: 12px;
+    }
+  }
+
+  &.bordered {
+    .TileComponent-thumbnail {
+      border: 1px solid #e3e5e6;
+    }
+  }
+}
+
+.rtl {
+  .TileComponent {
+    &.direction-row {
+      .TileComponent-thumbnail {
+        margin-right: unset;
+        margin-left: 10px;
+      }
+    }
+    &-thumbnail {
+      .tile-icon {
+        right: unset;
+        left: 6px;
+      }
+    }    
+  }
+}
