@@ -1,7 +1,7 @@
 import './TinyLoadingAnimation.scss';
 import React, { useContext, useEffect, useState } from 'react';
 import { Context3d } from '../../store/3d/shader-lib/Provider3d';
-import animation from '../../assets/images/loading_blue_64x.gif'
+import animation from '../../assets/images/react.svg'
 
 const TinyLoadingAnimation = (props) => {
 

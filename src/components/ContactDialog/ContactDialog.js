@@ -9,7 +9,7 @@ import { DataContext } from '../../store/data/DataProvider';
 import { formHandler, postContactForm, titles } from '../../utils/form-utils';
 import { SiteContext } from '../../store/site/SiteProvider';
 import { CONTACT_ACTION, US_STATES, CA_PROV_TERR } from '../../constants';
-import { useKeepPagePosition } from '../../utils/customHooks'
+import { useKeepPagePosition } from '../../utils/customHooks';
 import { APIContext } from '../../store/api/APIProvider';
 import roles from '../../store/roles';
 import locationCountries from '../../store/locationCountries';

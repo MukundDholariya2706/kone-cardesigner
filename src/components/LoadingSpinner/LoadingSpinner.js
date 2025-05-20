@@ -1,6 +1,6 @@
 import './LoadingSpinner.scss';
 import React from 'react';
-import animation from '../../assets/images/loading_blue_128x.gif'
+import animation from '../../assets/images/react.svg'
 
 const LoadingSpinner = (props) => {
 

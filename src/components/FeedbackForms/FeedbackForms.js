@@ -7,7 +7,7 @@ import { SiteContext } from "../../store/site/SiteProvider";
 import { ToastContext } from "../../store/toast/ToastProvider";
 import { TranslationContext } from "../../store/translation/TranslationProvider";
 import { UserContext } from "../../store/user/UserProvider";
-import { AuthContext } from "../../store/auth";
+import { AuthContext } from "../../store/auth/AuthProvider";
 import {
   useInterval,
   useProjectCountry,

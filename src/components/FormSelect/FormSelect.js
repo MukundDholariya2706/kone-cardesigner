@@ -1,9 +1,9 @@
 import React, { useState, useRef, useMemo } from 'react'
 
-import chevron from '../../assets/icons/icon-select-white.svg'
+import chevron from '../../assets/icons/react.svg'
 
 import './FormSelect.scss'
-import { useOnClickOutside } from '../../utils/customHooks'
+import { useOnClickOutside } from '../../utils/customHooks';
 import { useEffect } from 'react'
 
 /**

@@ -2,7 +2,7 @@ import React, { useMemo, useContext, useState } from 'react'
 import { ProductContext } from '../../store/product/ProductProvider'
 import { TranslationContext } from '../../store/translation/TranslationProvider'
 import Icon from '../Icon'
-import Info from '../info/Info';
+import Info from '../Info/Info'
 import TileImage from '../TileImage'
 import emptyWallIcon from '../../assets/icons/react.svg'
 

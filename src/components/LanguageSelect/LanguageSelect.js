@@ -6,7 +6,7 @@ import { DataContext } from '../../store/data/DataProvider';
 import { TranslationContext } from '../../store/translation/TranslationProvider';
 import Icon from '../Icon';
 import { sortLanguages } from '../../utils/generalUtils';
-import { useOnClickOutside } from '../../utils/customHooks'
+import { useOnClickOutside } from '../../utils/customHooks';
 
 const LanguageSelect = ({className = ''}) => {
   

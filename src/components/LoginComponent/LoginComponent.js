@@ -1,6 +1,6 @@
 import React, { useState, useContext, useRef, useMemo } from 'react'
 import { AuthContext } from '../../store/auth/AuthProvider'
-import { useOnClickOutside } from '../../utils/customHooks'
+import { useOnClickOutside } from '../../utils/customHooks';
 import Dialog, { DialogHead, DialogBody } from '../Dialog';
 import Button from '../Button'
 import Icon from '../Icon'

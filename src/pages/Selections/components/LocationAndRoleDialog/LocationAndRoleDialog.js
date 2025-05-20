@@ -10,7 +10,7 @@ import iconQuestion from '../../../../assets/icons/react.svg'
 import iconQuestion2x from '../../../../assets/icons/react.svg'
 
 import './LocationAndRoleDialog.scss'
-import { useKeepPagePosition } from '../../../../utils/customHooks'
+import { useKeepPagePosition } from '../../../../utils/customHooks';
 import Map from '../../../../components/Map'
 import Icon from '../../../../components/Icon'
 import { AuthContext } from '../../../../store/auth/AuthProvider'

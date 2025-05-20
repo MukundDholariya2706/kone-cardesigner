@@ -1,7 +1,7 @@
 import "./HeadingComponent.scss"
 
 import React from 'react';
-import Info from "../info";
+import Info from "../info/Info";
 
 
 /**

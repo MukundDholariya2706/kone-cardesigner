@@ -7,7 +7,7 @@ import GridComponent from '../../../../components/GridComponent/GridComponent'
 import SelectableCard from '../../../../components/SelectableCard'
 
 import './RoleSelectionDialog.scss'
-import { useKeepPagePosition } from '../../../../utils/customHooks'
+import { useKeepPagePosition } from '../../../../utils/customHooks';
 
 function RoleSelectionDialog(props) {
   const { className = '', onCancel, onConfirm, role: initRole, roles } = props
