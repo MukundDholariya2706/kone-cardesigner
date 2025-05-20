@@ -1,6 +1,6 @@
 import { useMemo, useContext, useEffect } from 'react'
-import { DesignContext } from '../../store/design'
-import { ProductContext } from '../../store/product'
+import { DesignContext } from '../../store/design/DesignProvider'
+import { ProductContext } from '../../store/product/ProductProvider'
 import { getComponentFromComponentsData } from './cop-utils'
 
 export function usePosition(type) {

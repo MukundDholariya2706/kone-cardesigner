@@ -1,6 +1,6 @@
 import React, { useContext, } from 'react';
 import './CheckBoxGroup.scss';
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import Icon from '../Icon';
 
 /**

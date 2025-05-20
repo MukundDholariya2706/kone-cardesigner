@@ -1,7 +1,7 @@
 import React, { useState,  useContext, useMemo, useEffect } from 'react';
 import SectionAccordion from '../../../SectionAccordion';
-import { DesignContext } from '../../../../store/design';
-import { TranslationContext } from '../../../../store/translation';
+import { DesignContext } from '../../../../store/design/DesignProvider';
+import { TranslationContext } from '../../../../store/translation/TranslationProvider';
 import HeadingComponent from '../../../HeadingComponent/HeadingComponent';
 import RadioButtonGroup from '../../../RadioButtonGroup';
 import './EditLensSections.scss';

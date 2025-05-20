@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useContext } from 'react'
-import { TranslationContext } from '../../../../store/translation';
+import { TranslationContext } from '../../../../store/translation/TranslationProvider';
 import Icon from '../../../Icon';
 
 import './ScenicWindowPositionSelector.scss'

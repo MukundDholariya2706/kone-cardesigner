@@ -26,6 +26,7 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.1",
+    "react-tiny-popover": "^8.1.6",
     "three": "^0.176.0",
     "three-js-csg": "^72.0.0",
     "uniqid": "^5.4.0",

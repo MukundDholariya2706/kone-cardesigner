@@ -4,7 +4,7 @@ import { ReportIssueDialog } from '../../components/FeedbackForms/FeedbackForms'
 import Layout from '../../components/Layout'
 import { ERROR_TYPES } from '../../constants'
 import { SiteContext } from '../../store/site'
-import { TranslationContext } from '../../store/translation'
+import { TranslationContext } from '../../store/translation/TranslationProvider'
 import { useErrorLogger } from '../../utils/customHooks/customHooks'
 import './ErrorPage.scss'
 

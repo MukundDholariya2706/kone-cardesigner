@@ -2,11 +2,11 @@ import './WallsEditor.scss';
 import React, { useContext, useState, useRef, useEffect, useMemo } from 'react';
 import jsonLogic from 'json-logic-js';
 import deepcopy from 'deepcopy'
-import { ProductContext } from '../../store/product'
-import { DesignContext } from '../../store/design'
-import { LayoutContext } from '../../store/layout';
-import { Context3d } from '../../store/3d';
-import { TranslationContext } from '../../store/translation';
+import { ProductContext } from '../../store/product/ProductProvider'
+import { DesignContext } from '../../store/design/DesignProvider'
+import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { Context3d } from '../../store/3d/shader-lib/Provider3d';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 
 
 import EditorLayout from '../EditorLayout';

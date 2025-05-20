@@ -1,9 +1,9 @@
 import './CeilingEditor.scss';
 import React, { useContext, useState, useEffect, useMemo, useLayoutEffect } from 'react';
 import jsonLogic from 'json-logic-js';
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
-import { TranslationContext } from '../../store/translation';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import EditorLayout from '../EditorLayout';
 import ListComponent from '../ListComponent';
 import Box from '../Box';

@@ -7,7 +7,7 @@ import 'jspolyfill-array.prototype.findIndex'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { HashRouter, useLocation } from 'react-router-dom'
-import { ReactComponent as Icons } from './assets/icons-bundle.svg'
+// import { ReactComponent as Icons } from './assets/icons-bundle.svg'
 import App from './components/App'
 import UnsupportedBrowser from './components/UnsupportedBrowser'
 import './index.scss'
@@ -66,7 +66,7 @@ ReactDOM.render(
       </Provider>
     </CriticalErrorPage>
     {/* Cache icons here ... use later (see Icon component) */}
-    <Icons style={{ display: 'none' }} />
+    {/* <Icons style={{ display: 'none' }} /> */}
   </HashRouter>,
   document.getElementById('root')
 )

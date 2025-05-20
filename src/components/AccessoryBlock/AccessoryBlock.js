@@ -4,10 +4,10 @@ import React, { useContext } from 'react'
 import Sprite from '../Sprite';
 import Icon from '../Icon'
 import InfoBox from '../InfoBox';
-import { LayoutContext } from '../../store/layout';
-import { DesignContext } from '../../store/design'
-import { ProductContext } from '../../store/product'
-import { TranslationContext } from '../../store/translation';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { DesignContext } from '../../store/design/DesignProvider'
+import { ProductContext } from '../../store/product/ProductProvider'
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import { BUFFER_RAIL_POSITIONS, TYP_CAR_BUFFER_RAIL, TYP_CAR_MIRROR, TYP_CAR_MIRROR_2} from '../../constants'
 import HeadingComponent from '../HeadingComponent/HeadingComponent';
 

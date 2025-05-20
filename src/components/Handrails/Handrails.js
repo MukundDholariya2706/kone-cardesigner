@@ -5,11 +5,11 @@ import jsonLogic from 'json-logic-js';
 import objectHash from 'object-hash';
 
 import EditorLayout from '../EditorLayout'
-import { LayoutContext } from '../../store/layout';
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
-import { Context3d } from '../../store/3d';
-import { TranslationContext } from '../../store/translation';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { Context3d } from '../../store/3d/shader-lib/Provider3d';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 
 import ImageTitle from '../ImageTitle'
 import PositionSelector from '../PositionSelector/PositionSelector';

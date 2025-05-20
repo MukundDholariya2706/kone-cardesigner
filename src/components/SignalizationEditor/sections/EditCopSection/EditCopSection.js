@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 import jsonLogic from 'json-logic-js';
 import SectionAccordion from '../../../../components/SectionAccordion'
 import { COPS_WITH_KONE_INFORMATION, KCSM_KONE_INFORMATION, MAT_CAR_FRONT_WALL_A} from '../../../../constants'
-import { DesignContext } from '../../../../store/design'
-import { ProductContext } from '../../../../store/product'
-import { TranslationContext } from '../../../../store/translation'
-import { LayoutContext } from '../../../../store/layout';
+import { DesignContext } from '../../../../store/design/DesignProvider'
+import { ProductContext } from '../../../../store/product/ProductProvider'
+import { TranslationContext } from '../../../../store/translation/TranslationProvider'
+import { LayoutContext } from '../../../../store/layout/LayoutProvider';
 import { FinishList } from '../../../FinishAccordionItem'
 import GridComponent from '../../../GridComponent'
 import HeadingComponent from '../../../HeadingComponent/HeadingComponent'

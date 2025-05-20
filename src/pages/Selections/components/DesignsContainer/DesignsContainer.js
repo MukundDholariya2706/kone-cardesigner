@@ -2,7 +2,7 @@ import React, { useMemo, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Sprite from '../../../../components/Sprite'
 import { EXTRA_FEATURES } from '../../../../constants'
-import { TranslationContext } from '../../../../store/translation'
+import { TranslationContext } from '../../../../store/translation/TranslationProvider'
 import PredesignTheme from '../PredesignTheme/PredesignTheme'
 
 import './DesignsContainer.scss'

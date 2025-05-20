@@ -1,7 +1,7 @@
 import React, { useMemo, useContext } from 'react'
 import { EXTRA_FEATURES } from '../../../../constants'
-import { DesignContext } from '../../../../store/design'
-import { TranslationContext } from '../../../../store/translation'
+import { DesignContext } from '../../../../store/design/DesignProvider'
+import { TranslationContext } from '../../../../store/translation/TranslationProvider'
 import InfoBox from '../../../InfoBox'
 import SectionAccordion from '../../../SectionAccordion'
 import SwitchButton from '../../../SwitchButton';

@@ -3,14 +3,14 @@ import React, { useContext, useState, useEffect } from 'react';
 import jsonLogic from 'json-logic-js';
 import _ from 'lodash'
 
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
 import EditorLayout from '../EditorLayout';
 import MirrorType from '../MirrorType/MirrorType';
 import PositionSelector from '../PositionSelector';
 import InfoBox from '../InfoBox';
-import { TranslationContext } from '../../store/translation';
-import { LayoutContext } from '../../store/layout';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
 import { TYP_CAR_MIRROR, TYP_CAR_CEILING, TYP_COP_PRODUCT_1, TYP_COP_2, TYP_CAR_WALL_ADD_DECO_PACKAGE, MAT_CAR_WALL_FINISH_C, TYP_CAR_MIRROR_2, WIDE_ANGLE_MIRROR, TYP_CAR_GLASS_WALL_C,} from '../../constants';
 import HeadingComponent from '../HeadingComponent/HeadingComponent';
 import ScrollBox from '../ScrollBox';

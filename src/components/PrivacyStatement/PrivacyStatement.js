@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { SiteContext } from '../../store/site'
-import { TranslationContext } from '../../store/translation'
+import { TranslationContext } from '../../store/translation/TranslationProvider'
 
 import './PrivacyStatement.scss'
 

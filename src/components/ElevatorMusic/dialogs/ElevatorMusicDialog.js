@@ -1,7 +1,6 @@
 import "./ElevatorMusicDialog.scss";
 import React, { useContext } from "react";
-import { TranslationContext } from "../../../store/translation";
-import { DataContext } from "../../../store/data";
+import { TranslationContext } from "../../../store/translation/TranslationProvider";import { DataContext } from "../../../store/data/DataProvider";
 import Dialog, { DialogHead, DialogBody, DialogFooter } from "../../Dialog";
 import Button from "../../Button";
 

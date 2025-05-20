@@ -4,7 +4,7 @@ import React, {useContext } from 'react'
 import GridComponent from '../GridComponent/GridComponent'
 import SelectableCard from '../SelectableCard'
 import Container from '../Container'
-import { TranslationContext } from '../../store/translation'
+import { TranslationContext } from '../../store/translation/TranslationProvider'
 
 
 const BuildingAndRoleSelectionView = props => {

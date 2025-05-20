@@ -2,13 +2,13 @@ import './TenantDirectory.scss';
 import React, { useContext, useState, useEffect } from 'react';
 import jsonLogic from 'json-logic-js';
 
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
-import { TranslationContext } from '../../store/translation';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import EditorLayout from '../EditorLayout';
 import ImageTitle from '../ImageTitle'
 import SwitchButton from '../SwitchButton';
-import { LayoutContext } from '../../store/layout';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
 import { TYP_CAR_TENANT_DIRECTORY, MAT_CAR_TENANT_DIRECTORY, TYP_COP_PRODUCT_1, TYP_CAR_GLASS_WALL_C } from '../../constants';
 import RadioButtonGroup from '../RadioButtonGroup';
 import InfoBox from '../InfoBox';

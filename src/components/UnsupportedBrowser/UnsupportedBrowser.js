@@ -1,6 +1,6 @@
 import './UnsupportedBrowser.scss';
 import React, { useContext, useEffect } from 'react';
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 
 import chromeIcon from '../../assets/icons/icon-chrome.png'
 import firefoxIcon from '../../assets/icons/icon-firefox.png'
@@ -8,7 +8,7 @@ import safariIcon from '../../assets/icons/icon-safari.png'
 import edgeIcon from '../../assets/icons/icon-edge.png'
 import { useErrorLogger } from '../../utils/customHooks/customHooks';
 import { ERROR_TYPES } from '../../constants';
-import { DataContext } from '../../store/data';
+import { DataContext } from '../../store/data/DataProvider';
 
 /**
  * UnsupportedBrowser is a component to be

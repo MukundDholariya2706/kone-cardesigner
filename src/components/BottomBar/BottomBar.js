@@ -3,9 +3,9 @@ import "./BottomBar.scss";
 import React, { useContext, useState } from "react";
 import Popover from "react-tiny-popover";
 
-import { TranslationContext } from "../../store/translation";
-import { Context3d } from "../../store/3d";
-import { DesignContext } from "../../store/design";
+import { TranslationContext } from "../../store/translation/TranslationProvider";
+import { Context3d } from "../../store/3d/shader-lib/Provider3d";
+import { DesignContext } from "../../store/design/DesignProvider";
 import Button from "../Button";
 import Icon from "../Icon";
 import ListComponent from "../ListComponent";
@@ -14,7 +14,7 @@ import {
   QUALITY_3D_HIGH,
   QUALITY_3D_LOW,
   QUALITY_3D_MEDIUM,
-} from "../../store/3d/3d-constants";
+} from "../../store/3d";
 import { useHistory } from "react-router-dom";
 import { getLink } from "../../utils/link-utils";
 import {
@@ -22,7 +22,7 @@ import {
   formatDesignForAnalytics,
 } from "../../utils/analytics-utils";
 import DownloadDialog from "../DownloadDialog";
-import { UserContext } from "../../store/user";
+import { UserContext } from "../../store/user/UserProvider";
 import { BlueprintContext } from '../../store/blueprint';
 import { ToastContext } from '../../store/toast';
 

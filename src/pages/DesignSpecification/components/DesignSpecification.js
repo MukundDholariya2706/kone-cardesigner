@@ -10,12 +10,12 @@ import ContactDialog from '../../components/ContactDialog';
 import Icon from '../../components/Icon';
 import LoadingSpinner from '../../components/LoadingSpinner';
 
-import { DataContext } from '../../store/data';
-import { UserContext } from '../../store/user';
-import { DesignContext } from '../../store/design';
-import { ProductContext } from '../../store/product';
+import { DataContext } from '../../store/data/DataProvider';
+import { UserContext } from '../../store/user/UserProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { ProductContext } from '../../store/product/ProductProvider';
 import { OfferingContext } from '../../store/offering';
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import { getDesignInformation, getViewImages } from '../../utils/designInformation'
 import {  
     DOWNLOAD_PAGE_ACTION, 

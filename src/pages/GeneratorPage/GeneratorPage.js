@@ -2,10 +2,10 @@ import './GeneratorPage.scss'
 
 import React, { useContext, useEffect, useState } from 'react'
 
-import { DesignContext } from '../../store/design'
-import { ProductContext } from '../../store/product'
-import { Context3d } from '../../store/3d'
-import { DataContext } from '../../store/data'
+import { DesignContext } from '../../store/design/DesignProvider'
+import { ProductContext } from '../../store/product/ProductProvider'
+import { Context3d } from '../../store/3d/shader-lib/Provider3d'
+import { DataContext } from '../../store/data/DataProvider'
 import { APIContext } from '../../store/api'
 import {
   TYP_LANDING_FLOOR,
@@ -18,7 +18,7 @@ import {
   MIDDLE_RIGHT,
   TYP_COP_HORIZONTAL,
 } from '../../constants'
-import { QUALITY_3D_LOW, QUALITY_3D_MEDIUM, QUALITY_3D_HIGH } from '../../store/3d/3d-constants'
+import { QUALITY_3D_LOW, QUALITY_3D_MEDIUM, QUALITY_3D_HIGH } from '../../store/3d'
 import { OfferingContext } from '../../store/offering'
 import { renderImages, IMAGE_IDS } from '../../utils/renderImages'
 import { BlueprintContext } from '../../store/blueprint/BlueprintProvider'

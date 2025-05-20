@@ -4,9 +4,9 @@ import React, {useContext, useState, useEffect, useMemo } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 
 import { OfferingContext } from '../../store/offering';
-import { ProductContext } from '../../store/product';
-import { TranslationContext } from '../../store/translation';
-import { UserContext } from '../../store/user';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
+import { UserContext } from '../../store/user/UserProvider';
 
 import { useRecaptcha } from '../../components/Recaptcha';
 import Layout from '../../components/Layout'; 
@@ -15,7 +15,7 @@ import Container from '../../components/Container';
 import { SELECTION_PAGE_ACTION, NEW_BUILDINGS, EXISTING_BUILDINGS, MARINE, LOCAL_STORAGE_ROLE, LOCAL_STORAGE_PROJECT_LOCATION } from '../../constants';
 
 import { SiteContext } from '../../store/site/SiteProvider';
-import { DataContext } from '../../store/data';
+import { DataContext } from '../../store/data/DataProvider';
 import { useBuildingsType } from '../../utils/customHooks/customHooks';
 import allRoles from '../../store/roles'
 import { RoleSelectionDialog, LocationAndRoleDialog } from './components'
@@ -23,7 +23,7 @@ import Icon from '../../components/Icon';
 import Sprite from '../../components/Sprite';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import ProductFamilyContainer from './components/ProductFamilyContainer/ProductFamilyContainer';
-import { DesignContext } from '../../store/design';
+import { DesignContext } from '../../store/design/DesignProvider';
 import { AuthContext } from '../../store/auth';
 import { setAnalyticsForPage} from '../../utils/analytics-utils'
 import { getDomainDefinition } from '../../utils/generalUtils';

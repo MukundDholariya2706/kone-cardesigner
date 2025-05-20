@@ -3,10 +3,10 @@ import { useHistory } from 'react-router';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import { useRecaptcha } from '../../components/Recaptcha';
 import { SAVE_PREDESIGN_ACTION } from '../../constants';
-import { Context3d } from '../../store/3d';
+import { Context3d } from '../../store/3d/shader-lib/Provider3d';
 import { APIContext } from '../../store/api';
 import { BlueprintContext } from '../../store/blueprint';
-import { DesignContext } from '../../store/design';
+import { DesignContext } from '../../store/design/DesignProvider';
 import {  getDesignSpecificationURL } from '../../utils/link-utils';
 
 export default function ImageRendererPage(props) {

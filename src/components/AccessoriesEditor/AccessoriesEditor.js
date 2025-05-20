@@ -2,9 +2,9 @@ import './AccessoriesEditor.scss';
 import React, { useContext, useState, useEffect} from 'react';
 import jsonLogic from 'json-logic-js';
 
-import { TranslationContext } from '../../store/translation'
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
+import { TranslationContext } from '../../store/translation/TranslationProvider'
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
 import EditorLayout from '../EditorLayout';
 import AccessoryBlock from '../AccessoryBlock'
 import ServiceBlock from '../ServiceBlock'

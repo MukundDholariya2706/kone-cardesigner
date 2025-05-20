@@ -3,9 +3,9 @@ import './StartDesigningView.scss'
 import React, { useContext, useEffect, useState } from 'react'
 import { useHistory } from "react-router-dom"
 import ActionCard from '../ActionCard'
-import { ProductContext } from '../../store/product'
+import { ProductContext } from '../../store/product/ProductProvider'
 import { OfferingContext } from '../../store/offering'
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 
 import Container from '../Container'
 import LoadingSpinner from '../LoadingSpinner'

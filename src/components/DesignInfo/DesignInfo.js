@@ -1,6 +1,6 @@
 import React, { useMemo, useContext, useState } from 'react'
-import { ProductContext } from '../../store/product'
-import { TranslationContext } from '../../store/translation'
+import { ProductContext } from '../../store/product/ProductProvider'
+import { TranslationContext } from '../../store/translation/TranslationProvider'
 import Icon from '../Icon'
 import Info from '../info'
 import TileImage from '../TileImage'

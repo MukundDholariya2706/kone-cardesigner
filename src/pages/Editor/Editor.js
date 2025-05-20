@@ -16,18 +16,18 @@ import UnsavedChangesDialog from '../../components/UnsavedChangesDialog';
 import ToastContainer from '../../components/ToastContainer';
 import BottomBar from '../../components/BottomBar';
 
-import { LayoutContext } from '../../store/layout';
-import { DesignContext } from '../../store/design';
-import { ProductContext } from '../../store/product';
-import { Context3d } from '../../store/3d';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { Context3d } from '../../store/3d/shader-lib/Provider3d';
 
 import { setAnalyticsForEditPage, setAnalyticsForEvent } from '../../utils/analytics-utils'
 
 import { EDIT_VIEW_MODEL, EDITOR_PAGE_ACTION, EDIT_VIEW_CUSTOM_WALL_FINISH, EDIT_VIEW_CUSTOM_FLOOR_FINISH, EDIT_VIEW_FLOOR_FINISH_MIXER, EDIT_VIEW_CUSTOM_LANDING_FLOOR_FINISH, EDIT_VIEW_CUSTOM_LANDING_WALL_FINISH, EDIT_VIEW_LANDING_FINISHES, VIEW3D_MODE_CAR } from '../../constants';
 import TinyLoadingAnimation from '../../components/TinyLoadingAnimation';
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import { SiteContext } from '../../store/site/SiteProvider';
-import { UserContext } from '../../store/user';
+import { UserContext } from '../../store/user/UserProvider';
 import { useRecaptcha } from '../../components/Recaptcha';
 import { useHideScrollBar, useIsDesignEditable, useProductFromURL } from '../../utils/customHooks/customHooks';
 import GendocShareLoadingView from '../../components/GendocShareLoadingView/GendocShareLoadingView';

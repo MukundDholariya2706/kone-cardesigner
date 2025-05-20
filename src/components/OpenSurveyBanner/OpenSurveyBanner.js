@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { APIContext } from '../../store/api'
-import { DataContext } from '../../store/data'
-import { TranslationContext } from '../../store/translation'
+import { DataContext } from '../../store/data/DataProvider'
+import { TranslationContext } from '../../store/translation/TranslationProvider'
 import Icon from '../Icon'
 import './OpenSurveyBanner.scss'
 

@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react';
 import './ThumbnailList.scss';
 import MaterialItem from '../MaterialItem'
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import Sprite from '../Sprite';
 
 /**

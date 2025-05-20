@@ -9,9 +9,9 @@ import ProductChanger from '../../components/ProductChanger'
 import Card from '../../components/Card';
 import PreDesign from '../../components/PreDesign';
 
-import { ProductContext } from '../../store/product';
+import { ProductContext } from '../../store/product/ProductProvider';
 import { PREDESIGNS_PAGE_ACTION } from '../../constants';
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import { useRecaptcha } from '../../components/Recaptcha';
 import { useProductFromURL, useBuildingsType } from '../../utils/customHooks/customHooks';
 

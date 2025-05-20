@@ -1,7 +1,7 @@
 import './LandingEditor.scss';
 import React, { useContext } from 'react';
-import { DesignConsumer } from '../../store/design'
-import { TranslationContext } from '../../store/translation';
+import { DesignConsumer } from '../../store/design/DesignProvider'
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import EditorLayout from '../EditorLayout';
 
 

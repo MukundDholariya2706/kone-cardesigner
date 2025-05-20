@@ -5,7 +5,7 @@ import Dialog, { DialogHead, DialogBody } from '../Dialog';
 import Button from '../Button'
 import Icon from '../Icon'
 import './LoginComponent.scss'
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 
 const LoginComponent = (props) => {
   const { cardFromTop, redirectOnLogin = true } = props

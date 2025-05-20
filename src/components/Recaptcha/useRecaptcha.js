@@ -1,5 +1,5 @@
 import { useEffect, useContext } from 'react'
-import { DataContext } from '../../store/data'
+import { DataContext } from '../../store/data/DataProvider'
 
 /**
  * A custom hook for handling recaptcha.

@@ -1,5 +1,5 @@
 import React, {  useContext } from 'react'
-import { TranslationContext } from '../../../../store/translation'
+import { TranslationContext } from '../../../../store/translation/TranslationProvider'
 import { getDisplayNameAndRole, getPhoneNumber } from '../../../../utils/generalUtils'
 import Icon from '../../../Icon'
 import Layout from '../../../Layout'

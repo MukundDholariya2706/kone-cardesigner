@@ -1,13 +1,13 @@
 import './ElevatorCall.scss';
 import React, { useContext, useState, useEffect } from 'react';
 
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
-import { TranslationContext } from '../../store/translation';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import EditorLayout from '../EditorLayout';
 import SwitchButton from '../SwitchButton';
 import ElevatorCallDialog from './dialogs/ElevatorCallDialog';
-import { LayoutContext } from '../../store/layout';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
 import { EDIT_VIEW_DIGITAL_SERVICES, KCSM_MOBILE_ELEV_CALL } from '../../constants';
 import ScrollBox from '../ScrollBox';
 

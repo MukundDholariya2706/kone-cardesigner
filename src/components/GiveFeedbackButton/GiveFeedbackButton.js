@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { TranslationContext } from '../../store/translation'
+import { TranslationContext } from '../../store/translation/TranslationProvider'
 import { CompactFeedbackForm } from '../FeedbackForms/FeedbackForms'
 import Icon from '../Icon'
 import './GiveFeedbackButton.scss'

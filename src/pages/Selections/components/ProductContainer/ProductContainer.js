@@ -3,7 +3,7 @@ import FormSelect from '../../../../components/FormSelect'
 import Icon from '../../../../components/Icon'
 import { OfferingContext } from '../../../../store/offering'
 import { SiteContext } from '../../../../store/site'
-import { TranslationContext } from '../../../../store/translation'
+import { TranslationContext } from '../../../../store/translation/TranslationProvider'
 import { useBuildingsType } from '../../../../utils/customHooks/customHooks'
 import DesignsContainer from '../DesignsContainer/DesignsContainer'
 

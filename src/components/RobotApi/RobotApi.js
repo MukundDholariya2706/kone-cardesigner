@@ -1,13 +1,13 @@
 import './RobotApi.scss';
 import React, { useContext, useState, useEffect } from 'react';
 
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
-import { TranslationContext } from '../../store/translation';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import EditorLayout from '../EditorLayout';
 import SwitchButton from '../SwitchButton';
 import RobotApiDialog from './dialogs/RobotApiDialog';
-import { LayoutContext } from '../../store/layout';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
 import { EDIT_VIEW_DIGITAL_SERVICES, KCSM_APF_SERV_ROBOT_API } from '../../constants';
 
 import ScrollBox from '../ScrollBox';

@@ -3,10 +3,10 @@ import React, { useContext, useEffect, useState, useRef } from 'react';
 
 import jsonLogic from 'json-logic-js';
 
-import { DesignContext } from '../../store/design';
-import { ProductContext } from '../../store/product';
-import { Context3d } from '../../store/3d';
-import { TranslationContext } from '../../store/translation';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { Context3d } from '../../store/3d/shader-lib/Provider3d';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import { AuthContext } from '../../store/auth/AuthProvider';
 
 import EditorLayout from '../EditorLayout';

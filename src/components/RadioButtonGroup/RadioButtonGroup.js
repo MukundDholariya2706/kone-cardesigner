@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import './RadioButtonGroup.scss';
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 
 /**
  * Renders out the RadioButtonGroup

@@ -1,8 +1,8 @@
 import { useContext, useMemo } from 'react';
 import jsonLogic from 'json-logic-js';
 
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
 import { OfferingContext } from '../../store/offering';
 import { TYP_LCS_PRODUCT, TYP_LDO_FRAME_FRONT, TYP_DOOR_A, TYP_CAR_CEILING,
   TYP_CAR_WALL_B,

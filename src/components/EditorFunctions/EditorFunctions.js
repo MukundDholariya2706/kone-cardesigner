@@ -1,8 +1,8 @@
 import './EditorFunctions.scss';
 
 import React, {useContext} from 'react';
-import { LayoutContext } from '../../store/layout';
-import { TranslationContext } from '../../store/translation';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 
 
 /**

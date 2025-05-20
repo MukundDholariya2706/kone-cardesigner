@@ -2,12 +2,12 @@ import './Skirting.scss';
 import React, { useContext, useState, useEffect } from 'react';
 import jsonLogic from 'json-logic-js';
 
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
-import { TranslationContext } from '../../store/translation';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import EditorLayout from '../EditorLayout';
 import SwitchButton from '../SwitchButton';
-import { LayoutContext } from '../../store/layout';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
 import { MAT_CAR_SKIRTING, TYP_CAR_SKIRTING, MAT_CAR_FLOORING, EXTRA_FEATURES, OFFERING_INDIA, MAT_CAR_WALL_FINISH_B, MAT_CAR_CEILING, MAT_CAR_FRONT_WALL_A } from '../../constants';
 import InfoBox from '../InfoBox';
 import ImageTitle from '../ImageTitle';

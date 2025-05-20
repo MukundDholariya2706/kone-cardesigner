@@ -2,7 +2,7 @@ import "./Layout.scss"
 
 import React, { useContext, useState } from 'react';
 import { Helmet } from "react-helmet"
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 
 import Header from "../Header"
 import NavBar from "../NavBar"
@@ -10,7 +10,7 @@ import NavBar from "../NavBar"
 import CookieConsent from "react-cookie-consent";
 import { useWindowSize } from '../../utils/customHooks';
 import { SiteContext } from '../../store/site/SiteProvider';
-import { DataContext } from "../../store/data";
+import { DataContext } from "../../store/data/DataProvider";
 import OpenSurveyBanner from '../OpenSurveyBanner/OpenSurveyBanner';
 import { FeedbackDialog } from '../FeedbackForms/FeedbackForms';
 import GiveFeedbackButton from '../GiveFeedbackButton/GiveFeedbackButton';

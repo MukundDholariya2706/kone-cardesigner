@@ -17,7 +17,7 @@ import {
    FIXED_SIZE_HANDRAILS, AIR_PURIFIER_PARTS, DEFAULT_WHITE_TEXTURE_ID, DEFAULT_AMBIENT_OCCLUSION_TEXTURE_ID, DEFAULT_LIGHTMAP_TEXTURE_ID, DEFAULT_NORMALMAP_TEXTURE_ID
 } from "../../constants";
 
-import { QUALITY_3D_HIGH, QUALITY_3D_MEDIUM, QUALITY_3D_LOW, LIGHT_SPOT_LIGHT } from '../3d/3d-constants';
+import { QUALITY_3D_HIGH, QUALITY_3D_MEDIUM, QUALITY_3D_LOW, LIGHT_SPOT_LIGHT } from '../3d';
 import { isLandingDevice, similar, and, joinTest } from './blueprint-utils';
 import { materialPropertyTypes } from '../3d/material-property-types';
 import { isTrueTypeCar } from '../../utils/design-utils'

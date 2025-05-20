@@ -3,10 +3,10 @@ import React, { useContext, useEffect, useRef, useState, useMemo } from "react";
 import jsonLogic from "json-logic-js";
 
 import { ProductContext } from "../../store/product";
-import { DesignContext } from "../../store/design";
-import { LayoutContext } from "../../store/layout";
+import { DesignContext } from "../../store/design/DesignProvider";
+import { LayoutContext } from "../../store/layout/LayoutProvider";
 import { Context3d } from "../../store/3d";
-import { TranslationContext } from "../../store/translation";
+import { TranslationContext } from "../../store/translation/TranslationProvider";
 
 import EditorLayout from '../EditorLayout';
 import RadioButtonGroup from '../RadioButtonGroup';

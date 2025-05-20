@@ -5,10 +5,10 @@ import {
   MAT_LANDING_FLOOR,
   MAT_LANDING_WALL
 } from '../../constants'
-import { DesignContext } from '../../store/design'
-import { LayoutContext } from '../../store/layout'
-import { ProductContext } from '../../store/product'
-import { TranslationContext } from '../../store/translation'
+import { DesignContext } from '../../store/design/DesignProvider'
+import { LayoutContext } from '../../store/layout/LayoutProvider'
+import { ProductContext } from '../../store/product/ProductProvider'
+import { TranslationContext } from '../../store/translation/TranslationProvider'
 import Alert from '../Alert/Alert'
 import Icon from '../Icon'
 import TermsOfService from '../TermsOfService'

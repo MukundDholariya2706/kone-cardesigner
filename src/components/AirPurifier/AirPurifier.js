@@ -1,14 +1,14 @@
 import './AirPurifier.scss';
 import React, { useContext, useState, useEffect } from 'react';
 
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
-import { TranslationContext } from '../../store/translation';
-import { Context3d } from '../../store/3d';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
+import { Context3d } from '../../store/3d/shader-lib/Provider3d';
 import EditorLayout from '../EditorLayout';
 import SwitchButton from '../SwitchButton';
 import AirPurifierDialog from './dialogs/AirPurifierDialog';
-import { LayoutContext } from '../../store/layout';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
 import { KCSM_AIR_PURIFIER,VIEW3D_MODE_CAR, TYP_COP_PRODUCT_1 } from '../../constants';
 import ScrollBox from '../ScrollBox';
 

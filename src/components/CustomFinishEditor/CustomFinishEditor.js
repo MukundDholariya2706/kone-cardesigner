@@ -1,14 +1,14 @@
 import './CustomFinishEditor.scss';
 
 import React, { useContext, useState, useRef, useEffect, useCallback } from 'react'
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
 import HeadingComponent from '../HeadingComponent/HeadingComponent';
 import ListComponent from '../ListComponent/ListComponent';
 import Cropper from 'react-easy-crop'
 import Slider from '../Slider';
 import RadioButtonGroup from '../RadioButtonGroup/RadioButtonGroup';
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import EditorLayout from '../EditorLayout';
 import ScrollBox from '../ScrollBox';
 import FileInput from '../FileInput';

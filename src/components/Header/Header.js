@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import LanguageSelect from '../LanguageSelect';
 
 import './Header.scss';
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import Icon from '../Icon';
 import LoginComponent from '../LoginComponent';
 import { MARINE } from '../../constants';

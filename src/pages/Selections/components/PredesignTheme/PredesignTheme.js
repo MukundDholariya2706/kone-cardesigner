@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Sprite from '../../../../components/Sprite'
-import { TranslationContext } from '../../../../store/translation'
+import { TranslationContext } from '../../../../store/translation/TranslationProvider'
 
 import './PredesignTheme.scss'
 

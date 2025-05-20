@@ -1,6 +1,6 @@
 import './EditPanel.scss';
 import React, { useContext, useState, useRef } from 'react';
-import { LayoutContext } from '../../store/layout';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
 
 import CeilingEditor from '../CeilingEditor';
 import WallsEditor from '../WallsEditor';
@@ -32,9 +32,9 @@ import { EDIT_VIEW_ACCESORIES, EDIT_VIEW_CEILING,EDIT_VIEW_DOORS,EDIT_VIEW_FLOOR
         TYP_CAR_GLASS_WALL_C, EDIT_VIEW_DIGITAL_SERVICES} from '../../constants'
 import CustomFinishEditor from '../CustomFinishEditor';
 import FloorFinishMixer from '../FloorFinishMixer/FloorFinishMixer';
-import { DesignContext } from '../../store/design';
+import { DesignContext } from '../../store/design/DesignProvider';
 import LandingFinishesEditor from '../LandingFinishesEditor';
-import { ProductContext } from '../../store/product';
+import { ProductContext } from '../../store/product/ProductProvider';
 import Alert from '../Alert/Alert';
 import Icon from '../Icon';
 import { getFloorMixerGroups } from '../../utils/product-utils'

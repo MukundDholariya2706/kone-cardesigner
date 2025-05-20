@@ -5,7 +5,7 @@ import Bowser from "bowser";
 
 import Layout from '../../components/Layout';
 import MobileAppAdvertisement from '../../components/MobileAppAdvertisement';
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import { OfferingContext } from '../../store/offering';
 
 import imgExplore from '../../assets/images/explore.jpg'
@@ -16,7 +16,7 @@ import imgShare from '../../assets/images/share.jpg'
 import imgFunctionalDurableMaterials from '../../assets/images/functional-durable-materials.jpg'
 import imgKoneElevatorPlanner from '../../assets/images/kone-elevator-planner.png'
 
-import { DataContext } from '../../store/data';
+import { DataContext } from '../../store/data/DataProvider';
 import { APIContext } from '../../store/api';
 import HeroMarine from './components/HeroMarine';
 import HeroIndia from './components/HeroIndia';

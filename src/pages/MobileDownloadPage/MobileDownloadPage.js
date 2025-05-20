@@ -7,9 +7,9 @@ import phonesImg from './images/phones.png'
 import phonesImg2x from './images/phones@2x.png'
 import appstoreBadge from '../../assets/images/appstore_badge.png'
 import './MobileDownloadPage.scss'
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import { APIContext } from '../../store/api';
-import { DataContext } from '../../store/data';
+import { DataContext } from '../../store/data/DataProvider';
 
 const APK_FILE_NAME = 'kone-car-designer-3d.apk'
 const AWS_LOCATION = 'https://car-designer-china-prod.s3.cn-north-1.amazonaws.com.cn/downloads/apps'

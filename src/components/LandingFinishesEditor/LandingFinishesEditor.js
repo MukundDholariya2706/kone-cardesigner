@@ -1,17 +1,17 @@
 import './LandingFinishesEditor.scss';
 import React, { useContext, useState, useEffect } from 'react';
 import uniqid from 'uniqid'
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import EditorLayout from '../EditorLayout';
-import { LayoutContext } from '../../store/layout';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
 import ScrollBox from '../ScrollBox';
 import Button from '../Button';
 import { SketchPicker } from 'react-color'
 import { useOnClickOutside } from '../../utils/customHooks';
 import { useRef } from 'react';
 import { EDIT_VIEW_CUSTOM_LANDING_WALL_FINISH, EDIT_VIEW_CUSTOM_LANDING_FLOOR_FINISH, MAT_LANDING_WALL, MAT_LANDING_FLOOR, MAT_LANDING_CEILING, EDIT_VIEW_LANDING_FINISHES, LANDING_FINISH_GROUP } from '../../constants';
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
 import CustomFinishEditor from '../CustomFinishEditor';
 import { useCallback } from 'react';
 

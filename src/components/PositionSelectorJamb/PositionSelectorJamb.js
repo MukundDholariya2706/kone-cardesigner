@@ -1,6 +1,6 @@
 import './PositionSelectorJamb.scss'
 import React, { useContext } from 'react'
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import Icon from '../Icon';
 import { isTrueTypeCar } from '../../utils/design-utils'
 

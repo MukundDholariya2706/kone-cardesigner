@@ -1,8 +1,8 @@
 import './PreDesign.scss'
 import React, {useContext} from 'react';
 import { Link } from "react-router-dom";
-import { DesignContext } from '../../store/design';
-import { TranslationContext } from '../../store/translation';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import Sprite, { getBGStyle } from '../Sprite';
 
 

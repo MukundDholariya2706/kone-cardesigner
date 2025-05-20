@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import jsonLogic from 'json-logic-js';
 import { MIDDLE_BETWEEN_DOORS, MIDDLE_LEFT, MIDDLE_LEFT_FRAME, MIDDLE_RIGHT, MIDDLE_RIGHT_FRAME, TOP_CENTER, TOP_CENTER_FRAME, TOP_LEFT, TOP_LEFT_FRAME, TOP_RIGHT, TOP_RIGHT_FRAME } from '../../../../constants'
-import { DesignContext } from '../../../../store/design'
-import { ProductContext } from '../../../../store/product'
-import { TranslationContext } from '../../../../store/translation'
+import { DesignContext } from '../../../../store/design/DesignProvider'
+import { ProductContext } from '../../../../store/product/ProductProvider'
+import { TranslationContext } from '../../../../store/translation/TranslationProvider'
 import LandingPositions from '../../../LandingPositions'
 import RadioButtonGroup from '../../../RadioButtonGroup'
 import SectionAccordion from '../../../SectionAccordion'

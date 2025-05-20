@@ -3,14 +3,14 @@ import React, { useState, useContext } from 'react'
 
 import InfoBox from '../InfoBox'
 import SecondDialogView from '../SecondDialogView'
-import { TranslationContext } from '../../store/translation'
+import { TranslationContext } from '../../store/translation/TranslationProvider'
 import PdfGenerator from '../PdfGenerator'
 import { useKeepPagePosition } from '../../utils/customHooks'
 import LoadingSpinner from '../LoadingSpinner'
 import Dialog, { DialogNotification, DialogBody, DialogFooter, DialogHead } from '../Dialog'
 import Toast from '../Toast'
 import DownloadDesignPDFButton from '../DownloadDesignPDFButton/DownloadDesignPDFButton'
-import { DesignContext } from '../../store/design'
+import { DesignContext } from '../../store/design/DesignProvider'
 
 
 const DownloadDialog = ({

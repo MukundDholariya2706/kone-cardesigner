@@ -1,10 +1,10 @@
 import './EditorControllers.scss';
 
 import React, { useContext } from 'react';
-import { Context3d } from '../../store/3d';
+import { Context3d } from '../../store/3d/shader-lib/Provider3d';
 import LandingFinishSelectorHorizontal from '../LandingFinishSelectorHorizontal'
-import { TranslationContext } from '../../store/translation';
-import { LayoutContext } from '../../store/layout'
+import { TranslationContext } from '../../store/translation/TranslationProvider';
+import { LayoutContext } from '../../store/layout/LayoutProvider'
 import { VIEW3D_MODE_CAR, VIEW3D_MODE_LANDING, EDIT_VIEW_LANDING_FINISHES } from '../../constants';
 
 /**

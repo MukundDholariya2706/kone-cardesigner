@@ -2,16 +2,16 @@ import './InfoMediaScreens.scss';
 import React, { useContext, useState, useEffect, useMemo } from 'react';
 import jsonLogic from 'json-logic-js';
 
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
-import { TranslationContext } from '../../store/translation';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import EditorLayout from '../EditorLayout';
 import SwitchButton from '../SwitchButton'
 import InfoBox from '../InfoBox'
 import CarShapeSelector from '../CarShapeSelector'
 import ImageTitle from '../ImageTitle'
 import ToggleButtons from '../ToggleButtons';
-import { LayoutContext } from '../../store/layout';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
 import { TYP_CAR_INFOSCREEN, TYP_CAR_MEDIASCREEN, TYP_COP_2, TYP_COP_PRODUCT_1, TYP_CAR_MIRROR, MAT_CAR_MEDIASCREEN, TYP_CAR_GLASS_WALL_C, KCSM_KONE_INFORMATION, TYP_CAR_WALL_ADD_DECO_PACKAGE} from '../../constants';
 import KoneInformationDialog from '../KoneInformationDialog';
 import HeadingComponent from '../HeadingComponent/HeadingComponent';

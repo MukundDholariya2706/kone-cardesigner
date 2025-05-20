@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { EXISTING_BUILDINGS, NEW_BUILDINGS } from '../../../constants'
-import { TranslationContext } from '../../../store/translation'
+import { TranslationContext } from '../../../store/translation/TranslationProvider'
 
 function HeroWithModernization(props) {
   const { getText } = useContext(TranslationContext)

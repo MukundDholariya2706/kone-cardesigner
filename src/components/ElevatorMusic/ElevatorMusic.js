@@ -1,13 +1,13 @@
 import './ElevatorMusic.scss';
 import React, { useContext, useState, useEffect } from 'react';
 
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
-import { TranslationContext } from '../../store/translation';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import EditorLayout from '../EditorLayout';
 import SwitchButton from '../SwitchButton';
 import ElevatorMusicDialog from './dialogs/ElevatorMusicDialog';
-import { LayoutContext } from '../../store/layout';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
 import { EDIT_VIEW_DIGITAL_SERVICES, KCSM_ELEV_MUSIC } from '../../constants';
 import HeadingComponent from '../HeadingComponent/HeadingComponent';
 import ScrollBox from '../ScrollBox';

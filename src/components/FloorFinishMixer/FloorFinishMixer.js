@@ -2,10 +2,10 @@ import './FloorFinishMixer.scss'
 import React, { useContext, useEffect, useReducer, useMemo } from 'react';
 import ScrollBox from '../ScrollBox';
 import EditorLayout from '../EditorLayout';
-import { TranslationContext } from '../../store/translation';
-import { LayoutContext } from '../../store/layout';
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
 import { EDIT_VIEW_FLOOR, MAT_CAR_FLOORING, MATERIAL_CATEGORY_MASTER } from '../../constants';
 import HeadingComponent from '../HeadingComponent/HeadingComponent';
 import TileComponent from '../TileComponent';

@@ -4,9 +4,9 @@ import React, {useContext, useState, useMemo } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { OfferingContext } from '../../store/offering';
-import { ProductContext } from '../../store/product';
-import { TranslationContext } from '../../store/translation';
-import { UserContext } from '../../store/user';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
+import { UserContext } from '../../store/user/UserProvider';
 
 import { useRecaptcha } from '../../components/Recaptcha';
 import Layout from '../../components/Layout'; 

@@ -1,10 +1,10 @@
 import './DigitalServicesEditor.scss';
 import React, { useContext, useState, useEffect} from 'react';
 
-import { TranslationContext } from '../../store/translation'
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
-import { LayoutContext } from '../../store/layout';
+import { TranslationContext } from '../../store/translation/TranslationProvider'
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
 import EditorLayout from '../EditorLayout';
 import ServiceBlock from '../ServiceBlock'
 import DigitalServicesDialog from './dialogs/DigitalServicesDialog';

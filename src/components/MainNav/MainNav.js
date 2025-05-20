@@ -1,5 +1,5 @@
 import React, { useContext} from 'react';
-import { LayoutContext } from '../../store/layout';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
 import Bowser from "bowser";
 import Icon from "../Icon"
 
@@ -9,10 +9,10 @@ import { EDIT_VIEW_ACCESORIES, EDIT_VIEW_SKIRTING, EDIT_VIEW_HANDRAIL, EDIT_VIEW
         EDIT_VIEW_DIGITAL_SERVICES, EDIT_VIEW_CONNECTED_SERVICES, EDIT_VIEW_ELEVATOR_MUSIC, EDIT_VIEW_ELEVATOR_CALL, EDIT_VIEW_ROBOT_API, EDIT_VIEW_AIR_PURIFIER, KCSM_24_7_CONNECT, KCSM_ELEV_MUSIC, KCSM_MOBILE_ELEV_CALL, KCSM_APF_SERV_ROBOT_API} from '../../constants'
 
 import './MainNav.scss';
-import { DesignContext } from '../../store/design';
-import { TranslationContext } from '../../store/translation';
-import { UserContext } from '../../store/user';
-import { ProductContext } from '../../store/product';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
+import { UserContext } from '../../store/user/UserProvider';
+import { ProductContext } from '../../store/product/ProductProvider';
 
 import { setAnalyticsForEvent} from '../../utils/analytics-utils'
 

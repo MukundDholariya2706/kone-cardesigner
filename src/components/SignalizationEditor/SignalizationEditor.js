@@ -3,11 +3,11 @@ import React, { useContext, useState, useEffect, useRef, useMemo} from 'react';
 import jsonLogic from 'json-logic-js';
 import _ from 'lodash'
 
-import { ProductContext } from '../../store/product';
-import { DesignContext } from '../../store/design';
-import { LayoutContext } from '../../store/layout';
-import { Context3d } from '../../store/3d';
-import { TranslationContext } from '../../store/translation';
+import { ProductContext } from '../../store/product/ProductProvider';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { Context3d } from '../../store/3d/shader-lib/Provider3d';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 
 import EditorLayout from '../EditorLayout';
 import ToggleButtons from '../ToggleButtons';

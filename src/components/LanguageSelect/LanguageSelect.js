@@ -1,9 +1,9 @@
 import React, { useState, useRef, useContext } from 'react'
 import './LanguageSelect.scss'
 
-import { UserContext } from '../../store/user';
-import { DataContext } from '../../store/data';
-import { TranslationContext } from '../../store/translation';
+import { UserContext } from '../../store/user/UserProvider';
+import { DataContext } from '../../store/data/DataProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import Icon from '../Icon';
 import { sortLanguages } from '../../utils/generalUtils';
 import { useOnClickOutside } from '../../utils/customHooks'

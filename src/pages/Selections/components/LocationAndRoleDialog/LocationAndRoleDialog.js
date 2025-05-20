@@ -1,5 +1,5 @@
 import React, { useState, useContext, useMemo } from 'react'
-import { TranslationContext } from '../../../../store/translation'
+import { TranslationContext } from '../../../../store/translation/TranslationProvider'
 import { sortCountries } from '../../../../utils/generalUtils'
 import Button from '../../../../components/Button'
 import Container from '../../../../components/Container'

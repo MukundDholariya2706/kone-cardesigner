@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 
 import './MobileAppAdvertisement.scss';
 import Icon from '../Icon';
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import appstoreBadge from '../../assets/images/appstore_badge.png'
 import playstoreBadge from '../../assets/images/playstore_badge.png'
 import appgalleryBadge from '../../assets/images/appGallery_badge.png'

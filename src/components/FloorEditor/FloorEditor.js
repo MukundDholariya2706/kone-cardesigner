@@ -2,9 +2,9 @@ import './FloorEditor.scss';
 import 'ie-array-find-polyfill';
 import React, { useContext, useEffect, useState, useMemo} from 'react';
 import jsonLogic from 'json-logic-js';
-import { ProductContext } from '../../store/product'
-import { DesignContext } from '../../store/design'
-import { TranslationContext } from '../../store/translation';
+import { ProductContext } from '../../store/product/ProductProvider'
+import { DesignContext } from '../../store/design/DesignProvider'
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 
 import InfoBox from '../InfoBox';
 import EditorLayout from '../EditorLayout';
@@ -17,7 +17,7 @@ import Description from '../Description';
 import ScrollBox from '../ScrollBox';
 import ToggleButtons from '../ToggleButtons';
 import Button from '../Button';
-import { LayoutContext } from '../../store/layout';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
 import CustomFinishes from '../CustomFinishes';
 import TermsOfService from '../TermsOfService';
 import { sortFinishes } from '../../utils/generalUtils'

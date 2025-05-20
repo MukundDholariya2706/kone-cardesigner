@@ -1,7 +1,7 @@
 import deepCopy from 'deepcopy';
 import { LOCAL_STORAGE_3D_QUALITY } from '../constants';
-import { QUALITY_3D_HIGH, QUALITY_3D_LOW, QUALITY_3D_MEDIUM } from '../store/3d/3d-constants';
 import { isMobile } from './device-utils';
+import { QUALITY_3D_HIGH, QUALITY_3D_LOW, QUALITY_3D_MEDIUM } from '../store/3d';
 
 /**
  * Converts an array of objects to hash table

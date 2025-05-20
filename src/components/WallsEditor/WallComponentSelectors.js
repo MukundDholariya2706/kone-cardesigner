@@ -11,9 +11,9 @@ import {
 } from '../../constants';
 import WallItemSelector from '../WallItemSelector';
 import InfoBox from '../InfoBox';
-import { DesignContext } from '../../store/design';
-import { TranslationContext } from '../../store/translation';
-import { ProductContext } from '../../store/product';
+import { DesignContext } from '../../store/design/DesignProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
+import { ProductContext } from '../../store/product/ProductProvider';
 import { ToastContext } from '../../store/toast';
 import { getPanelTypes } from '../../utils/design-utils';
 import CustomFinishes from '../CustomFinishes';

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { TranslationContext } from '../../../../store/translation'
+import { TranslationContext } from '../../../../store/translation/TranslationProvider'
 import appstoreBadge from '../../../../assets/images/appstore_badge.png'
 import playstoreBadge from '../../../../assets/images/playstore_badge.png'
 import qrCodeIOS from '../../../../assets/images/QR_code_AppStore.png'

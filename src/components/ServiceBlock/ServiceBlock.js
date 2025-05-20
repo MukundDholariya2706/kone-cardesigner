@@ -4,9 +4,9 @@ import React, { useContext } from 'react'
 import Sprite from '../Sprite';
 import Icon from '../Icon'
 import InfoBox from '../InfoBox';
-import { LayoutContext } from '../../store/layout';
-import { DesignContext } from '../../store/design'
-import { TranslationContext } from '../../store/translation';
+import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { DesignContext } from '../../store/design/DesignProvider'
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import HeadingComponent from '../HeadingComponent/HeadingComponent';
 
 /**

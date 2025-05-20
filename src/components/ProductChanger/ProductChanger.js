@@ -3,9 +3,9 @@ import './ProductChanger.scss';
 import React, { useState, useEffect, useContext, useRef, useMemo } from 'react';
 import { withRouter } from "react-router"
 import Dropdown from '../../components/Dropdown'
-import { ProductContext } from '../../store/product';
+import { ProductContext } from '../../store/product/ProductProvider';
 import { OfferingContext } from '../../store/offering';
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import { sortProducts } from '../../utils/generalUtils';
 import { EXISTING_BUILDINGS } from '../../constants';
 

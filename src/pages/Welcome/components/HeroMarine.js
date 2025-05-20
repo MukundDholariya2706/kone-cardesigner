@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { MARINE } from '../../../constants'
-import { TranslationContext } from '../../../store/translation'
+import { TranslationContext } from '../../../store/translation/TranslationProvider'
 
 function HeroMarine(props) {
   const { getText } = useContext(TranslationContext)

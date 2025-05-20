@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { TWO_PANELS_COMBINED } from '../../../../constants'
-import { ProductContext } from '../../../../store/product'
-import { TranslationContext } from '../../../../store/translation'
+import { ProductContext } from '../../../../store/product/ProductProvider'
+import { TranslationContext } from '../../../../store/translation/TranslationProvider'
 import Icon from '../../../Icon'
 import TileImage from '../../../TileImage/TileImage'
 

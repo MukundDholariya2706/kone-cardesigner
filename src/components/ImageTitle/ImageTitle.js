@@ -1,6 +1,6 @@
 import './ImageTitle.scss'
 import React, {useContext} from 'react'
-import { TranslationContext } from '../../store/translation';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import Sprite from '../Sprite';
 import Icon from '../Icon';
 

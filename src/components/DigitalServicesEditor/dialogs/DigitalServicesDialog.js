@@ -1,7 +1,6 @@
 import "./DigitalServicesDialog.scss";
 import React, { useContext } from "react";
-import { TranslationContext } from "../../../store/translation";
-import Dialog, { DialogBody, DialogFooter } from "../../Dialog";
+import { TranslationContext } from "../../../store/translation/TranslationProvider";import Dialog, { DialogBody, DialogFooter } from "../../Dialog";
 import Button from "../../Button";
 import Icon from "../../Icon";
 import GridComponent from "../../GridComponent";

@@ -3,9 +3,9 @@ import React, { useState, useContext, useMemo } from 'react'
 import { useRecaptcha } from '../Recaptcha'
 import FormInput from '../FormInput';
 import SecondDialogView from '../SecondDialogView';
-import { UserContext } from '../../store/user';
-import { TranslationContext } from '../../store/translation';
-import { DataContext } from '../../store/data';
+import { UserContext } from '../../store/user/UserProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
+import { DataContext } from '../../store/data/DataProvider';
 import { formHandler, postContactForm, titles } from '../../utils/form-utils';
 import { SiteContext } from '../../store/site';
 import { CONTACT_ACTION, US_STATES, CA_PROV_TERR } from '../../constants';

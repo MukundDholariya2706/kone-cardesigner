@@ -9,9 +9,9 @@ import playstoreBadge from '../../assets/images/playstore_badge.png'
 
 import React, { useContext, useRef, useEffect } from 'react';
 
-import { DataContext } from '../../store/data';
-import { UserContext } from '../../store/user';
-import { TranslationContext } from '../../store/translation';
+import { DataContext } from '../../store/data/DataProvider';
+import { UserContext } from '../../store/user/UserProvider';
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import Icon from '../Icon';
 import { setAnalyticsForPage} from '../../utils/analytics-utils'
 import { getDomainDefinition } from '../../utils/generalUtils';

@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { TranslationContext } from '../../../../store/translation'
+import { TranslationContext } from '../../../../store/translation/TranslationProvider'
 import Button from '../../../../components/Button'
 import Container from '../../../../components/Container'
 import Dialog, { DialogHead, DialogBody, DialogFooter } from '../../../../components/Dialog'
