@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { TranslationContext } from '../../../../store/translation/TranslationProvider'
-import appstoreBadge from '../../../../assets/images/appstore_badge.png'
-import playstoreBadge from '../../../../assets/images/playstore_badge.png'
-import qrCodeIOS from '../../../../assets/images/QR_code_AppStore.png'
-import qrCodeAndroid from '../../../../assets/images/QR_code_PlayStore.png'
+import appstoreBadge from '../../../../assets/images/react.svg'
+import playstoreBadge from '../../../../assets/images/react.svg'
+import qrCodeIOS from '../../../../assets/images/react.svg'
+import qrCodeAndroid from '../../../../assets/images/react.svg'
 import imgKoneCarDesignerAppForMobileDevices from '../../../../assets/images/kone-car-designer-app-for-mobile-devices.jpg'
 import './MobileAppSection.scss'
 

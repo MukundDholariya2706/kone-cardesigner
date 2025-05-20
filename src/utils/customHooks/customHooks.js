@@ -1,14 +1,14 @@
 import { useEffect, useContext, useRef, useState } from 'react'
 import { ProductContext } from '../../store/product/ProductProvider'
-import { OfferingContext } from '../../store/offering'
-import { SiteContext } from '../../store/site'
+import { OfferingContext } from '../../store/offering/OfferingProvider'
+import { SiteContext } from '../../store/site/SiteProvider'
 import { useParams } from 'react-router'
 import { EXISTING_BUILDINGS, NEW_BUILDINGS, MARINE } from '../../constants'
 import { DesignContext } from '../../store/design/DesignProvider'
-import { AuthContext } from '../../store/auth'
+import { AuthContext } from '../../store/auth/AuthProvider'
 import { getDesignInformation } from '../designInformation'
 import { getShareLink } from '../link-utils'
-import { APIContext } from '../../store/api'
+import { APIContext } from '../../store/api/APIProvider'
 import { DataContext } from '../../store/data/DataProvider'
 
 /**

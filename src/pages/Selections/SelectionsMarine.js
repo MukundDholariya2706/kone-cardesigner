@@ -3,7 +3,7 @@ import './SelectionsMarine.scss';
 import React, {useContext, useState, useMemo } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { OfferingContext } from '../../store/offering';
+import { OfferingContext } from '../../store/offering/OfferingProvider';
 import { ProductContext } from '../../store/product/ProductProvider';
 import { TranslationContext } from '../../store/translation/TranslationProvider';
 import { UserContext } from '../../store/user/UserProvider';
@@ -24,7 +24,7 @@ import allRoles from '../../store/roles'
 import { RoleSelectionDialog } from './components';
 import Sprite from '../../components/Sprite';
 import origBuildingTypes from '../../store/building-types';
-import { AuthContext } from '../../store/auth';
+import { AuthContext } from '../../store/auth/AuthProvider';
 
 /**
  * Renders out the SelectionsMarine page. The page contains selection for project type and solution.

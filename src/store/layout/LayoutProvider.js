@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Context3d } from '../3d'
+import { Context3d } from '../3d/shader-lib/Provider3d'
 import { VIEW3D_MODE_CAR, EDIT_VIEW_SIGNALIZATION, EDIT_VIEW_DOORS, EDIT_VIEW_MODEL, TYP_CAR_WALL_B, TYP_CAR_WALL_C, TYP_CAR_WALL_D, EDIT_VIEW_CUSTOM_WALL_FINISH,
   EDIT_VIEW_CUSTOM_FLOOR_FINISH, EDIT_VIEW_LANDING_FINISHES, THREE_PANELS } from '../../constants'
 import { DesignContext } from '../design';

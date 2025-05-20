@@ -7,7 +7,7 @@ import { TranslationContext } from '../../store/translation/TranslationProvider'
 import Icon from '../Icon';
 import LoginComponent from '../LoginComponent';
 import { MARINE } from '../../constants';
-import { SiteContext } from '../../store/site';
+import { SiteContext } from '../../store/site/SiteProvider';
 
 /**
  * Renders out the header part of the view (currently not in use)

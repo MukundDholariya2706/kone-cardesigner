@@ -24,7 +24,7 @@ import {
 import DownloadDialog from "../DownloadDialog";
 import { UserContext } from "../../store/user/UserProvider";
 import { BlueprintContext } from '../../store/blueprint';
-import { ToastContext } from '../../store/toast';
+import { ToastContext } from '../../store/toast/ToastProvider';
 
 /**
  * Bottom bar component for editor

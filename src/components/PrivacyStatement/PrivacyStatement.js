@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { SiteContext } from '../../store/site'
+import { SiteContext } from '../../store/site/SiteProvider'
 import { TranslationContext } from '../../store/translation/TranslationProvider'
 
 import './PrivacyStatement.scss'

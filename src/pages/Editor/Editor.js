@@ -36,7 +36,7 @@ import SimpleEditorNavBar from '../../components/SimpleEditorNavBar/SimpleEditor
 import { getDomainDefinition } from '../../utils/generalUtils';
 
 import GendocEditWarningDialog from '../../components/GendocEditWarningDialog/GendocEditWarningDialog';
-import { AuthContext } from '../../store/auth';
+import { AuthContext } from '../../store/auth/AuthProvider';
 import LoadingSpinner from '../../components/LoadingSpinner';
 
 

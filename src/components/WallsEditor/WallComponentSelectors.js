@@ -14,7 +14,7 @@ import InfoBox from '../InfoBox';
 import { DesignContext } from '../../store/design/DesignProvider';
 import { TranslationContext } from '../../store/translation/TranslationProvider';
 import { ProductContext } from '../../store/product/ProductProvider';
-import { ToastContext } from '../../store/toast';
+import { ToastContext } from '../../store/toast/ToastProvider';
 import { getPanelTypes } from '../../utils/design-utils';
 import CustomFinishes from '../CustomFinishes';
 import Description from '../Description';

@@ -5,10 +5,10 @@ import Layout from '../../components/Layout';
 
 import phonesImg from './images/phones.png'
 import phonesImg2x from './images/phones@2x.png'
-import appstoreBadge from '../../assets/images/appstore_badge.png'
+import appstoreBadge from '../../assets/images/react.svg'
 import './MobileDownloadPage.scss'
 import { TranslationContext } from '../../store/translation/TranslationProvider';
-import { APIContext } from '../../store/api';
+import { APIContext } from '../../store/api/APIProvider';
 import { DataContext } from '../../store/data/DataProvider';
 
 const APK_FILE_NAME = 'kone-car-designer-3d.apk'

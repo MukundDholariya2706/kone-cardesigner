@@ -6,8 +6,8 @@ import Button from "../Button";
 import GridComponent from "../GridComponent";
 import Icon from "../Icon";
 
-import imgCarouselCop from "../../assets/images/KONE_information_image2.png";
-import imgCarouselMediaScreen from "../../assets/images/KONE_information_image3.png";
+import imgCarouselCop from "../../assets/images/react.svg";
+import imgCarouselMediaScreen from "../../assets/images/react.svg";
 import { useServiceReadMoreURL } from '../../utils/customHooks/productHooks';
 import { KCSM_KONE_INFORMATION } from '../../constants';
 

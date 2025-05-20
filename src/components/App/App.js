@@ -5,7 +5,7 @@ import './App.scss';
 // Reason: Loader components HTML is rendered before
 // Styles are loaded / initialized
 import '../Loader/Loader.scss' 
-import playstoreBadge from '../../assets/images/playstore_badge.png'
+import playstoreBadge from '../../assets/images/react.svg'
 
 import React, { useContext, useRef, useEffect } from 'react';
 

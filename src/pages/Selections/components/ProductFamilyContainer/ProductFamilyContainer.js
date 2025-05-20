@@ -1,5 +1,5 @@
 import React, { useMemo, useContext } from 'react'
-import { AuthContext } from '../../../../store/auth'
+import { AuthContext } from '../../../../store/auth/AuthProvider'
 import { ProductContext } from '../../../../store/product/ProductProvider'
 import { TranslationContext } from '../../../../store/translation/TranslationProvider'
 import { sortProducts } from '../../../../utils/generalUtils'

@@ -6,25 +6,25 @@ import Bowser from "bowser";
 import Layout from '../../components/Layout';
 import MobileAppAdvertisement from '../../components/MobileAppAdvertisement';
 import { TranslationContext } from '../../store/translation/TranslationProvider';
-import { OfferingContext } from '../../store/offering';
+import { OfferingContext } from '../../store/offering/OfferingProvider';
 
 import imgExplore from '../../assets/images/explore.jpg'
-import imgExploreEna from '../../assets/images/explore-ena.png'
+import imgExploreEna from '../../assets/images/react.svg'
 import imgDesign from '../../assets/images/design.jpg'
-import imgDesignEna from '../../assets/images/design-ena.png'
+import imgDesignEna from '../../assets/images/react.svg'
 import imgShare from '../../assets/images/share.jpg'
 import imgFunctionalDurableMaterials from '../../assets/images/functional-durable-materials.jpg'
-import imgKoneElevatorPlanner from '../../assets/images/kone-elevator-planner.png'
+import imgKoneElevatorPlanner from '../../assets/images/react.svg'
 
 import { DataContext } from '../../store/data/DataProvider';
-import { APIContext } from '../../store/api';
+import { APIContext } from '../../store/api/APIProvider';
 import HeroMarine from './components/HeroMarine';
 import HeroIndia from './components/HeroIndia';
 import HeroWithModernization from './components/HeroWithModernization';
 import HeroNoModernization from './components/HeroNoModernization';
 import MobileAppSection from './components/MobileAppSection';
 import {  LOCAL_STORAGE_SHOW_MOBILE_AD, LOCAL_STORAGE_ROLE } from '../../constants';
-import { SiteContext } from '../../store/site';
+import { SiteContext } from '../../store/site/SiteProvider';
 import { setAnalyticsForPage} from '../../utils/analytics-utils'
 import { getDomainDefinition } from '../../utils/generalUtils';
 

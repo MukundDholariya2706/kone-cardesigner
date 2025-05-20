@@ -4,7 +4,7 @@ import { DesignContext } from '../design'
 import BlueprintBuilder from './BlueprintBuilder';
 import { ProductContext } from '../product';
 import { LayoutContext } from '../layout';
-import { Context3d } from '../3d';
+import { Context3d } from '../3d/shader-lib/Provider3d';
 import { CAR_SHAPE_DEEP, TYP_LCS_PRODUCT} from '../../constants';
 import { createCaptureBlueprintFilters } from './blueprint-utils';
 import { get3DQuality } from '../../utils/generalUtils';

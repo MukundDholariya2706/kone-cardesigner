@@ -6,14 +6,14 @@ import Container from '../../../../components/Container'
 import Dialog, { DialogHead, DialogBody, DialogFooter } from '../../../../components/Dialog'
 import FormSelect from '../../../../components/FormSelect'
 import Sprite from '../../../../components/Sprite'
-import iconQuestion from '../../../../assets/icons/icon-question.png'
-import iconQuestion2x from '../../../../assets/icons/icon-question@2x.png'
+import iconQuestion from '../../../../assets/icons/react.svg'
+import iconQuestion2x from '../../../../assets/icons/react.svg'
 
 import './LocationAndRoleDialog.scss'
 import { useKeepPagePosition } from '../../../../utils/customHooks'
 import Map from '../../../../components/Map'
 import Icon from '../../../../components/Icon'
-import { AuthContext } from '../../../../store/auth'
+import { AuthContext } from '../../../../store/auth/AuthProvider'
 
 
 function LocationAndRoleDialog(props) {

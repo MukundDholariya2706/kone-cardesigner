@@ -5,18 +5,18 @@ import FormInput from '../FormInput';
 import SecondDialogView from '../SecondDialogView';
 import { formHandler } from '../../utils/form-utils';
 import { sendEmail } from '../../utils/email-utils';
-import { OfferingContext } from '../../store/offering'
+import { OfferingContext } from '../../store/offering/OfferingProvider'
 import { DataContext } from '../../store/data/DataProvider'
 import { TranslationContext } from '../../store/translation/TranslationProvider';
 import { UserContext } from '../../store/user/UserProvider';
 import { SHARE_DIALOG_ACTION } from '../../constants'
 import { useKeepPagePosition } from '../../utils/customHooks';
-import { APIContext } from '../../store/api';
+import { APIContext } from '../../store/api/APIProvider';
 import { setAnalyticsForEvent} from '../../utils/analytics-utils'
 import useRecaptcha from '../Recaptcha/useRecaptcha';
 import Dialog, { DialogHead, DialogBody, DialogFooter, DialogNotification } from '../Dialog';
 import { Honeypots } from '../FormInput/FormInput';
-import { SiteContext } from '../../store/site';
+import { SiteContext } from '../../store/site/SiteProvider';
 import { ProductContext } from '../../store/product/ProductProvider';
 import Toast from '../Toast';
 import Icon from '../Icon';

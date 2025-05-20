@@ -12,10 +12,10 @@ import { EDIT_VIEW_DIGITAL_SERVICES, KCSM_24_7_CONNECT } from '../../constants';
 
 import ScrollBox from '../ScrollBox';
 
-import imgMonitoring from "../../assets/images/24-7-monitoring.png";
-import imgReporting from "../../assets/images/24-7-reporting.png";
-import imgAlerts from "../../assets/images/24-7-alerts.png";
-import imgAnalysis from "../../assets/images/24-7-analysis.png";
+import imgMonitoring from "../../assets/images/react.svg";
+import imgReporting from "../../assets/images/react.svg";
+import imgAlerts from "../../assets/images/react.svg";
+import imgAnalysis from "../../assets/images/react.svg";
 
 const ConnectedServices = (props) => {
   

@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from '../../../../components/Icon'
 import { NEW_BUILDINGS } from '../../../../constants'
-import { AuthContext } from '../../../../store/auth'
+import { AuthContext } from '../../../../store/auth/AuthProvider'
 import { TranslationContext } from '../../../../store/translation/TranslationProvider'
 import './HeroIndia.scss'
 

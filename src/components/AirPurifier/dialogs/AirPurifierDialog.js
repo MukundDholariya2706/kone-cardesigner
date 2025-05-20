@@ -5,7 +5,7 @@ import { DataContext } from "../../../store/data/DataProvider";
 import Dialog, { DialogHead, DialogBody, DialogFooter } from "../../Dialog";
 import Button from "../../Button";
 
-import imgFallBack from '../../../assets/images/fallback-air-purifier.png'
+import imgFallBack from '../../../assets/images/react.svg'
 import { useServiceReadMoreURL } from '../../../utils/customHooks/productHooks';
 import { KCSM_AIR_PURIFIER } from '../../../constants';
 

@@ -10,7 +10,7 @@ import TileComponent from '../TileComponent';
 import { ProductContext } from '../../store/product/ProductProvider';
 import { DesignContext } from '../../store/design/DesignProvider';
 import { TranslationContext } from '../../store/translation/TranslationProvider';
-import { ToastContext } from '../../store/toast';
+import { ToastContext } from '../../store/toast/ToastProvider';
 import HeadingComponent from '../HeadingComponent/HeadingComponent';
 import { DEFAULT_LIST_IMAGE_URL, MAT_CAR_FRONT_WALL_A, MAT_CDO_PANEL } from '../../constants';
 

@@ -3,7 +3,7 @@ import jsonLogic from 'json-logic-js';
 
 import { ProductContext } from '../../store/product/ProductProvider';
 import { DesignContext } from '../../store/design/DesignProvider';
-import { OfferingContext } from '../../store/offering';
+import { OfferingContext } from '../../store/offering/OfferingProvider';
 import { TYP_LCS_PRODUCT, TYP_LDO_FRAME_FRONT, TYP_DOOR_A, TYP_CAR_CEILING,
   TYP_CAR_WALL_B,
   MAT_COP_FACE_PLATE_1,

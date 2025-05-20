@@ -4,9 +4,9 @@ import { TranslationContext } from "../../../store/translation/TranslationProvid
 import Dialog, { DialogHead, DialogBody, DialogFooter } from "../../Dialog";
 import Button from "../../Button";
 
-import imgFallBack from '../../../assets/images/fallback-elevator-music.png'
-import imgKoneLogo from "../../../assets/images/logo.png";
-import imgSoundtrackLogo from "../../../assets/images/soundtrack_logo.png";
+import imgFallBack from '../../../assets/images/react.svg'
+import imgKoneLogo from "../../../assets/images/react.svg";
+import imgSoundtrackLogo from "../../../assets/images/react.svg";
 import { useServiceReadMoreURL } from '../../../utils/customHooks/productHooks';
 import { KCSM_ELEV_MUSIC } from '../../../constants';
 

@@ -12,7 +12,7 @@ import { EDIT_VIEW_DIGITAL_SERVICES, KCSM_ELEV_MUSIC } from '../../constants';
 import HeadingComponent from '../HeadingComponent/HeadingComponent';
 import ScrollBox from '../ScrollBox';
 
-import imgElevatorMusic from "../../assets/images/elevator-music.png";
+import imgElevatorMusic from "../../assets/images/react.svg";
 import Icon from '../Icon';
 
 const ElevatorMusic = (props) => {

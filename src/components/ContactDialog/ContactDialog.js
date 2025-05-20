@@ -7,10 +7,10 @@ import { UserContext } from '../../store/user/UserProvider';
 import { TranslationContext } from '../../store/translation/TranslationProvider';
 import { DataContext } from '../../store/data/DataProvider';
 import { formHandler, postContactForm, titles } from '../../utils/form-utils';
-import { SiteContext } from '../../store/site';
+import { SiteContext } from '../../store/site/SiteProvider';
 import { CONTACT_ACTION, US_STATES, CA_PROV_TERR } from '../../constants';
 import { useKeepPagePosition } from '../../utils/customHooks'
-import { APIContext } from '../../store/api';
+import { APIContext } from '../../store/api/APIProvider';
 import roles from '../../store/roles';
 import locationCountries from '../../store/locationCountries';
 import { sortCountries } from '../../utils/generalUtils'

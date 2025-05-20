@@ -14,7 +14,7 @@ import { DataContext } from '../../store/data/DataProvider';
 import { UserContext } from '../../store/user/UserProvider';
 import { DesignContext } from '../../store/design/DesignProvider';
 import { ProductContext } from '../../store/product/ProductProvider';
-import { OfferingContext } from '../../store/offering';
+import { OfferingContext } from '../../store/offering/OfferingProvider';
 import { TranslationContext } from '../../store/translation/TranslationProvider';
 import { getDesignInformation, getViewImages } from '../../utils/designInformation'
 import {  
@@ -22,20 +22,20 @@ import {
   LOCAL_STORAGE_SHARE_INFO_DIALOG_SHOWN, 
     SAVE_PREDESIGN_ACTION,
   } from '../../constants';
-import { APIContext } from '../../store/api';
+import { APIContext } from '../../store/api/APIProvider';
 import { setAnalyticsForEditPage } from '../../utils/analytics-utils'
 import { getCustomFinishesInUse } from '../../utils/design-utils'
 import { getShareLink } from '../../utils/link-utils'
 import useRecaptcha from '../../components/Recaptcha/useRecaptcha';
 import { useProductFromURL, useBuildingsType, useIsDesignEditable } from '../../utils/customHooks/customHooks';
 import { AuthContext } from '../../store/auth/AuthProvider';
-import { SiteContext } from '../../store/site';
+import { SiteContext } from '../../store/site/SiteProvider';
 import allRoles from '../../store/roles'
 import DesignNameEditor from './components/DesignNameEditor';
 import ShareDesignArea from './components/ShareDesignArea';
 import InfoDialog from './components/InfoDialog';
 import ToastContainer from '../../components/ToastContainer';
-import { ToastContext } from '../../store/toast';
+import { ToastContext } from '../../store/toast/ToastProvider';
 import DesignImages from './components/DesignImages';
 // import { renderImages, IMAGE_IDS } from '../../utils/renderImages';
 import { getDomainDefinition } from '../../utils/generalUtils';

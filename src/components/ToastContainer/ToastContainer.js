@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react'
-import { ToastContext } from '../../store/toast';
+import { ToastContext } from '../../store/toast/ToastProvider';
 import Toast from '../Toast';
 
 import './ToastContainer.scss'

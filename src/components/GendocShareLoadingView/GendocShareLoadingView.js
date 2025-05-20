@@ -2,9 +2,9 @@ import React, { useContext } from 'react'
 import Loader from '../Loader'
 
 import { TranslationContext } from '../../store/translation/TranslationProvider';
-import reviewDesignImage from '../../assets/images/share-link-dialog/review-design.png'
-import updateDesignImage from '../../assets/images/share-link-dialog/update-design.png'
-import contactAboutDesignImage from '../../assets/images/share-link-dialog/contact-about-design.png'
+import reviewDesignImage from '../../assets/images/react.svg'
+import updateDesignImage from '../../assets/images/react.svg'
+import contactAboutDesignImage from '../../assets/images/react.svg'
 import Sprite from '../../components/Sprite';
 
 import './GendocShareLoadingView.scss'

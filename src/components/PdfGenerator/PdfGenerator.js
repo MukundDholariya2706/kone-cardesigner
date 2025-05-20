@@ -1,38 +1,38 @@
 import React from 'react';
 import { View, Document, Image, Text, Font, Link } from '@react-pdf/renderer';
 
-import fp_bg from '../../assets/images/pdf_fp_bg.png';
-import logo from '../../assets/images/logo.png';
-import slogan from '../../assets/images/slogan.png';
-import emptyWallIcon from '../../assets/icons/wall-finish.png';
+import fp_bg from '../../assets/images/react.svg';
+import logo from '../../assets/images/react.svg';
+import slogan from '../../assets/images/react.svg';
+import emptyWallIcon from '../../assets/icons/react.svg';
 
-import apiIcon from '../../assets/icons/icon-api-ready.png';
-import connectIcon from '../../assets/icons/icon-connected.png';
-import maxSpeedIcon from '../../assets/icons/icon-max-speed.png';
-import maxTravelIcon from '../../assets/icons/icon-max-travel.png';
-import maxPersonsIcon from '../../assets/icons/icon-max-persons.png';
-import maxGroupsIcon from '../../assets/icons/icon-max-groups.png';
+import apiIcon from '../../assets/icons/react.svg';
+import connectIcon from '../../assets/icons/react.svg';
+import maxSpeedIcon from '../../assets/icons/react.svg';
+import maxTravelIcon from '../../assets/icons/react.svg';
+import maxPersonsIcon from '../../assets/icons/react.svg';
+import maxGroupsIcon from '../../assets/icons/react.svg';
 
-import linkIcon from '../../assets/icons/icon-link-white.png';
+import linkIcon from '../../assets/icons/react.svg';
 
-import premiumIconEu from '../../assets/icons/icon-premium.png';
-import premiumIconInverseEU from '../../assets/icons/icon-premium-inverse.png';
-import premiumIconEna from '../../assets/icons/icon-premium-ena.png';
-import premiumIconInverseEna from '../../assets/icons/icon-premium-ena-inverse.png';
+import premiumIconEu from '../../assets/icons/react.svg';
+import premiumIconInverseEU from '../../assets/icons/react.svg';
+import premiumIconEna from '../../assets/icons/react.svg';
+import premiumIconInverseEna from '../../assets/icons/react.svg';
 
-import indHigh from '../../assets/images/HIGH.jpg';
-import indLow from '../../assets/images/LOW.jpg';
-import indMiddle from '../../assets/images/MIDDLE.jpg';
-import indHighLow from '../../assets/images/HIGH-LOW.jpg';
-import indHighMiddle from '../../assets/images/HIGH-MIDDLE.jpg';
-import indHighMiddleLow from '../../assets/images/HIGH-MIDDLE-LOW.jpg';
-import indMiddleLow from '../../assets/images/MIDDLE-LOW.jpg';
+import indHigh from '../../assets/images/react.svg';
+import indLow from '../../assets/images/react.svg';
+import indMiddle from '../../assets/images/react.svg';
+import indHighLow from '../../assets/images/react.svg';
+import indHighMiddle from '../../assets/images/react.svg';
+import indHighMiddleLow from '../../assets/images/react.svg';
+import indMiddleLow from '../../assets/images/react.svg';
 
-import indFwFh from '../../assets/images/MR1FWFH.jpg';
-import indFwPh from '../../assets/images/MR1FWPH.jpg';
-import indPwMh from '../../assets/images/MR1PWMH.jpg';
-import indPwPh from '../../assets/images/MR1PWPH.jpg';
-import indNwPh from '../../assets/images/MR1NWPH.jpg';
+import indFwFh from '../../assets/images/react.svg';
+import indFwPh from '../../assets/images/react.svg';
+import indPwMh from '../../assets/images/react.svg';
+import indPwPh from '../../assets/images/react.svg';
+import indNwPh from '../../assets/imagesreact.svg';
 
 import font from '../../styles/fonts/KONE_Information_pdf.ttf';
 import fontZh from '../../styles/fonts/wqy-MicroHei_pdf.ttf';
@@ -85,12 +85,12 @@ import {
 
 import { capitalizeString } from '../../utils/generalUtils';
 
-import img247Services from '../../assets/images/connected-services.png';
-import imgKoneInformation from '../../assets/images/kone-information.png';
-import imgElevatorMusic from '../../assets/images/elevator-music.png';
-import imgElevatorCall from '../../assets/images/elevator-call.png';
-import imgRobotApi from '../../assets/images/robot-api.png';
-import imgAirPurifier from '../../assets/images/air-purifier-sticker.png';
+import img247Services from '../../assets/images/react.svg';
+import imgKoneInformation from '../../assets/images/react.svg';
+import imgElevatorMusic from '../../assets/images/react.svg';
+import imgElevatorCall from '../../assets/images/react.svg';
+import imgRobotApi from '../../assets/images/react.svg';
+import imgAirPurifier from '../../assets/images/react.svg';
 
 import {
   KCSM_24_7_CONNECT,

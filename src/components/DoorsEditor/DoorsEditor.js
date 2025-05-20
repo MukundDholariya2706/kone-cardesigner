@@ -2,10 +2,10 @@ import "./DoorsEditor.scss";
 import React, { useContext, useEffect, useRef, useState, useMemo } from "react";
 import jsonLogic from "json-logic-js";
 
-import { ProductContext } from "../../store/product";
+import { ProductContext } from "../../store/product/ProductProvider";
 import { DesignContext } from "../../store/design/DesignProvider";
 import { LayoutContext } from "../../store/layout/LayoutProvider";
-import { Context3d } from "../../store/3d";
+import { Context3d } from "../../store/3d/shader-lib/Provider3d";
 import { TranslationContext } from "../../store/translation/TranslationProvider";
 
 import EditorLayout from '../EditorLayout';

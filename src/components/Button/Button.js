@@ -1,7 +1,6 @@
 import "./Button.scss"
 
 import React from 'react';
-import { isArray } from "util";
 import Icon from "../Icon";
 
 /**
@@ -31,8 +30,8 @@ const Button = ({
   return (
     <div className={ 
       "Button" + (selected ? ' selected' : '') + 
-      (theme && isArray(theme) ? theme.map(t => (' theme-' + t)).join('')  : '') + // if array
-      (theme && !isArray(theme) ? ' theme-' + theme : '') + // if array
+      (theme && Array.isArray(theme) ? theme.map(t => (' theme-' + t)).join('')  : '') + // if array
+      (theme && !Array.isArray(theme) ? ' theme-' + theme : '') + // if array
       (padding ? ' padding-' + padding : '') + 
       (disabled ? ' disabled' : '') + 
       (inlineBlock ? ' inline-block' : '') + 

@@ -1,7 +1,7 @@
 import './Loader.scss'
 import React, {useContext} from 'react'
 import { TranslationContext } from '../../store/translation/TranslationProvider';
-import logo from '../../assets/icons/kone-logo-with-text.png'
+import logo from '../../assets/icons/react.svg'
 
 const Loader = ({ progress = 0}) => {
     const { getText } = useContext(TranslationContext)

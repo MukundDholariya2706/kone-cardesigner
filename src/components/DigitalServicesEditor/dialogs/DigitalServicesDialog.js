@@ -4,7 +4,7 @@ import { TranslationContext } from "../../../store/translation/TranslationProvid
 import Button from "../../Button";
 import Icon from "../../Icon";
 import GridComponent from "../../GridComponent";
-import imgDigitalServices from "../../../assets/images/digital-services.png";
+import imgDigitalServices from "../../../assets/images/react.svg";
 import { useServiceReadMoreURL } from '../../../utils/customHooks/productHooks';
 
 const DigitalServicesDialog = ({ onCancel, onConfirm }) => {

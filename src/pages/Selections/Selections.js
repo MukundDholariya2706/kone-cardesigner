@@ -3,7 +3,7 @@ import './Selections.scss';
 import React, {useContext, useState, useEffect, useMemo } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 
-import { OfferingContext } from '../../store/offering';
+import { OfferingContext } from '../../store/offering/OfferingProvider';
 import { ProductContext } from '../../store/product/ProductProvider';
 import { TranslationContext } from '../../store/translation/TranslationProvider';
 import { UserContext } from '../../store/user/UserProvider';
@@ -24,7 +24,7 @@ import Sprite from '../../components/Sprite';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import ProductFamilyContainer from './components/ProductFamilyContainer/ProductFamilyContainer';
 import { DesignContext } from '../../store/design/DesignProvider';
-import { AuthContext } from '../../store/auth';
+import { AuthContext } from '../../store/auth/AuthProvider';
 import { setAnalyticsForPage} from '../../utils/analytics-utils'
 import { getDomainDefinition } from '../../utils/generalUtils';
 import ToastContainer from '../../components/ToastContainer';

@@ -2,9 +2,9 @@ import React, { useMemo, useContext, useState } from 'react'
 import { ProductContext } from '../../store/product/ProductProvider'
 import { TranslationContext } from '../../store/translation/TranslationProvider'
 import Icon from '../Icon'
-import Info from '../info'
+import Info from '../info/Info';
 import TileImage from '../TileImage'
-import emptyWallIcon from '../../assets/icons/wall-finish.png'
+import emptyWallIcon from '../../assets/icons/react.svg'
 
 
 import './DesignInfo.scss'
@@ -12,11 +12,11 @@ import { capitalizeString } from '../../utils/generalUtils'
 import { KCSM_24_7_CONNECT, KCSM_AIR_PURIFIER, KCSM_APF_SERV_ROBOT_API, KCSM_ELEV_MUSIC, KCSM_KONE_INFORMATION, KCSM_MOBILE_ELEV_CALL, SEPARATE_HALL_INDICATORS } from '../../constants'
 import { useDesignInformation } from '../../utils/customHooks/customHooks'
 
-import img247Services from "../../assets/images/connected-services.png";
-import imgKoneInformation from "../../assets/images/kone-information.png";
-import imgElevatorMusic from "../../assets/images/elevator-music.png";
-import imgElevatorCall from "../../assets/images/elevator-call.png";
-import imgRobotApi from "../../assets/images/robot-api.png";
+import img247Services from "../../assets/images/react.svg";
+import imgKoneInformation from "../../assets/images/react.svg";
+import imgElevatorMusic from "../../assets/images/react.svg";
+import imgElevatorCall from "../../assets/images/react.svg";
+import imgRobotApi from "../../assets/images/react.svg";
 import { createServiceReadMoreUrlGetter } from '../../utils/product-utils'
 
 

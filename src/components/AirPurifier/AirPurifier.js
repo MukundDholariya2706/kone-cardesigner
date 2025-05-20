@@ -12,7 +12,7 @@ import { LayoutContext } from '../../store/layout/LayoutProvider';
 import { KCSM_AIR_PURIFIER,VIEW3D_MODE_CAR, TYP_COP_PRODUCT_1 } from '../../constants';
 import ScrollBox from '../ScrollBox';
 
-import imgAirPurifier from "../../assets/images/air-purifier-sticker.png";
+import imgAirPurifier from "../../assets/images/react.svg";
 
 const AirPurifier = (props) => {
   

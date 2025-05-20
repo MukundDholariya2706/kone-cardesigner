@@ -5,12 +5,12 @@ import Dialog, { DialogHead, DialogBody, DialogFooter } from "../Dialog";
 import Button from "../Button";
 
 // 1x & 2x guide images
-import imgSelect from "../../assets/images/dcs-1-select.png";
-import imgSelect2x from "../../assets/images/dcs-1-select@2x.png";
-import imgMove from "../../assets/images/dcs-2-move.png";
-import imgMove2x from "../../assets/images/dcs-2-move@2x.png";
-import imgEnjoy from "../../assets/images/dcs-3-enjoy.png";
-import imgEnjoy2x from "../../assets/images/dcs-3-enjoy@2x.png";
+import imgSelect from "../../assets/images/react.svg";
+import imgSelect2x from "../../assets/images/react.svg";
+import imgMove from "../../assets/images/react.svg";
+import imgMove2x from "../../assets/images/react.svg";
+import imgEnjoy from "../../assets/images/react.svg";
+import imgEnjoy2x from "../../assets/images/react.svg";
 
 const quideImages1x = [imgSelect, imgMove, imgEnjoy];
 const quideImages2x = [imgSelect2x, imgMove2x, imgEnjoy2x];

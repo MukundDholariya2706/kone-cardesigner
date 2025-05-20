@@ -22,7 +22,7 @@ import MobileDownloadPage from './pages/MobileDownloadPage';
 import GendocShareLoadingView from './components/GendocShareLoadingView/GendocShareLoadingView';
 import DesignSpecification from './pages/DesignSpecification'
 import Loader from './components/Loader';
-// import { AuthContext } from './store/auth';
+// import { AuthContext } from './store/auth/AuthProvider';
 import { DataContext } from './store/data/DataProvider';
 import { DesignContext } from './store/design/DesignProvider';
 import { attemptAsync } from './utils/async-utils';

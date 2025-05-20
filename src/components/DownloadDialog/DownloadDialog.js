@@ -1,109 +1,103 @@
-import './DownloadDialog.scss'
-import React, { useState, useContext } from 'react'
+import "./DownloadDialog.scss";
+import React, { useState, useContext } from "react";
 
-import InfoBox from '../InfoBox'
-import SecondDialogView from '../SecondDialogView'
-import { TranslationContext } from '../../store/translation/TranslationProvider'
-import PdfGenerator from '../PdfGenerator'
-import { useKeepPagePosition } from '../../utils/customHooks'
-import LoadingSpinner from '../LoadingSpinner'
-import Dialog, { DialogNotification, DialogBody, DialogFooter, DialogHead } from '../Dialog'
-import Toast from '../Toast'
-import DownloadDesignPDFButton from '../DownloadDesignPDFButton/DownloadDesignPDFButton'
-import { DesignContext } from '../../store/design/DesignProvider'
+import InfoBox from "../InfoBox";
+import SecondDialogView from "../SecondDialogView";
+import { TranslationContext } from "../../store/translation/TranslationProvider";
+import PdfGenerator from "../PdfGenerator";
+import { useKeepPagePosition } from "../../utils/customHooks";
+import LoadingSpinner from "../LoadingSpinner";
+import Dialog, {
+  DialogNotification,
+  DialogBody,
+  DialogFooter,
+  DialogHead,
+} from "../Dialog";
+import Toast from "../Toast";
+import DownloadDesignPDFButton from "../DownloadDesignPDFButton/DownloadDesignPDFButton";
+import { DesignContext } from "../../store/design/DesignProvider";
 
+const DownloadDialog = ({ closed, onChange, documentLanguage }) => {
+  const { getText } = useContext(TranslationContext);
+  const [downloaded, setDownloaded] = useState(false);
+  const [close, setClose] = useState(closed);
+  const designCtx = useContext(DesignContext);
 
-const DownloadDialog = ({
-  closed,
-  onChange,
-  documentLanguage
-}) => {
+  const [error, setError] = useState(null);
+  const [loadingPdf, setLoadingPdf] = useState(false);
 
-  const { getText } = useContext(TranslationContext)
-  const [downloaded, setDownloaded] = useState(false)
-  const [close, setClose] = useState(closed)
-  const designCtx = useContext(DesignContext)
+  const pdfName =
+    designCtx.designName?.replace(" ", "_").toLowerCase() + ".pdf" ||
+    "Design.pdf";
 
-  const [ error, setError ] = useState(null)
-  const [ loadingPdf, setLoadingPdf ] = useState(false) 
-
-  const pdfName = designCtx.designName?.replace(" ", "_").toLowerCase() + ".pdf" || 'Design.pdf'
-
-  useKeepPagePosition()
+  useKeepPagePosition();
 
   const closeDialog = (e) => {
-    setClose(!close)
-    onChange(false)
-  }
-  
+    setClose(!close);
+    onChange(false);
+  };
+
   if (close) {
-    return null
+    return null;
   }
 
   return (
     <>
       {!downloaded ? (
-        <Dialog className="DownloadDialog" >
+        <Dialog className="DownloadDialog">
           <DialogNotification>
             {downloaded ? (
-              <Toast
-                message={ getText('ui-dialog-notification-download') }
-              />
-            ) : null}          
+              <Toast message={getText("ui-dialog-notification-download")} />
+            ) : null}
             {error ? (
               <Toast
-                message={ getText('error-message-pdf-generation') }
+                message={getText("error-message-pdf-generation")}
                 type="error"
               />
             ) : null}
           </DialogNotification>
           <DialogHead onClose={(e) => closeDialog(e)}>
-            {getText('ui-dialog-download-specifications')}
+            {getText("ui-dialog-download-specifications")}
           </DialogHead>
           <DialogBody>
             {loadingPdf ? (
-                <div className="loading-spinner-container">
-                  <LoadingSpinner />
-                </div>
-              ) : (
-                <>
-                  <InfoBox
-                    icon="icon-tool"
-                    header={pdfName}
-                    text={'2.5MB'}
-                  />
-                </>
-              )}
+              <div className="loading-spinner-container">
+                <LoadingSpinner />
+              </div>
+            ) : (
+              <>
+                <InfoBox icon="icon-tool" header={pdfName} text={"2.5MB"} />
+              </>
+            )}
           </DialogBody>
           <DialogFooter>
             <div className="buttons">
-              <DownloadDesignPDFButton 
+              <DownloadDesignPDFButton
                 className="download"
                 document={PdfGenerator}
                 pdfName={pdfName}
                 documentLanguage={documentLanguage}
                 onClick={() => setLoadingPdf(true)}
                 onGenerationFinished={(error) => {
-                  setLoadingPdf(false)
+                  setLoadingPdf(false);
 
                   if (error) {
-                    setError(error)
+                    setError(error);
                   } else {
-                    setDownloaded(true)
+                    setDownloaded(true);
                   }
                 }}
               >
-                {getText('ui-general-download')}
+                {getText("ui-general-download")}
               </DownloadDesignPDFButton>
-            </div>          
+            </div>
           </DialogFooter>
-
         </Dialog>
       ) : (
         <SecondDialogView onChange={(e) => closeDialog(e)} />
       )}
     </>
-  )
-}
+  );
+};
 
-export default DownloadDialog
+export default DownloadDialog;

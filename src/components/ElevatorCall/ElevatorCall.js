@@ -11,7 +11,7 @@ import { LayoutContext } from '../../store/layout/LayoutProvider';
 import { EDIT_VIEW_DIGITAL_SERVICES, KCSM_MOBILE_ELEV_CALL } from '../../constants';
 import ScrollBox from '../ScrollBox';
 
-import imgElevatorCall from "../../assets/images/elevator-call.png";
+import imgElevatorCall from "../../assets/images/react.svg";
 
 const ElevatorCall = (props) => {
   

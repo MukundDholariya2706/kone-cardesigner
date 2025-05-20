@@ -3,12 +3,12 @@ import React, {useContext} from 'react';
 import './MobileAppAdvertisement.scss';
 import Icon from '../Icon';
 import { TranslationContext } from '../../store/translation/TranslationProvider';
-import appstoreBadge from '../../assets/images/appstore_badge.png'
-import playstoreBadge from '../../assets/images/playstore_badge.png'
-import appgalleryBadge from '../../assets/images/appGallery_badge.png'
-import qrCodeIOS from '../../assets/images/QR_code_AppStore.png'
-import qrCodeAndroid from '../../assets/images/QR_code_PlayStore.png'
-import qrCodeHuawei from '../../assets/images/QR_code_AppGallery.png'
+import appstoreBadge from '../../assets/images/react.svg'
+import playstoreBadge from '../../assets/images/react.svg'
+import appgalleryBadge from '../../assets/images/react.svg'
+import qrCodeIOS from '../../assets/images/react.svg'
+import qrCodeAndroid from '../../assets/images/react.svg'
+import qrCodeHuawei from '../../assets/images/react.svg'
 
 /**
  * Renders out the top navigation bar in the 3D viewer

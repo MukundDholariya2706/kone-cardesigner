@@ -12,7 +12,7 @@ import { EDIT_VIEW_DIGITAL_SERVICES, KCSM_APF_SERV_ROBOT_API } from '../../const
 
 import ScrollBox from '../ScrollBox';
 
-import imgRobotApi from "../../assets/images/robot-api.png";
+import imgRobotApi from "../../assets/images/react.svg";
 
 const RobotApi = (props) => {
   

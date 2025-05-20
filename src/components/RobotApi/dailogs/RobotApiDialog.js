@@ -4,7 +4,7 @@ import { TranslationContext } from "../../../store/translation/TranslationProvid
 import Dialog, { DialogHead, DialogBody, DialogFooter } from "../../Dialog";
 import Button from "../../Button";
 
-import imgFallBack from '../../../assets/images/fallback-robot-api.png'
+import imgFallBack from '../../../assets/images/react.svg'
 import { useServiceReadMoreURL } from '../../../utils/customHooks/productHooks';
 import { KCSM_APF_SERV_ROBOT_API } from '../../../constants';
 
