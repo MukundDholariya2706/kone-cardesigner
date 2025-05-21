@@ -4,7 +4,7 @@ import appstoreBadge from '../../../../assets/images/react.svg'
 import playstoreBadge from '../../../../assets/images/react.svg'
 import qrCodeIOS from '../../../../assets/images/react.svg'
 import qrCodeAndroid from '../../../../assets/images/react.svg'
-import imgKoneCarDesignerAppForMobileDevices from '../../../../assets/images/kone-car-designer-app-for-mobile-devices.jpg'
+import imgKoneCarDesignerAppForMobileDevices from '../../../../assets/images/react.svg'
 import './MobileAppSection.scss'
 
 function MobileAppSection(props) {

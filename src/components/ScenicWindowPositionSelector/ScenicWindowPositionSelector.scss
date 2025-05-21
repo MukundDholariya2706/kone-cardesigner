@@ -1,0 +1,74 @@
+.ScenicWindowPositionSelector {
+  .center {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .wall-label {
+    position: absolute;
+    top: -1.5rem;
+    font-size: 0.875rem;
+    margin: 0;
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+  }
+
+  .backwall-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .position {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+
+    &.selected {
+      border-color: #007bff;
+      background-color: #e6f3ff;
+    }
+  }
+
+  .sidewall-part {
+    margin-bottom: 0.5rem;
+  }
+
+  .throughwall {
+    width: 2px;
+    height: 1rem;
+    background-color: #ccc;
+  }
+
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .selection {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &.checked {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+  }
+} 

@@ -1,7 +1,7 @@
 import React from 'react';
-import { LayoutProvider } from './layout';
 import { BlueprintProvider } from './blueprint';
 import { Provider3d } from './3d';
+import LayoutProvider from './layout';
 
 /**
  * Data provider (React Context API)

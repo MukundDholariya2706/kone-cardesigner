@@ -3,7 +3,7 @@ import React, { useState, useContext, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { useRecaptcha } from '../../components/Recaptcha'
 import FormInput from '../../components/FormInput'
-import Layout from '../../components/Layout'
+import Layout from '../../components/Layout/Layout'
 import Card from '../../components/Card'
 import { UserContext } from '../../store/user/UserProvider'
 import { DataContext } from '../../store/data/DataProvider'
@@ -23,8 +23,8 @@ import { APIContext } from '../../store/api/APIProvider'
 import { Honeypots } from '../../components/FormInput/FormInput'
 import FormSelect from '../../components/FormSelect/FormSelect'
 import FormRadio from '../../components/FormRadio/FormRadio'
-import ToastContainer from '../../components/ToastContainer'
 import { ToastContext } from '../../store/toast/ToastProvider'
+import ToastContainer from '../../components/ToastContainer'
 
 let locationInitialized
 
@@ -195,7 +195,6 @@ const ContactKone = () => {
                 <FormInput
                   className="form-item"
                   header={getText('ui-contact-help')}
-                  placeholder=""
                   maxlength="32000"
                   onChange={(e) => formHandler(e, inputs, setInputs)}
                   required={true}

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { ReportIssueDialog } from '../../components/FeedbackForms/FeedbackForms'
-import Layout from '../../components/Layout'
+import Layout from '../../components/Layout/Layout'
 import { ERROR_TYPES } from '../../constants'
 import { SiteContext } from '../../store/site/SiteProvider'
 import { TranslationContext } from '../../store/translation/TranslationProvider'

@@ -1,0 +1,93 @@
+var _g, _filter, _filter2;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+import * as React from "react";
+function SvgLoadingAnimation(_ref, svgRef) {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 128,
+    height: 40,
+    viewBox: "0 0 128 40",
+    preserveAspectRatio: "xMidYMid meet",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _g || (_g = /*#__PURE__*/React.createElement("g", {
+    id: "logo",
+    className: "logo"
+  }, /*#__PURE__*/React.createElement("g", {
+    id: "e",
+    className: "letters"
+  }, /*#__PURE__*/React.createElement("rect", {
+    id: "e_rect",
+    className: "rect",
+    x: 72,
+    y: 0,
+    width: 22,
+    height: 52
+  }), /*#__PURE__*/React.createElement("path", {
+    id: "e_txt",
+    className: "txt",
+    d: "M89.175,6.14 80.334,6.14 80.334,9.171 88.101,9.171 88.099,13.01 80.334,13.01 80.334,16.05 89.175,16.05 89.175,20.119 75.61,20.119 75.61,2.187 89.175,2.187z  "
+  })), /*#__PURE__*/React.createElement("g", {
+    id: "n",
+    className: "letters"
+  }, /*#__PURE__*/React.createElement("rect", {
+    id: "n_rect",
+    className: "rect",
+    x: 48,
+    y: 0,
+    width: 22,
+    height: 52
+  }), /*#__PURE__*/React.createElement("path", {
+    id: "n_txt",
+    className: "txt",
+    d: "M66.476,20.118 64.058,20.118 54.953,11.021 54.953,20.118 50.531,20.118 50.531,2.188 53.267,2.188 62.039,10.944 62.039,2.188 66.476,2.188z  "
+  })), /*#__PURE__*/React.createElement("g", {
+    id: "o",
+    className: "letters"
+  }, /*#__PURE__*/React.createElement("rect", {
+    id: "o_rect",
+    className: "rect",
+    x: 24,
+    y: 0,
+    width: 22,
+    height: 52
+  }), /*#__PURE__*/React.createElement("path", {
+    id: "o_txt",
+    className: "txt",
+    d: "M34.674,1.671c-2.115,0-4.061,0.641-5.619,1.781c-2.237,1.637-3.678,4.302-3.678,7.575 c0,3.271,1.439,5.938,3.675,7.577c1.559,1.143,3.505,1.786,5.622,1.786c2.044,0,3.93-0.6,5.461-1.67 c2.329-1.628,3.838-4.344,3.838-7.693c0-3.349-1.508-6.062-3.837-7.688C38.605,2.27,36.719,1.671,34.674,1.671z M34.673,16.158 c-2.547,0-4.516-2.088-4.516-5.131c0-3.036,1.968-5.131,4.516-5.131c2.541,0,4.516,2.095,4.516,5.131 C39.189,14.07,37.214,16.158,34.673,16.158z"
+  })), /*#__PURE__*/React.createElement("g", {
+    id: "k",
+    className: "letters"
+  }, /*#__PURE__*/React.createElement("rect", {
+    id: "k_rect",
+    className: "rect",
+    x: 0,
+    y: 0,
+    width: 22,
+    height: 52
+  }), /*#__PURE__*/React.createElement("path", {
+    id: "k_txt",
+    className: "txt",
+    d: "M14.045,20.118 7.899,11.623 7.899,20.118 3.118,20.118 3.118,2.188 7.899,2.188 7.899,10.011 13.817,2.188 19.448,2.188 12.913,10.628 19.896,20.118z  "
+  })))), _filter || (_filter = /*#__PURE__*/React.createElement("filter", {
+    id: "blur1"
+  }, /*#__PURE__*/React.createElement("feGaussianBlur", {
+    in: "SourceGraphic",
+    stdDeviation: "0 3"
+  }))), _filter2 || (_filter2 = /*#__PURE__*/React.createElement("filter", {
+    id: "blur2"
+  }, /*#__PURE__*/React.createElement("feGaussianBlur", {
+    in: "SourceGraphic",
+    stdDeviation: "0 0"
+  }))));
+}
+const ForwardRef = /*#__PURE__*/React.forwardRef(SvgLoadingAnimation);
+export default __webpack_public_path__ + "static/media/loading-animation.1ef10f66789b09a7a5b81fe44ebc70c1.svg";
+export { ForwardRef as ReactComponent };

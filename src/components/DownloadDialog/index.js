@@ -1,1 +1,1 @@
-export { default } from './DownloadDialog';
+export { default } from './DownloadDialog';  // Re-export default

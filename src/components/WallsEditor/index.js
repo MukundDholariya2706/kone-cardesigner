@@ -1,1 +1,6 @@
-export { default } from './WallComponentSelectors';
+export { default } from "./WallsEditor";
+export {
+  DecoSelector,
+  FinishSelector,
+  WallSelector,
+} from "./WallComponentSelectors";

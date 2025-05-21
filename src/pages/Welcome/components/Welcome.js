@@ -3,30 +3,24 @@ import './Welcome.scss';
 import React, { useContext, useEffect, useState } from 'react';
 import Bowser from "bowser";
 
-import Layout from '../../components/Layout';
-import MobileAppAdvertisement from '../../components/MobileAppAdvertisement';
-import { TranslationContext } from '../../store/translation/TranslationProvider';
-import { OfferingContext } from '../../store/offering/OfferingProvider';
+import { TranslationContext } from '../../../store/translation/TranslationProvider';
+import { OfferingContext } from '../../../store/offering/OfferingProvider';
 
-import imgExplore from '../../assets/images/explore.jpg'
-import imgExploreEna from '../../assets/images/react.svg'
-import imgDesign from '../../assets/images/design.jpg'
-import imgDesignEna from '../../assets/images/react.svg'
-import imgShare from '../../assets/images/share.jpg'
-import imgFunctionalDurableMaterials from '../../assets/images/functional-durable-materials.jpg'
-import imgKoneElevatorPlanner from '../../assets/images/react.svg'
 
-import { DataContext } from '../../store/data/DataProvider';
-import { APIContext } from '../../store/api/APIProvider';
-import HeroMarine from './components/HeroMarine';
-import HeroIndia from './components/HeroIndia';
-import HeroWithModernization from './components/HeroWithModernization';
-import HeroNoModernization from './components/HeroNoModernization';
-import MobileAppSection from './components/MobileAppSection';
-import {  LOCAL_STORAGE_SHOW_MOBILE_AD, LOCAL_STORAGE_ROLE } from '../../constants';
-import { SiteContext } from '../../store/site/SiteProvider';
-import { setAnalyticsForPage} from '../../utils/analytics-utils'
-import { getDomainDefinition } from '../../utils/generalUtils';
+import { DataContext } from '../../../store/data/DataProvider';
+import { APIContext } from '../../../store/api/APIProvider';
+import HeroMarine from './../components/HeroMarine';
+import HeroWithModernization from './../components/HeroWithModernization';
+import HeroNoModernization from './../components/HeroNoModernization';
+import MobileAppSection from './MobileAppSection';
+import {  LOCAL_STORAGE_SHOW_MOBILE_AD, LOCAL_STORAGE_ROLE } from '../../../constants';
+import { SiteContext } from '../../../store/site/SiteProvider';
+import { setAnalyticsForPage} from '../../../utils/analytics-utils'
+import { getDomainDefinition } from '../../../utils/generalUtils';
+import Layout from '../../../components/Layout/Layout';
+import MobileAppAdvertisement from '../../../components/MobileAppAdvertisement';
+import imgExplore from '../../../assets/react.svg'
+import HeroIndia from './HeroIndia';
 
 /**
  * Renders out the Welcome page. 
@@ -163,7 +157,7 @@ const Welcome = (props) => {
 
         <article className="card card-md mb-2 reversed">
           <div className="media">
-            <img src={domainCountry.enaHomePage ? imgExploreEna : imgExplore} alt="" />
+            <img src={domainCountry.enaHomePage ? imgExplore : imgExplore} alt="" />
           </div>
           <div className="body">
             {/* EXPLORE */}
@@ -178,13 +172,13 @@ const Welcome = (props) => {
             <p className="body-text">{getText('ui-landing-design-desc')}</p>
           </div>
           <div className="media">
-            <img src={domainCountry.enaHomePage ? imgDesignEna : imgDesign} alt="" />
+            <img src={domainCountry.enaHomePage ? imgExplore : imgExplore} alt="" />
           </div>
         </article>
 
         <article className="card card-md reversed">
           <div className="media">
-            <img src={imgShare} alt="" />
+            <img src={imgExplore} alt="" />
           </div>
           <div className="body">
             <h3 className="section-heading">{getText('ui-landing-share-title')}</h3>
@@ -224,7 +218,7 @@ const Welcome = (props) => {
             </div>
           </div>
           <div className="media">
-            <img src={imgFunctionalDurableMaterials} alt="" />
+            <img src={imgExplore} alt="" />
           </div>
         </article>
       </section>
@@ -261,7 +255,7 @@ const Welcome = (props) => {
               </div>
             </div>
             <div className="media">
-              <img src={imgKoneElevatorPlanner} alt="" />
+              <img src={imgExplore} alt="" />
             </div>
           </article>
         )}

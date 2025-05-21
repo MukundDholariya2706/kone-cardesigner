@@ -1,10 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react'
 import Button from '../../components/Button';
 
-import Layout from '../../components/Layout';
+import Layout from '../../components/Layout/Layout';
 
-import phonesImg from './images/phones.png'
-import phonesImg2x from './images/phones@2x.png'
 import appstoreBadge from '../../assets/images/react.svg'
 import './MobileDownloadPage.scss'
 import { TranslationContext } from '../../store/translation/TranslationProvider';
@@ -71,7 +69,7 @@ export function MobileDownloadPage(props) {
           </div>
           <div className="content-container">
           <div className="image-container">
-            <img srcSet={`${phonesImg} 1x, ${phonesImg2x} 2x`} />
+            <img srcSet={`${appstoreBadge} 1x, ${appstoreBadge} 2x`} />
           </div>
           <div className="text-container">
             <p className="text-container__description">

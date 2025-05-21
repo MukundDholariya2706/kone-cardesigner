@@ -14,7 +14,6 @@ import RadioButtonGroup from '../RadioButtonGroup';
 import GridComponent from '../GridComponent';
 import TileComponent from '../TileComponent';
 import { DecoSelector, WallSelector, FinishSelector } from './WallComponentSelectors'
-
 import Icon from '../Icon'
 
 import { 
@@ -37,8 +36,7 @@ import Button from '../Button';
 import WallItemSelector from '../WallItemSelector';
 import { getPanelTypes, getIndiaBackWallSetup } from '../../utils/design-utils';
 import TermsOfService from '../TermsOfService';
-import ScenicCarTypeSelector from './components/ScenicCarTypeSelector';
-
+import ScenicCarTypeSelector from '../ScenicCarTypeSelector';
 const NORMAL_VIEW_MODE = 'normal'
 const SCENIC_VIEW_MODE = 'scenic'
 

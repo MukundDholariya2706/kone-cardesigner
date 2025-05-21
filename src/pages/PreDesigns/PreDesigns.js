@@ -1,7 +1,7 @@
 import './PreDesigns.scss';
 
 import React, { useState, useEffect, useContext } from 'react';
-import Layout from '../../components/Layout';
+import Layout from '../../components/Layout/Layout';
 import ToggleButtons from '../../components/ToggleButtons';
 
 import LoadingSpinner from '../../components/LoadingSpinner'

@@ -21,10 +21,10 @@ import {
   setAnalyticsForEvent,
   formatDesignForAnalytics,
 } from "../../utils/analytics-utils";
-import DownloadDialog from "../DownloadDialog";
 import { UserContext } from "../../store/user/UserProvider";
 import { BlueprintContext } from '../../store/blueprint';
 import { ToastContext } from '../../store/toast/ToastProvider';
+import DownloadDialog from "../DownloadDialog";
 
 /**
  * Bottom bar component for editor

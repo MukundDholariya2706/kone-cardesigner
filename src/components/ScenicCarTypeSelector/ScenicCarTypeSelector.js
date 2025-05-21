@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { TranslationContext } from '../../../../store/translation/TranslationProvider'
-import { DesignContext } from '../../../../store/design/DesignProvider'
-import HeadingComponent from '../../../HeadingComponent'
-import SectionAccordion from '../../../SectionAccordion'
-import ScenicWindowPositionSelector from '../ScenicWindowPositionSelector'
+import { TranslationContext } from '../../store/translation/TranslationProvider'
+import { DesignContext } from '../../store/design/DesignProvider'
+import HeadingComponent from '../../components/HeadingComponent'
+import SectionAccordion from '../../components/SectionAccordion'
 import ComponentSelector from '../ComponentSelector'
 
-import { TYP_CAR_GLASS_WALL_C, TYP_CAR_WALL_C, CAR_TYPE_GLASS_BACKWALL, WALLC, TYP_CAR_WALL_ADD_DECO_PACKAGE, CAR_TYPE_TTC } from '../../../../constants'
+import { TYP_CAR_GLASS_WALL_C, TYP_CAR_WALL_C, CAR_TYPE_GLASS_BACKWALL, WALLC, TYP_CAR_WALL_ADD_DECO_PACKAGE, CAR_TYPE_TTC } from '../../constants'
 
 import './ScenicCarTypeSelector.scss'
-import { ProductContext } from '../../../../store/product/ProductProvider'
-import TileImage from '../../../TileImage/TileImage'
+import { ProductContext } from '../../store/product/ProductProvider'
+import TileImage from '../../components/TileImage/TileImage'
+import ScenicWindowPositionSelector from '../ScenicWindowPositionSelector'
 
 
 

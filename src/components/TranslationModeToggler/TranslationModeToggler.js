@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-import { ConfigContext } from '../../store/config'
 import { TranslationContext } from '../../store/translation/TranslationProvider'
 import SwitchButton from '../SwitchButton/SwitchButton'
 import './TranslationModeToggler.scss'
+import { ConfigContext } from '../../store/config/ConfigProvider'
 
 
 /**

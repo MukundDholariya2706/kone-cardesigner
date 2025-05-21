@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
-import { TranslationContext } from '../../../../store/translation/TranslationProvider'
-import Sprite from '../../../Sprite'
-
+import Sprite from '../Sprite/Sprite'
+import { TranslationContext } from '../../store/translation/TranslationProvider';
 import './ComponentSelector.scss'
 
 /**

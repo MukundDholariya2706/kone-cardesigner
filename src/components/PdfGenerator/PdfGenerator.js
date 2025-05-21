@@ -32,7 +32,7 @@ import indFwFh from '../../assets/images/react.svg';
 import indFwPh from '../../assets/images/react.svg';
 import indPwMh from '../../assets/images/react.svg';
 import indPwPh from '../../assets/images/react.svg';
-import indNwPh from '../../assets/imagesreact.svg';
+import indNwPh from '../../assets/react.svg';
 
 import font from '../../styles/fonts/KONE_Information_pdf.ttf';
 import fontZh from '../../styles/fonts/wqy-MicroHei_pdf.ttf';

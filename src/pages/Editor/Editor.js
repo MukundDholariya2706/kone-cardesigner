@@ -6,7 +6,7 @@ import { withRouter } from 'react-router'
 import ThreeViewer from '../../components/ThreeViewer';
 
 import Loader from '../../components/Loader'
-import Layout from '../../components/Layout';
+import Layout from '../../components/Layout/Layout';
 import MainNav from "../../components/MainNav"
 import EditPanel from "../../components/EditPanel"
 import DesignInfoPanel from "../../components/DesignInfoPanel"

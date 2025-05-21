@@ -37,7 +37,7 @@ import EditDinSection from './sections/EditDinSection/EditDinSection';
 import EditLandingPositionsSection from './sections/EditLandingPositionsSection/EditLandingPositionsSection';
 import EditJambSection from './sections/EditJambSection/EditJambSection';
 import EditEmergengy from './sections/EditEmergengy/EditEmergengy';
-import EditLensSections from './sections/editLensSection/EditLensSections';
+import EditLensSections from './sections/EditLensSection/EditLensSections';
 
 const { EMERGENCY_COMMUNICATIONS_247 } = EXTRA_FEATURES
 

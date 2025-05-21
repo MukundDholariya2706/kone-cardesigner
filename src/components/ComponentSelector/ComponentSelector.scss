@@ -1,0 +1,33 @@
+.ComponentSelector {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  &__item {
+    cursor: pointer;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+
+    &.selected {
+      border-color: #007bff;
+      background-color: #e6f3ff;
+    }
+  }
+
+  &__sprite {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.5rem;
+  }
+
+  &__label {
+    text-align: center;
+    font-size: 0.875rem;
+  }
+} 

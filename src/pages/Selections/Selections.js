@@ -9,7 +9,7 @@ import { TranslationContext } from '../../store/translation/TranslationProvider'
 import { UserContext } from '../../store/user/UserProvider';
 
 import { useRecaptcha } from '../../components/Recaptcha';
-import Layout from '../../components/Layout'; 
+import Layout from '../../components/Layout/Layout'; 
 import Container from '../../components/Container';
 
 import { SELECTION_PAGE_ACTION, NEW_BUILDINGS, EXISTING_BUILDINGS, MARINE, LOCAL_STORAGE_ROLE, LOCAL_STORAGE_PROJECT_LOCATION } from '../../constants';

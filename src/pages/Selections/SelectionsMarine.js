@@ -9,7 +9,7 @@ import { TranslationContext } from '../../store/translation/TranslationProvider'
 import { UserContext } from '../../store/user/UserProvider';
 
 import { useRecaptcha } from '../../components/Recaptcha';
-import Layout from '../../components/Layout'; 
+import Layout from '../../components/Layout/Layout'; 
 import ChevronProcess, { ChevronProcessItem } from '../../components/ChevronProcess';
 import BuildingAndRoleSelectionView from '../../components/BuildingAndRoleSelectionView';
 import ProductSelectionView from '../../components/ProductSelectionView';
@@ -21,10 +21,10 @@ import Button from '../../components/Button';
 
 import { SiteContext } from '../../store/site/SiteProvider';
 import allRoles from '../../store/roles'
-import { RoleSelectionDialog } from './components';
 import Sprite from '../../components/Sprite';
 import origBuildingTypes from '../../store/building-types';
 import { AuthContext } from '../../store/auth/AuthProvider';
+import { RoleSelectionDialog } from './components/RoleSelectionDialog';
 
 /**
  * Renders out the SelectionsMarine page. The page contains selection for project type and solution.
