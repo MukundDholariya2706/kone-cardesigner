@@ -9,9 +9,9 @@ import { OfferingContext } from '../../../store/offering/OfferingProvider';
 
 import { DataContext } from '../../../store/data/DataProvider';
 import { APIContext } from '../../../store/api/APIProvider';
-import HeroMarine from './../components/HeroMarine';
-import HeroWithModernization from './../components/HeroWithModernization';
-import HeroNoModernization from './../components/HeroNoModernization';
+import HeroMarine from './HeroMarine';
+import HeroWithModernization from './HeroWithModernization';
+import HeroNoModernization from './HeroNoModernization';
 import MobileAppSection from './MobileAppSection';
 import {  LOCAL_STORAGE_SHOW_MOBILE_AD, LOCAL_STORAGE_ROLE } from '../../../constants';
 import { SiteContext } from '../../../store/site/SiteProvider';

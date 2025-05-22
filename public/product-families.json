@@ -1,0 +1,38 @@
+[
+    {
+        "id": "monospace",
+        "name": "family-monospace",
+        "description": "family-monospace-desc",
+        "image": "thumbnails/product-families/monospace.png"
+    },
+    {
+        "id": "minispace",
+        "name": "family-minispace",
+        "description": "family-minispace-desc",
+        "image": "thumbnails/product-families/minispace.png"
+    },
+    {
+        "id": "transys",
+        "name": "family-transys",
+        "description": "family-transys-desc",
+        "image": "thumbnails/product-families/transys.png"
+    },
+    {
+        "id": "homelift",
+        "name": "family-home",
+        "description": "family-home-desc",
+        "image": "thumbnails/product-families/homelift.png"
+    },
+    {
+        "id": "full-replacement",
+        "name": "family-full-replacement",
+        "description": "family-full-replacement-desc",
+        "image": "thumbnails/product-families/full-replacement.png"
+    },
+    {
+        "id": "modular-modernization",
+        "name": "family-modular-modernization",
+        "description": "family-modular-modernization-desc",
+        "image": "thumbnails/product-families/modular-modernization.png"
+    }
+]

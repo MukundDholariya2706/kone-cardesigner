@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { CAR_SHAPES } from '../../constants';
+import { CAR_SHAPES } from '../../../constants';
 
 export const pasteHideGroup = (hideGroup, mesh) => {
   if (!hideGroup || typeof hideGroup !== 'string' || !mesh) {

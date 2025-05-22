@@ -25,20 +25,20 @@ import { useProductFromURL, useBuildingsType, useIsDesignEditable } from '../../
 import { AuthContext } from '../../../store/auth/AuthProvider';
 import { SiteContext } from '../../../store/site/SiteProvider';
 import allRoles from '../../../store/roles'
-import DesignNameEditor from './../components/DesignNameEditor';
-import ShareDesignArea from './../components/ShareDesignArea';
+import DesignNameEditor from './DesignNameEditor';
+import ShareDesignArea from './ShareDesignArea';
 import ToastContainer from '../../../components/ToastContainer';
 import { ToastContext } from '../../../store/toast/ToastProvider';
-import DesignImages from './../components/DesignImages';
+import DesignImages from './DesignImages';
 // import { renderImages, IMAGE_IDS } from '../../../utils/renderImages';
 import { getDomainDefinition } from '../../../utils/generalUtils';
-import TenderInfo from './../components/TenderInfo/TenderInfo';
+import TenderInfo from './TenderInfo/TenderInfo';
 import DesignInfo from '../../../components/DesignInfo/DesignInfo';
 import Layout from '../../../components/Layout';
 import DownloadDialog from '../../../components/DownloadDialog';
 import ContactDialog from '../../../components/ContactDialog';
 import Icon from '../../../components/Icon';
-import InfoDialog from './../components/InfoDialog';
+import InfoDialog from './InfoDialog';
 
 
 const DesignSpecification = (props) => {

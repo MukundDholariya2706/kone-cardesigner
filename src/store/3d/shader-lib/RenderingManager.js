@@ -8,14 +8,14 @@ import { GammaCorrectionShader } from "three/examples/jsm/shaders/GammaCorrectio
 import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass";
 import { SeparableUnrealBloomPass } from './SeparableUnrealBloomPass'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
-import { isMobile } from '../../utils/device-utils';
+import { isMobile } from '../../../utils/device-utils';
 import { CopyShader } from 'three/examples/jsm/shaders/CopyShader'
 import { ClearPass } from 'three/examples/jsm/postprocessing/ClearPass'
 import { TAARenderPass } from 'three/examples/jsm/postprocessing/TAARenderPass'
 
-import SimpleCopyVertexShader from './shader-lib/utility-shaders/simple-copy-vert.glsl'
-import BloomCombineFragShader from './shader-lib/utility-shaders/combine-bloom-frag.glsl'
-import AlphaDebugFragmentShader from './shader-lib/utility-shaders/highlight-alpha-frag.glsl'
+import SimpleCopyVertexShader from './utility-shaders/simple-copy-vert.glsl'
+import BloomCombineFragShader from './utility-shaders/combine-bloom-frag.glsl'
+import AlphaDebugFragmentShader from './utility-shaders/highlight-alpha-frag.glsl'
 
 
 import { QUALITY_3D_HIGH, QUALITY_3D_MEDIUM, QUALITY_3D_LOW, SCENE_BACKGROUND_COLOR, RENDERER_TONE_MAPPING, RENDERER_TONE_MAPPING_EXPOSURE } from './3d-constants'

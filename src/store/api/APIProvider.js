@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useHistory } from "react-router-dom"
-import { ConfigContext } from '../config';
 import { AuthContext } from '../auth/AuthProvider';
+import { ConfigContext } from '../config';
 
 export const APIContext = React.createContext();
 

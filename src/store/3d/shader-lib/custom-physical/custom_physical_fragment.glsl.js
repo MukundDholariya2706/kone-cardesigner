@@ -1,6 +1,6 @@
 
 
-import IridescenceSampler from "../custom-physical/frag/iridescence_sampler.glsl";
+import IridescenceSampler from "./frag/iridescence_sampler.glsl";
 // eslint-disable-next-line import/no-anonymous-default-export
 export default /* glsl */`
 // CUSTOM FRAGMENT

@@ -5,7 +5,7 @@ import { TranslationContext } from '../../store/translation/TranslationProvider'
 import reviewDesignImage from '../../assets/images/react.svg'
 import updateDesignImage from '../../assets/images/react.svg'
 import contactAboutDesignImage from '../../assets/images/react.svg'
-import Sprite from '../../components/Sprite';
+import Sprite from '../Sprite';
 
 import './GendocShareLoadingView.scss'
 

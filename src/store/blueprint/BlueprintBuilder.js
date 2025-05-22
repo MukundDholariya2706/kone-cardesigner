@@ -19,8 +19,8 @@ import {
 
 import { QUALITY_3D_HIGH, QUALITY_3D_MEDIUM, QUALITY_3D_LOW, LIGHT_SPOT_LIGHT } from '../3d';
 import { isLandingDevice, similar, and, joinTest } from './blueprint-utils';
-import { materialPropertyTypes } from '../3d/material-property-types';
 import { isTrueTypeCar } from '../../utils/design-utils'
+import { materialPropertyTypes } from '../3d/shader-lib';
 
 
 /**

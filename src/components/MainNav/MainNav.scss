@@ -80,9 +80,9 @@
         hyphens: auto;
         display: none;
 
-        @include respond-wide-edit-panel-nav {
-          display: block;
-        }
+        // @include respond-wide-edit-panel-nav {
+        //   display: block;
+        // }
 
       }
     }

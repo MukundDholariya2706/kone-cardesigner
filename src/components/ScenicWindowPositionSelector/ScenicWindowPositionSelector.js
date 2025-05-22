@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useContext } from 'react'
 import { TranslationContext } from '../../store/translation/TranslationProvider';
-import Icon from '../../components/Icon';
+import Icon from '../Icon';
 
 import './ScenicWindowPositionSelector.scss'
 

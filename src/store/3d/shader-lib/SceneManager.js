@@ -27,11 +27,11 @@ import { CAR_SHAPE_DEEP, CAR_SHAPE_SQUARE, CAR_SHAPE_SQUARE_10_13_24, CAR_SHAPE_
   CAR_SHAPE_WIDE_AU_14_16_24, TYP_CAR_GLASS_WALL_FRAME, TYP_CAR_FRONT_WALL_A, CAR_SHAPE_WIDE_ENA_20_13_24, CAR_SHAPE_WIDE_ENA_19_16_24, CAR_SHAPE_4500HMC_ENA_17_25_24, CORNER_START_NOFIXING_REVERSE, CORNER_START_NOFIXING, TYP_HL_DISPLAY,
   CAR_SHAPE_INDIA_16_13_22, CAR_SHAPE_INDIA_11_10_22, CAR_SHAPE_INDIA_11_20_22, CAR_SHAPE_INDIA_11_13_22, CAR_SHAPE_INDIA_13_24_22, CAR_SHAPE_INDIA_16_15_22,
   CAR_SHAPE_TRANSYS_12_23_24, CAR_SHAPE_TRANSYS_12_26_24, CAR_SHAPE_TRANSYS_14_24_24, CAR_SHAPE_TRANSYS_15_27_24, TYP_COP_PRODUCT_1, CAR_SHAPE_WIDE_23_17_26,CAR_SHAPE_INDIA_17_18_22,CAR_SHAPE_WIDE_16_20_24
-} from '../../constants';
+} from '../../../constants';
 import {computeTangents, EasingFunctions, findMeshesByComponentType, fixIntersections, getCameraLookPosition } from './3d-utils';
-import { get3DQuality, getLeadingZeros } from '../../utils/generalUtils';
+import { get3DQuality, getLeadingZeros } from '../../../utils/generalUtils';
 
-import * as Live3DEditor from '../../utils/live-3d-editor'
+import * as Live3DEditor from '../../../utils/live-3d-editor'
 import {  Box3, Vector3 } from 'three';
 import RenderingManager from './RenderingManager'
 import CubemapManager from './CubemapManager'

@@ -1,6 +1,6 @@
 import { TYP_HL_PRODUCT, TYP_LCS_PRODUCT, TYP_EID_PRODUCT, TYP_DOP_PRODUCT, TYP_DIN_PRODUCT, TYP_FB, TYP_COP_PRODUCT_1,
        TYP_CDL_PRODUCT, TYP_HIB_PRODUCT, TYP_HI_PRODUCT } from "../../constants"
-import { COP_CAPTURE_LIGHTS, DEFAULT_CAPTURE_LIGHTS } from "../3d/3d-light-setups"
+import { COP_CAPTURE_LIGHTS, DEFAULT_CAPTURE_LIGHTS } from "../3d"
 
 /** 
  * Checks if given componentType is landing device or not

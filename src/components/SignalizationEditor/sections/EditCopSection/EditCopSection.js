@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import jsonLogic from 'json-logic-js';
-import SectionAccordion from '../../../../components/SectionAccordion'
+import SectionAccordion from '../../../SectionAccordion'
 import { COPS_WITH_KONE_INFORMATION, KCSM_KONE_INFORMATION, MAT_CAR_FRONT_WALL_A} from '../../../../constants'
 import { DesignContext } from '../../../../store/design/DesignProvider'
 import { ProductContext } from '../../../../store/product/ProductProvider'

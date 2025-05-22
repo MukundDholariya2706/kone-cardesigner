@@ -1,0 +1,117 @@
+// responsive threshold values
+$desktop-medium: 1440px;
+$desktop-small: 1280px;
+$tablet-landscape: 1024px;
+$tablet-portrait-extra: 896px; // New breakpoint with some extra room to work with (should really just make $tablet-portrait bigger and use that everywhere, but that would require a lot of testing to see that nothing breaks...) 
+$tablet-portrait: 768px;
+$tablet-portrait-small: 620px;
+$phone-big: 550px;
+$phone-medium: 460px;
+$phone: 400px;
+$phone-small: 340px;
+$tablet-landscape-height: 700px;
+
+// layout measurements
+//$max-width-layout: 2560px;
+$max-width-layout: 1440px;
+
+$viewer3d-min-height: 350px;
+
+// main navigation measurements
+$xl-width-main-nav: 90px;
+$l-width-main-nav: 90px;
+$md-width-main-nav: 48px;
+$sm-width-main-nav: 100%;
+$main-nav-narrow-breakpoint: $desktop-small;
+$main-nav-low-breakpoint: 720px;
+
+// edit panel measurements
+$xl-width-edit-panel: 380px;
+$l-width-edit-panel: 280px;
+$md-width-edit-panel: 260px;
+$sm-width-edit-panel: 100%;
+$edit-panel-narrow-breakpoint: $desktop-medium;
+$edit-panel-contents-width: 340px;
+$edit-panel-narrow-contents-width: 240px;
+
+$editpanel-padding: 20px;
+
+$editpanel-padding-bottom: 30px;
+
+// nav bar measurements
+$nav-bar-height: 50px;
+$nav-bar-height-lg: 50px;
+
+// downloadspecs measurements
+$download-specs-bar-height: 56px;
+$width-download-specs: 30%;
+
+// colors
+$nav-bg-none: #1c2226;
+$nav-bg-none-hover: #262e33;
+$nav-bg-selected: #0071b9;
+$nav-bg-selected-hover: #338dc7;
+
+$dark-blue: #004987;
+$kone-blue: #0071B9;
+$light-blue: #0071B9;
+$lighter-blue: #177CBD;
+$lightest-blue: #86C2E6;
+
+$kone-green: #00BA34;
+
+$dropshadow: #00000033;
+
+$hover-blue: #338DC7;
+
+$nav-bar-bg: #E0E4E6; 
+
+$desc-text :#BABDBF;
+
+$base-text-color: #11161A;
+// $base-text-color: #313131;
+
+$darkest-grey: #373737;
+$darker-gray: #3B4245;
+$dark-gray: #566066;
+// $dark-gray: #8D9194;
+$gray: #E0E4E6;
+$light-gray :#BABDBF;
+$lighter-gray: #F4F4F5; 
+$disabled-color: #8C9499;
+
+$layout-bg: #eef0f1;
+// $app-bg: #EDEFF0;
+$app-bg: #FFFFFF;
+$card-bg: #FFFFFF;
+// $border-color: #B3B3B3;
+$border-color: #E0E4E6;
+$border-color-darker: #C4C4C4;
+$button-border-radius: 0.25rem;
+$button-primary-border-radius: 5px;
+$header-bg: #FFFFFF;
+$header-height: 70px;
+$header-height-mobile: 125px;
+$edit-panel-bg: #FFFFFF;
+
+$error-color: #C71F25;
+
+
+// @font-face {
+//     font-family: 'KoneFont';
+//     font-weight: normal;
+//     src: url('./fonts/KONE_Information.eot'); /* IE9 Compat Modes */
+//     src: url('./fonts/KONE_Information.woff2') format('woff2'), /* Super Modern Browsers */
+//     url('./fonts/KONE_Information.woff') format('woff'), /* Pretty Modern Browsers */
+//     url('./fonts/KONE_Information.ttf')  format('truetype'), /* Safari, Android, iOS */
+//          url('./fonts/KONE_Information.svg') format('svg'); /* Legacy iOS */
+// }
+
+// @font-face {
+//     font-family: 'DroidSansFallback';
+//     font-weight: normal;
+//     src: url('./fonts/KONE_Information.ttf') format('truetype');/*  Android */
+// }
+
+$headingFont: KoneFont, 'Microsoft YaHei','HeiTi SC', -apple-system, 'DroidSansFallback', sans-serif;
+$bodyFont: Arial, sans-serif, 'Microsoft YaHei','HeiTi SC';

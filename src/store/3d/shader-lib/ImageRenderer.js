@@ -2,8 +2,8 @@ import EventEmitter from 'events';
 import hash from 'object-hash';
 import { DEFAULT_WIDTH, DEFAULT_HEIGHT, CAMERA_POSITION, CAMERA_TARGET, CAMERA_NEAR, CAMERA_VIEW_ANGLE } from './3d-constants';
 import { getCaptureCameraProperties } from './3d-utils';
-import { similar } from '../blueprint/blueprint-utils';
 import { Box3Helper, CameraHelper, Color, PerspectiveCamera } from 'three';
+import { similar } from '../../blueprint/blueprint-utils';
 
 
 class ImageRenderer extends EventEmitter {

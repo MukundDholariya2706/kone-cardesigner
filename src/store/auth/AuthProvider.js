@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect, useMemo, useRef } from 'react';
-import * as msal from "@azure/msal-browser";
+import * as msal from "../../../node_modules/@azure/msal-browser/dist";
 import axios from 'axios'
 import { ConfigContext } from '../config';
 

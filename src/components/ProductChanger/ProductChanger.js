@@ -2,7 +2,7 @@ import './ProductChanger.scss';
 
 import React, { useState, useEffect, useContext, useRef, useMemo } from 'react';
 import { withRouter } from "react-router"
-import Dropdown from '../../components/Dropdown'
+import Dropdown from '../Dropdown'
 import { ProductContext } from '../../store/product/ProductProvider';
 import { OfferingContext } from '../../store/offering/OfferingProvider';
 import { TranslationContext } from '../../store/translation/TranslationProvider';

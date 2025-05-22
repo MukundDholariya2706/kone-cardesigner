@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import CSG from './3rd-party/THREE-CSGMesh/three-csg'
+import CSG from './../3rd-party/THREE-CSGMesh/three-csg'
 import { Box3, Box3Helper, Vector3 } from 'three';
 
 // converts unreliably defined values to vec2

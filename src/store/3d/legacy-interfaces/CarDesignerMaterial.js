@@ -5,7 +5,7 @@ import { RawShaderMaterial, Color, GLSL3, DoubleSide, Vector2, MeshPhysicalMater
 import custom_physical_fragmentGlsl from '../shader-lib/custom-physical/custom_physical_fragment.glsl';
 import custom_physical_vertexGlsl from '../shader-lib/custom-physical/custom_physical_vertex.glsl';
 import { ENV_CAR, ENV_LANDING, ENV_IMAGE_CAPTURE } from '../../../constants';
-import { toVec2 } from '../3d-utils'
+import { toVec2 } from '../shader-lib/3d-utils';
 
 // patching notes:
 // add this to three before final GLSL declaration in WebglProgram, this skips the prefix declarations

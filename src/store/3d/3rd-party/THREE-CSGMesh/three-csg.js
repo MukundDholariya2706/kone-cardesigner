@@ -1,4 +1,4 @@
-import*as THREE from "three";
+import * as THREE from "three";
 import {CSG, Vertex, Vector, Polygon} from "./csg-lib.js"
 // import { Geometry } from 'three/examples/jsm/deprecated/Geometry'
 

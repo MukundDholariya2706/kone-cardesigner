@@ -1,1 +1,6 @@
-export { default as CatalogContext } from "./CatalogProvider";
+export {
+  CatalogContext,
+  CatalogProvider,
+  CatalogConsumer,
+} from "./CatalogProvider";
+export { default } from "./CatalogProvider";

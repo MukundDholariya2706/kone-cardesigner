@@ -8,9 +8,9 @@
     flex: 0 0 2.5rem;
     position: relative;
 
-    @include respond-wide-edit-panel() {
-      flex: 0 0  3.25rem;
-    }
+    // @include respond-wide-edit-panel() {
+    //   flex: 0 0  3.25rem;
+    // }
   }
 
   &.disabled {
@@ -59,10 +59,10 @@
     height: 12px;
     width: 12px;
 
-    @include respond-wide-edit-panel() {
-      height: 14px;
-      width: 14px;
-    }
+    // @include respond-wide-edit-panel() {
+    //   height: 14px;
+    //   width: 14px;
+    // }
 
     .svg-icon {
       height: 100%;

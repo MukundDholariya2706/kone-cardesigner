@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext, useRef} from 'react'
 import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
-import Layout from '../../components/Layout/Layout'; 
+import Layout from '../Layout/Layout'; 
 import { DesignContext } from '../../store/design/DesignProvider'
 import applyRules, { validateDesign } from '../../store/design/design-rules'
 import { ProductContext } from '../../store/product/ProductProvider'

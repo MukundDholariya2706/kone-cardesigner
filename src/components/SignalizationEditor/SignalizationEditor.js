@@ -12,7 +12,7 @@ import { TranslationContext } from '../../store/translation/TranslationProvider'
 import EditorLayout from '../EditorLayout';
 import ToggleButtons from '../ToggleButtons';
 import ScrollBox from '../ScrollBox';
-import InfoBox from '..//InfoBox';
+import InfoBox from '../InfoBox';
 
 import { getFinishType } from './cop-utils'
 

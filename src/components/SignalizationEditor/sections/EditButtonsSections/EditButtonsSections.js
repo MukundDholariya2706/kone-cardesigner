@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useContext, useEffect, useRef } from 'react';
 import jsonLogic from 'json-logic-js';
 import DropdownContainer, { DropdownTrigger, DropdownContent } from 'react-simple-dropdown';
-import SectionAccordion from '../../../../components/SectionAccordion';
+import SectionAccordion from '../../../SectionAccordion';
 import { DesignContext } from '../../../../store/design/DesignProvider';
 import { ProductContext } from '../../../../store/product/ProductProvider';
 import { TranslationContext } from '../../../../store/translation/TranslationProvider';

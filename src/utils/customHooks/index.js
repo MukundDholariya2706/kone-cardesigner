@@ -1,14 +1,15 @@
-export { default as useCustomHooks } from "./customHooks";
-export { default as useKeepPagePosition } from "./customHooks";
-export { default as useOnClickOutside } from "./customHooks";
-export { default as useProductFromURL } from "./customHooks";
-export { default as useBuildingsType } from "./customHooks";
-export { default as useIsDesignEditable } from "./customHooks";
-export { default as useDesignInformation } from "./customHooks";
-export { default as useDesignUrl } from "./customHooks";
-export { default as useErrorLogger } from "./customHooks";
-export { default as useInterval } from "./customHooks";
-export { default as useProjectCountry } from "./customHooks";
-export { default as useHideScrollBar } from "./customHooks";
-export { default as useWindowSize } from "./windowSize";
-export { default as useServiceReadMoreURL } from "./productHooks";
+export {
+  useBuildingsType,
+  useDesignInformation,
+  useDesignUrl,
+  useErrorLogger,
+  useHideScrollBar,
+  useInterval,
+  useIsDesignEditable,
+  useKeepPagePosition,
+  useOnClickOutside,
+  useProductFromURL,
+  useProjectCountry,
+} from "./customHooks";
+export { useWindowSize } from "./windowSize";
+export { useServiceReadMoreURL } from "./productHooks";

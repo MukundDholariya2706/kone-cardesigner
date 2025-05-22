@@ -1,4 +1,4 @@
-import { DEFAULT_WHITE_TEXTURE_ID, DEFAULT_LIGHTMAP_TEXTURE_ID, ENV_CAR, DEFAULT_NORMALMAP_TEXTURE_ID } from '../../constants';
+import { DEFAULT_WHITE_TEXTURE_ID, DEFAULT_LIGHTMAP_TEXTURE_ID, ENV_CAR, DEFAULT_NORMALMAP_TEXTURE_ID } from '../../../constants';
 
 export const mapTypes = [
   'alphaMap',
