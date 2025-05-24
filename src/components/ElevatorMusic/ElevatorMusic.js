@@ -7,7 +7,7 @@ import { TranslationContext } from '../../store/translation/TranslationProvider'
 import EditorLayout from '../EditorLayout';
 import SwitchButton from '../SwitchButton';
 import ElevatorMusicDialog from './dialogs/ElevatorMusicDialog';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import { EDIT_VIEW_DIGITAL_SERVICES, KCSM_ELEV_MUSIC } from '../../constants';
 import HeadingComponent from '../HeadingComponent/HeadingComponent';
 import ScrollBox from '../ScrollBox';

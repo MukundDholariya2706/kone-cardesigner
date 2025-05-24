@@ -7,7 +7,7 @@ import { TranslationContext } from '../../store/translation/TranslationProvider'
 import EditorLayout from '../EditorLayout';
 import SwitchButton from '../SwitchButton';
 import ConnectedServicesDialog from './dialogs/ConnectedServicesDialog';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import { EDIT_VIEW_DIGITAL_SERVICES, KCSM_24_7_CONNECT } from '../../constants';
 
 import ScrollBox from '../ScrollBox';

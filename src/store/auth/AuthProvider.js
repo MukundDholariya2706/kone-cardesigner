@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect, useMemo, useRef } from 'react';
-import * as msal from "../../../node_modules/@azure/msal-browser/dist";
+import * as msal from "@azure/msal-browser";
 import axios from 'axios'
 import { ConfigContext } from '../config';
 
@@ -19,10 +19,10 @@ export const AuthProvider = ({ children }) => {
 
   const authRequired = config.ui_auth_required && !window.location.hash.includes('/generator/')
 
-  const msalApp = useMemo(() => {
-    const msalObj = new msal.PublicClientApplication({
+  const msalApp = useMemo(async () => {
+    const msalObj = await new msal.PublicClientApplication({
       auth: {
-        clientId: config.clientID,
+        clientId: '893879db-45d8-434c-a566-3fafc3bb4f29',
         authority: 'https://login.microsoftonline.com/kone.onmicrosoft.com',
         validateAuthority: true,
         redirectUri: `${window.location.protocol}//${window.location.host}`,
@@ -36,7 +36,7 @@ export const AuthProvider = ({ children }) => {
       }
     })
 
-    msalObj.handleRedirectPromise().then(async tokenResponse => {
+    await msalObj.handleRedirectPromise().then(async tokenResponse => {
       let accountObj = null
       if (tokenResponse) {
         accountObj = tokenResponse.account

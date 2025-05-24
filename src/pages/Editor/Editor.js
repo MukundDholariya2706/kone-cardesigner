@@ -16,7 +16,7 @@ import UnsavedChangesDialog from '../../components/UnsavedChangesDialog';
 import ToastContainer from '../../components/ToastContainer';
 import BottomBar from '../../components/BottomBar';
 
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import { DesignContext } from '../../store/design/DesignProvider';
 import { ProductContext } from '../../store/product/ProductProvider';
 import { Context3d } from '../../store/3d/shader-lib/Provider3d';

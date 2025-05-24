@@ -5,7 +5,7 @@ import _ from 'lodash'
 
 import { ProductContext } from '../../store/product/ProductProvider';
 import { DesignContext } from '../../store/design/DesignProvider';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import { Context3d } from '../../store/3d/shader-lib/Provider3d';
 import { TranslationContext } from '../../store/translation/TranslationProvider';
 

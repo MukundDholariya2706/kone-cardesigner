@@ -8,7 +8,7 @@ import { Context3d } from '../../store/3d/shader-lib/Provider3d';
 import EditorLayout from '../EditorLayout';
 import SwitchButton from '../SwitchButton';
 import AirPurifierDialog from './dialogs/AirPurifierDialog';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import { KCSM_AIR_PURIFIER,VIEW3D_MODE_CAR, TYP_COP_PRODUCT_1 } from '../../constants';
 import ScrollBox from '../ScrollBox';
 

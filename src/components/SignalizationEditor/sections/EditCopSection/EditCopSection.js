@@ -5,7 +5,7 @@ import { COPS_WITH_KONE_INFORMATION, KCSM_KONE_INFORMATION, MAT_CAR_FRONT_WALL_A
 import { DesignContext } from '../../../../store/design/DesignProvider'
 import { ProductContext } from '../../../../store/product/ProductProvider'
 import { TranslationContext } from '../../../../store/translation/TranslationProvider'
-import { LayoutContext } from '../../../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../../../store/layout';
 import { FinishList } from '../../../FinishAccordionItem'
 import GridComponent from '../../../GridComponent'
 import HeadingComponent from '../../../HeadingComponent/HeadingComponent'

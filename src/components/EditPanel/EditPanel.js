@@ -1,6 +1,6 @@
 import './EditPanel.scss';
 import React, { useContext, useState, useRef } from 'react';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 
 import CeilingEditor from '../CeilingEditor';
 import WallsEditor from '../WallsEditor';

@@ -1,5 +1,5 @@
 import React, { useContext} from 'react';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import Bowser from "bowser";
 import Icon from "../Icon"
 

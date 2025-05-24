@@ -2,7 +2,7 @@ import './ThreeViewer.scss'
 import React, { useRef, useEffect, useContext } from 'react';
 import { Context3d } from '../../store/3d/shader-lib/Provider3d'
 import { useWindowSize } from '../../utils/customHooks';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 
 const ThreeViewer = ({ children, disabled }) => {
 

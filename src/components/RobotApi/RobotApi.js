@@ -7,7 +7,7 @@ import { TranslationContext } from '../../store/translation/TranslationProvider'
 import EditorLayout from '../EditorLayout';
 import SwitchButton from '../SwitchButton';
 import RobotApiDialog from './dialogs/RobotApiDialog';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import { EDIT_VIEW_DIGITAL_SERVICES, KCSM_APF_SERV_ROBOT_API } from '../../constants';
 
 import ScrollBox from '../ScrollBox';

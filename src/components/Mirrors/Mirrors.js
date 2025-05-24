@@ -10,7 +10,7 @@ import MirrorType from '../MirrorType/MirrorType';
 import PositionSelector from '../PositionSelector';
 import InfoBox from '../InfoBox';
 import { TranslationContext } from '../../store/translation/TranslationProvider';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import { TYP_CAR_MIRROR, TYP_CAR_CEILING, TYP_COP_PRODUCT_1, TYP_COP_2, TYP_CAR_WALL_ADD_DECO_PACKAGE, MAT_CAR_WALL_FINISH_C, TYP_CAR_MIRROR_2, WIDE_ANGLE_MIRROR, TYP_CAR_GLASS_WALL_C,} from '../../constants';
 import HeadingComponent from '../HeadingComponent/HeadingComponent';
 import ScrollBox from '../ScrollBox';

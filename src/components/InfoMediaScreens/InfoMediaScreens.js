@@ -11,7 +11,7 @@ import InfoBox from '../InfoBox'
 import CarShapeSelector from '../CarShapeSelector'
 import ImageTitle from '../ImageTitle'
 import ToggleButtons from '../ToggleButtons';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import { TYP_CAR_INFOSCREEN, TYP_CAR_MEDIASCREEN, TYP_COP_2, TYP_COP_PRODUCT_1, TYP_CAR_MIRROR, MAT_CAR_MEDIASCREEN, TYP_CAR_GLASS_WALL_C, KCSM_KONE_INFORMATION, TYP_CAR_WALL_ADD_DECO_PACKAGE} from '../../constants';
 import KoneInformationDialog from '../KoneInformationDialog';
 import HeadingComponent from '../HeadingComponent/HeadingComponent';

@@ -15,6 +15,7 @@ import ErrorPage, { CriticalErrorPage } from './pages/ErrorPage/ErrorPage'
 import Routes from './Routes'
 import * as serviceWorker from './serviceWorker'
 import Provider from './store'
+import { createRoot } from 'react-dom/client'
 
 const BrowserCheck = ({ children, component: Component }) => {
   const browser = Bowser.getParser(window.navigator.userAgent)
@@ -52,7 +53,10 @@ if (process.env.NODE_ENV === 'production') {
   }
 }
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
   <HashRouter>
     <CriticalErrorPage>
       <Provider>
@@ -67,8 +71,7 @@ ReactDOM.render(
     </CriticalErrorPage>
     {/* Cache icons here ... use later (see Icon component) */}
     {/* <Icons style={{ display: 'none' }} /> */}
-  </HashRouter>,
-  document.getElementById('root')
+  </HashRouter>
 )
 
 // If you want your app to work offline and load faster, you can change

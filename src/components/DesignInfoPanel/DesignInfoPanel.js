@@ -1,6 +1,6 @@
 import React, { useState, useContext, useRef, useEffect } from 'react'
 import { DesignContext } from '../../store/design/DesignProvider'
-import { LayoutContext } from '../../store/layout/LayoutProvider'
+import { LayoutContext } from '../../store/layout'
 import { ProductContext } from '../../store/product/ProductProvider'
 import { ToastContext } from '../../store/toast/ToastProvider'
 import { TranslationContext } from '../../store/translation/TranslationProvider'

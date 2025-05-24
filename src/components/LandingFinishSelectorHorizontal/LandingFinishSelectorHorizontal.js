@@ -6,7 +6,7 @@ import {
   MAT_LANDING_WALL
 } from '../../constants'
 import { DesignContext } from '../../store/design/DesignProvider'
-import { LayoutContext } from '../../store/layout/LayoutProvider'
+import { LayoutContext } from '../../store/layout'
 import { ProductContext } from '../../store/product/ProductProvider'
 import { TranslationContext } from '../../store/translation/TranslationProvider'
 import Alert from '../Alert/Alert'

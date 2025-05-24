@@ -9,7 +9,7 @@ import EditorLayout from '../EditorLayout';
 import ImageTitle from '../ImageTitle'
 import CarShapeSelector from '../CarShapeSelector'
 import SwitchButton from '../SwitchButton'
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import { TranslationContext } from '../../store/translation/TranslationProvider';
 import { TYP_CAR_SEAT, TYP_COP_PRODUCT_1, TYP_COP_2, TYP_CAR_MIRROR, TYP_CAR_BUFFER_RAIL, TYP_CAR_HANDRAIL, TYP_CAR_WALL_ADD_DECO_PACKAGE, TYP_CAR_GLASS_WALL_C, SEAT_IN_CX_PRODUCTS } from '../../constants';
 import HeadingComponent from '../HeadingComponent/HeadingComponent';

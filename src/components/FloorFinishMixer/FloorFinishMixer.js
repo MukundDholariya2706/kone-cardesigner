@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useReducer, useMemo } from 'react';
 import ScrollBox from '../ScrollBox';
 import EditorLayout from '../EditorLayout';
 import { TranslationContext } from '../../store/translation/TranslationProvider';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import { ProductContext } from '../../store/product/ProductProvider';
 import { DesignContext } from '../../store/design/DesignProvider';
 import { EDIT_VIEW_FLOOR, MAT_CAR_FLOORING, MATERIAL_CATEGORY_MASTER } from '../../constants';

@@ -7,7 +7,7 @@ import { TranslationContext } from '../../store/translation/TranslationProvider'
 import EditorLayout from '../EditorLayout';
 import SwitchButton from '../SwitchButton';
 import ElevatorCallDialog from './dialogs/ElevatorCallDialog';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import { EDIT_VIEW_DIGITAL_SERVICES, KCSM_MOBILE_ELEV_CALL } from '../../constants';
 import ScrollBox from '../ScrollBox';
 

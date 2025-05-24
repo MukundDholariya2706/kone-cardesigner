@@ -3,7 +3,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import uniqid from 'uniqid'
 import { TranslationContext } from '../../store/translation/TranslationProvider';
 import EditorLayout from '../EditorLayout';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import ScrollBox from '../ScrollBox';
 import Button from '../Button';
 import { SketchPicker } from 'react-color'

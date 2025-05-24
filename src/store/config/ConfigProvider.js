@@ -22,7 +22,7 @@ const Api_Endpoints = {
  */
 export const ConfigProvider =  ({ children}) => {
 
-  const [config, setConfig] = useState((process.env.RUNNING_TEST ?{} :null))
+  const [config, setConfig] = useState((process.env.RUNNING_TEST ? {} :null))
 
   useEffect(() => {
 

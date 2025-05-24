@@ -7,7 +7,7 @@ import { DesignContext } from '../../store/design/DesignProvider';
 import { TranslationContext } from '../../store/translation/TranslationProvider';
 import EditorLayout from '../EditorLayout';
 import SwitchButton from '../SwitchButton';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import { MAT_CAR_SKIRTING, TYP_CAR_SKIRTING, MAT_CAR_FLOORING, EXTRA_FEATURES, OFFERING_INDIA, MAT_CAR_WALL_FINISH_B, MAT_CAR_CEILING, MAT_CAR_FRONT_WALL_A } from '../../constants';
 import InfoBox from '../InfoBox';
 import ImageTitle from '../ImageTitle';

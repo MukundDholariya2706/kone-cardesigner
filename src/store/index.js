@@ -32,7 +32,7 @@ export const Provider = ({ children, initialState = {}, dependencies = {} }) => 
       <ConfigProvider>
         <ToastProvider>
           <AuthProvider>
-            <APIProvider axios={dependencies.axios || axios}>
+            <APIProvider axios={dependencies?.axios || axios}>
               <UserProvider>
                 <DataProvider initCountries={initialState.countries} initLanguages={initialState.languages}>
                     <SiteProvider>

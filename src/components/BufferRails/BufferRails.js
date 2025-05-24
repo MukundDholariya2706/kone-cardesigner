@@ -6,7 +6,7 @@ import _ from 'lodash'
 import { ProductContext } from '../../store/product/ProductProvider';
 import { DesignContext } from '../../store/design/DesignProvider';
 import EditorLayout from '../EditorLayout';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import { TYP_CAR_BUFFER_RAIL, MAT_CAR_BUFFER_RAIL, TYP_CAR_WALL_ADD_DECO_PACKAGE, TYP_CAR_MIRROR, TYP_COP_2,
       TYP_COP_PRODUCT_1, MAT_CAR_WALL_FINISH_C, TYP_CAR_GLASS_WALL_C,  MAT_CAR_WALL_FINISH_B, MAT_CAR_WALL_FINISH_D } from '../../constants';
 import PositionSelector from '../PositionSelector/PositionSelector';

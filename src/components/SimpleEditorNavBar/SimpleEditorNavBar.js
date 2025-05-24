@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { VIEW3D_MODE_CAR, VIEW3D_MODE_LANDING } from '../../constants'
-import { LayoutContext } from '../../store/layout/LayoutProvider'
+import { LayoutContext } from '../../store/layout'
 import { TranslationContext } from '../../store/translation/TranslationProvider'
 import LanguageSelect from '../LanguageSelect'
 import LoginComponent from '../LoginComponent'

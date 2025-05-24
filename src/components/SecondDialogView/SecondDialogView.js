@@ -1,7 +1,7 @@
 import './SecondDialogView.scss'
 import React, { useContext } from 'react'
 import { Link } from "react-router-dom";
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import { TranslationContext } from '../../store/translation/TranslationProvider';
 import Icon from '../Icon';
 import Dialog, { DialogHead, DialogBody, DialogFooter } from '../Dialog';

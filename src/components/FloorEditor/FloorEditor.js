@@ -17,7 +17,7 @@ import Description from '../Description';
 import ScrollBox from '../ScrollBox';
 import ToggleButtons from '../ToggleButtons';
 import Button from '../Button';
-import { LayoutContext } from '../../store/layout/LayoutProvider';
+import { LayoutContext } from '../../store/layout';
 import CustomFinishes from '../CustomFinishes';
 import TermsOfService from '../TermsOfService';
 import { sortFinishes } from '../../utils/generalUtils'
